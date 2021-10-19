@@ -1,0 +1,43 @@
+
+// Only variables can be placed here,
+// and other files such as themes cannot be introduced,
+// otherwise it will affect the packaging speed.
+
+/* theme color */
+$--color-primary: #F37021;
+$--color-success: #67c23a;
+$--color-warning: #e6a23c;
+$--color-danger: #f56c6c;
+$--color-info: #909399;
+
+// $--button-font-weight: 400;
+
+// $--color-text-regular: #1f2d3d;
+// $--border-color-light: #dfe4ed;
+// $--border-color-lighter: #e6ebf5;
+// $--table-border: 1px solid #dfe6ec;
+
+$--colors: (
+  "primary": (
+    "base": #F37021,
+  ),
+  "success": (
+    "base": #67c23a,
+  ),
+  "warning": (
+    "base": #e6a23c,
+  ),
+  "danger": (
+    "base": #f56c6c,
+  ),
+  "error": (
+    "base": #db2828,
+  ),
+  "info": (
+    "base": #909399,
+  ),
+);
+
+// :export {
+//   colorPrimary: $--color-primary;
+// }
