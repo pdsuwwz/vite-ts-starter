@@ -1,0 +1,20 @@
+
+/* icon font path, required */
+$--font-path: "element-plus/theme-chalk/fonts";
+
+@import "element-plus/packages/theme-chalk/src/index";
+
+
+
+#nprogress .bar {
+  background: $--color-primary !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px $--color-primary, 0 0 5px $--color-primary !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: $--color-primary;
+  border-left-color: $--color-primary;
+}

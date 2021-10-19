@@ -1,0 +1,8 @@
+@mixin multiple_ellipsis($line_number: 3) {
+  display: -webkit-box;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line_number;
+}
