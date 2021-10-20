@@ -1,6 +1,7 @@
 <template>
+  <!-- :to="`/${$store.state.UserAccount.lang}/`" -->
   <router-link
-    :to="`/${$store.state.UserAccount.lang}/`"
+    :to="`/${$route.params.lang || ''}`"
     class="wrap-navbar"
   >
     <img

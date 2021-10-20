@@ -45,7 +45,7 @@ import UserAccountModule from '@/modules/UserAccount/store'
 
 import Cookie from 'js-cookie'
 import { useStore } from 'vuex'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'UserAccountLogin',
@@ -55,6 +55,7 @@ export default defineComponent({
   setup () {
     const { proxy } = getCurrentInstance()
     const store = useStore()
+    const route = useRoute()
     const router = useRouter()
 
     const isLoading = ref(true)
@@ -154,7 +155,7 @@ export default defineComponent({
         Cookie.set('token', data.user.token)
         Cookie.set('name', data.user.username)
         router
-          .replace('/')
+          .replace(`/${route.params.lang || ''}`)
           .then(() => {
             proxy.$message({
               type: 'success',
@@ -170,9 +171,6 @@ export default defineComponent({
       nextTick(() => {
         setLoading(false)
       })
-      setTimeout(() => {
-        Cookie.remove('name')
-      }, 4000)
     })
 
     return {

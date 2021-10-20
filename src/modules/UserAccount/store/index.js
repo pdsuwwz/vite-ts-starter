@@ -12,7 +12,7 @@ const UserAccountModule = {
   namespaced: true,
   _name: 'UserAccount',
   state: {
-    lang: 'zh_CN',
+    lang: 'en',
     demoList: {},
     userInfo: {}
   },

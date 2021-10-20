@@ -36,7 +36,6 @@ export default defineComponent({
       console.log('overview', data)
     }
 
-    console.log('啦啦啦啦啦啦啦啦啦啦啦', route.params)
     init()
     return {
       overviewData
