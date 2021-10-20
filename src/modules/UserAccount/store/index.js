@@ -12,7 +12,7 @@ const UserAccountModule = {
   namespaced: true,
   _name: 'UserAccount',
   state: {
-    lang: 'en',
+    locale: 'en',
     demoList: {},
     userInfo: {}
   },
@@ -20,8 +20,8 @@ const UserAccountModule = {
     demoList: state => state.demoList
   },
   mutations: {
-    [MUTATION.SET_LANGUAGE] (state, lang) {
-      state.lang = lang
+    [MUTATION.SET_LANGUAGE] (state, locale) {
+      state.locale = locale
     },
     [MUTATION.SET_DEMO_LIST] (state, demoList) {
       state.demoList = demoList
@@ -47,7 +47,7 @@ const UserAccountModule = {
       return this.filterResponse(result)
     },
     setLanguage ({ commit }, data) {
-      commit(MUTATION.SET_LANGUAGE, data.lang)
+      commit(MUTATION.SET_LANGUAGE, data.locale)
     },
     async login ({ state, commit }, data) {
       await sleep(1000)

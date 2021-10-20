@@ -2,7 +2,6 @@ import router from '@/router'
 import store from '@/store'
 import Cookie from 'js-cookie'
 import { allowlist } from '@/router/auth-list'
-import { langMap } from '@/router/lang-map'
 
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -19,7 +18,7 @@ router.beforeEach(async (to, from, next) => {
 
   console.log('😄😄😄 ', to)
 
-  const currentRouteLang = to.params.lang
+  const currentRouteLocale = to.params.locale
 
   if (
     allowlist.find(
@@ -37,7 +36,7 @@ router.beforeEach(async (to, from, next) => {
 
   if (error) {
     store.dispatch('UserAccount/setLanguage', {
-      lang: currentRouteLang || data.language
+      locale: currentRouteLocale || data.language
     })
     Cookie.remove('token')
     Cookie.remove('name')
@@ -48,7 +47,7 @@ router.beforeEach(async (to, from, next) => {
   if (data.user.username && Cookie.get('name') === data.user.username) {
     // TODO: 需要配合后端 response 中的 language 一起使用
     store.dispatch('UserAccount/setLanguage', {
-      lang: currentRouteLang || data.language
+      locale: currentRouteLocale || data.language
     })
     next()
     return
@@ -58,9 +57,9 @@ router.beforeEach(async (to, from, next) => {
   Cookie.remove('token')
   Cookie.remove('name')
   store.dispatch('UserAccount/setLanguage', {
-    lang: currentRouteLang || store.state.UserAccount.lang
+    locale: currentRouteLocale || store.state.UserAccount.locale
   })
-  next(`/${currentRouteLang || store.state.UserAccount.lang}/user/login`)
+  next(`/${currentRouteLocale || store.state.UserAccount.locale}/user/login`)
 })
 
 router.afterEach((to) => {

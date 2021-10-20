@@ -1,5 +1,5 @@
 <template>
-  <el-config-provider :locale="lang">
+  <el-config-provider :locale="currentLocale">
     <router-view />
   </el-config-provider>
 </template>
@@ -17,27 +17,27 @@ import { useRoute, useRouter } from 'vue-router'
 import { watch } from '@vue/runtime-core'
 
 const useLanguage = (store, route) => {
-  const lang = computed(() => {
-    let lang = null
-    switch (store.state.UserAccount.lang) {
+  const currentLocale = computed(() => {
+    let locale = null
+    switch (store.state.UserAccount.locale) {
       case 'zh_CN':
-        lang = {
+        locale = {
           ...zhCn,
           ...selfzhCn
         }
         break
       case 'en':
-        lang = {
+        locale = {
           ...en,
           ...selfEn
         }
         break
     }
-    return lang
+    return locale
   })
 
   return {
-    lang
+    currentLocale
   }
 }
 
@@ -57,7 +57,7 @@ export default {
         if (route.name === '404') return
 
         store.dispatch('UserAccount/setLanguage', {
-          lang: route.params.lang || 'en'
+          locale: route.params.locale || 'en'
         })
       }
     )

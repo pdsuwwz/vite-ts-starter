@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="`${$route.params.lang ? '/' + $route.params.lang + '/' : '/'}result/${dataset.id}/overview`"
+    :href="`${$route.params.locale ? '/' + $route.params.locale + '/' : '/'}result/${dataset.id}/overview`"
   >
     <ul class="project-item-container">
       <li

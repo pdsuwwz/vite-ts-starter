@@ -9,7 +9,7 @@ const htmlPlugin = () => {
     transformIndexHtml (html) {
       return html.replace(
         /<title>(.*?)<\/title>/,
-        '<title>Vue3 Vite2 Template</title>'
+        '<title>Vite Starter</title>'
       )
     }
   }
@@ -27,15 +27,15 @@ export default defineConfig({
     )
   ],
   // API 代理，如果需要请打开
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://172.xx.xxx.xx/xxxxxxx/api',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  },
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://172.xx.xxx.xx/xxxxxxx/api',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api/, '')
+  //     }
+  //   }
+  // },
   resolve: {
     alias: [
       {
