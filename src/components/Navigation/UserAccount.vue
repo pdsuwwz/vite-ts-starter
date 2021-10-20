@@ -76,7 +76,7 @@ const useLogout = (store, router, route) => {
     Cookie.remove('token')
     Cookie.remove('name')
 
-    window.location.href = '/' + route.params.lang + '/login'
+    window.location.href = '/' + route.params.locale + '/login'
   }
   return {
     handleLogout
@@ -110,7 +110,7 @@ const useChangePassword = (store, proxy, route) => {
             ElLoading.service()
             ElMessage.success(setupUseLocaleInject.t('base.mosc'))
             setTimeout(() => {
-              window.location.href = '/' + route.params.lang + '/login'
+              window.location.href = '/' + route.params.locale + '/login'
             }, 1000)
           }
           return new Promise((resolve) => {

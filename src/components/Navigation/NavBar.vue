@@ -1,7 +1,7 @@
 <template>
-  <!-- :to="`/${$store.state.UserAccount.lang}/`" -->
+  <!-- :to="`/${$store.state.UserAccount.locale}/`" -->
   <router-link
-    :to="`/${$route.params.lang || ''}`"
+    :to="`/${$route.params.locale || ''}`"
     class="wrap-navbar"
   >
     <img

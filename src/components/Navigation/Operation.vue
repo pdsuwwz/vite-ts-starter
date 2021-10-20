@@ -80,7 +80,7 @@
           icon="icon-language1"
         />
         <span class="el-dropdown-target">
-          {{ currentLang }}
+          {{ currentLocale }}
         </span>
         <i
           class="el-icon-arrow-down el-icon--right"
@@ -151,39 +151,39 @@ const useBadge = (store, route) => {
 }
 
 const useLanguage = (store, route, router) => {
-  const langMap = {
+  const localeMap = {
     zh_CN: '中文',
     en: 'English'
     // 'zh-Tw': '繁体中文'
   }
 
-  const currentLang = computed(() => {
-    let lang = null
-    for (const key in langMap) {
-      if (key === route.params.lang) {
-        lang = langMap[key]
+  const currentLocale = computed(() => {
+    let locale = null
+    for (const key in localeMap) {
+      if (key === route.params.locale) {
+        locale = localeMap[key]
       }
     }
-    return lang
+    return locale
   })
 
-  const handleLanguage = async (lang) => {
-    if (currentLang.value === langMap[lang]) return
-    // currentLang.value = lang
+  const handleLanguage = async (currentLocale) => {
+    if (currentLocale.value === localeMap[currentLocale]) return
+    // currentLocale.value = lang
     let storeLang = null
 
-    for (const key in langMap) {
-      if (langMap[key] === lang) {
+    for (const key in localeMap) {
+      if (localeMap[key] === currentLocale) {
         storeLang = key
       }
     }
     console.log(storeLang)
     await store.dispatch('UserAccount/setLanguageStore', {
-      lang: storeLang
+      locale: storeLang
     })
     // 这里还需要同时告诉后端 前端更新了语言类型
     const res = await store.dispatch('UserAccount/setLanguage', {
-      lang: storeLang
+      locale: storeLang
     })
     console.log(res)
 
@@ -196,7 +196,7 @@ const useLanguage = (store, route, router) => {
   }
 
   return {
-    currentLang,
+    currentLocale,
     handleLanguage
   }
 }
