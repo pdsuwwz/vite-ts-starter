@@ -23,24 +23,30 @@ const routes = [
   },
   {
     path: `/:lang${getLocaleRegex()}?`,
-    name: 'LangRoot',
     component: Layout,
     beforeEnter (to, from, next) {
-      console.log('to', to)
+      console.log('beforeEnter: to ', to)
       if (langMap[to.params.lang] && !isUndefined(to.params.pathMatch)) {
-        next('/')
+        next(`/${to.params.lang}/project`)
         return
       }
       next()
     },
     children: [
-      ...childrenRoutes,
       {
-        path: ':pathMatch(.*)*',
-        name: '404',
-        component: () => import('@/components/404.vue')
-      }
+        path: '',
+        name: 'LangRoot',
+        redirect: {
+          name: 'Project'
+        }
+      },
+      ...childrenRoutes
     ]
+  },
+  {
+    path: '/:pathMatch(.*)',
+    name: '404',
+    component: () => import('@/components/404.vue')
   }
 ]
 

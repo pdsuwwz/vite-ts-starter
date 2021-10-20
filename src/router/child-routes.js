@@ -4,8 +4,6 @@ const Layout = () => import('@/components/Layout/index.vue')
 const LayoutView = () => import('@/components/Layout/LayoutView.vue')
 const LayoutArea = () => import('@/components/Layout/LayoutArea.vue')
 
-console.log('importModule', importModule)
-
 const childrenRoutes = [
   {
     path: 'test-layout',
