@@ -21,8 +21,8 @@ import { sync } from 'vuex-router-sync'
 import GlobalComponents from '@/components'
 import Mixin from './mixins'
 import Widgets from './widgets'
-// import language from './language'
-// import i18n from './language'
+// import language from './locales'
+// import i18n from './locales'
 
 const app = createApp(App)
 

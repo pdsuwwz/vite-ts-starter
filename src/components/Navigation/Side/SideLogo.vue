@@ -2,7 +2,9 @@
   <div
     class="side-logo-container"
   >
-    <router-link to="/">
+    <router-link
+      :to="`/${$route.params.locale || ''}`"
+    >
       <img
         class="side-logo-img"
         src="@/assets/svg/shinewing-dark.svg"

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { terser } from 'rollup-plugin-terser'
+
 const path = require('path')
 
 const htmlPlugin = () => {
@@ -26,7 +27,7 @@ export default defineConfig({
       }
     )
   ],
-  // API 代理，如果需要请打开
+  // According to the need to open proxy
   // server: {
   //   proxy: {
   //     '/api': {

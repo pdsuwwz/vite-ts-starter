@@ -66,7 +66,9 @@ const childrenRoutes = [
   },
   {
     path: 'result',
-    redirect: '/project'
+    redirect: {
+      name: 'ProjectList'
+    }
   },
   {
     path: 'result/:projectId',
