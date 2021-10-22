@@ -4,10 +4,10 @@
 // otherwise it will affect the packaging speed.
 
 /* theme color */
-$--color-primary: #F37021;
-$--color-success: #67c23a;
-$--color-warning: #e6a23c;
-$--color-danger: #f56c6c;
+$--color-primary: #4686FF;
+$--color-success: #52C41A;
+$--color-warning: #FAAD14;
+$--color-danger: #FA5555;
 $--color-info: #909399;
 
 // $--button-font-weight: 400;
@@ -19,16 +19,16 @@ $--color-info: #909399;
 
 $--colors: (
   "primary": (
-    "base": #F37021,
+    "base": #4686FF,
   ),
   "success": (
-    "base": #67c23a,
+    "base": #52C41A,
   ),
   "warning": (
-    "base": #e6a23c,
+    "base": #FAAD14,
   ),
   "danger": (
-    "base": #f56c6c,
+    "base": #FA5555,
   ),
   "error": (
     "base": #db2828,

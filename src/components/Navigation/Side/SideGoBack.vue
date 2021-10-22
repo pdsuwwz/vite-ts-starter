@@ -2,7 +2,9 @@
   <div
     class="go-back-container"
   >
-    <router-link to="/">
+    <router-link
+      :to="`/${$route.params.locale || ''}`"
+    >
       <IconFont
         icon="iconarrow_left"
         class="go-back-icon"

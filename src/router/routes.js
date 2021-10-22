@@ -1,16 +1,15 @@
 import childrenRoutes from '@/router/child-routes'
-import { localeMap } from '@/router/locale-map'
+import { localesMapping, isHasLocale } from '@/locales'
 import { isUndefined } from '@/utils/type'
 
 const Layout = () => import('@/components/Layout/index.vue')
 
-// Creates regex (zh_CN|en)
+// Creates regex (zh-hans|en)
 function getLocaleRegex () {
   let reg = ''
-  const localeList = Object.keys(localeMap)
-  localeList.forEach((localeItem, index) => {
-    const line = index !== localeList.length - 1 ? '|' : ''
-    reg = `${reg}${localeItem}${line}`
+  localesMapping.forEach((localeItem, index) => {
+    const line = index !== localesMapping.length - 1 ? '|' : ''
+    reg = `${reg}${localeItem.localeCode}${line}`
   })
   return `(${reg})`
 }
@@ -26,7 +25,7 @@ const routes = [
     component: Layout,
     beforeEnter (to, from, next) {
       console.log('beforeEnter: to ', to)
-      if (localeMap[to.params.locale] && !isUndefined(to.params.pathMatch)) {
+      if (isHasLocale(to.params.locale) && !isUndefined(to.params.pathMatch)) {
         next(`/${to.params.locale}/project`)
         return
       }

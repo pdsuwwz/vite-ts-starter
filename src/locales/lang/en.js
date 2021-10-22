@@ -1,4 +1,4 @@
-/* 英文 按模块划分 */
+/* English namespaced */
 export default {
   base: {
     mess: '最新消息e',
