@@ -4,26 +4,31 @@
       <div class="nav-logo"></div>
       <div class="nav-circle"></div>
       <div class="nav-title">
-        信永中和
+        {{ _t('base.sysTitle') }}
       </div>
     </div>
-    <UserAccountContainerLayout
-      v-bind="configLogin"
-      :form-data="formData"
-      @on-submit="onSubmit"
-    >
-      <template
-        #titleIcon
+    <div class="user-account-body">
+      <UserAccountContainerLayout
+        v-bind="configLogin"
+        :form-data="formData"
+        @on-submit="onSubmit"
       >
-        <!-- <img
-        src="@/assets/images/vue.svg"
-        alt=""
-      > -->
-        <i
-          class="el-icon-s-opportunity"
-        ></i>
-      </template>
-    </UserAccountContainerLayout>
+        <template
+          #titleIcon
+        >
+          <!-- <img
+          src="@/assets/images/vue.svg"
+          alt=""
+        > -->
+          <el-icon>
+            <Promotion />
+          </el-icon>
+          <!-- <i
+            class="el-icon-s-promotion"
+          ></i> -->
+        </template>
+      </UserAccountContainerLayout>
+    </div>
   </div>
 </template>
 
@@ -38,6 +43,8 @@ import {
   reactive,
   ref
 } from 'vue'
+import { useLocaleInject } from 'element-plus'
+import { Promotion } from '@element-plus/icons'
 
 import UserAccountContainerLayout from '@/modules/UserAccount/components/ContainerLayout.vue'
 
@@ -50,7 +57,8 @@ import { useRoute, useRouter } from 'vue-router'
 export default defineComponent({
   name: 'UserAccountLogin',
   components: {
-    UserAccountContainerLayout
+    UserAccountContainerLayout,
+    Promotion
   },
   setup () {
     const { proxy } = getCurrentInstance()
@@ -66,9 +74,11 @@ export default defineComponent({
       password: 'shinewing'
     })
 
+    const localeInject = useLocaleInject()
+
     const configLogin = computed(() => {
       return {
-        title: '欢迎登录',
+        title: localeInject.t('login.hydl'),
         actionList: [
           {
             attrs: {
@@ -76,7 +86,7 @@ export default defineComponent({
               loading: isLoading.value,
               size: 'large'
             },
-            text: '登录',
+            text: localeInject.t('login.signin'),
             on: {
               click (refForm) {
                 proxy.onSubmit(refForm)
@@ -93,17 +103,17 @@ export default defineComponent({
                 return [
                   proxy.getRequiredRules({
                     trigger: 'change',
-                    message: '请填写登录邮箱'
+                    message: localeInject.t('login.plsemail')
                   }), proxy.getValidatorRules('', 'blur', {
                     type: 'email',
-                    message: '请输入正确的邮箱地址'
+                    message: localeInject.t('login.plscurrentemail')
                   })
                 ]
               }
             },
-            label: '邮箱',
+            label: localeInject.t('login.email'),
             prefixIcon: 'user-tie',
-            placeholder: '请填写登录邮箱'
+            placeholder: localeInject.t('login.plsemail')
           },
           {
             attrs: {
@@ -112,20 +122,20 @@ export default defineComponent({
               rules () {
                 return proxy.getRequiredRules({
                   trigger: 'change',
-                  message: '请填写密码'
+                  message: localeInject.t('login.plspwd')
                 })
               }
             },
             link: {
-              text: '忘记密码',
+              text: localeInject.t('login.fgtpwd'),
               click () {
-                console.log(proxy, 'wo 忘记密码了。。。。')
+                console.log(proxy, localeInject.t('login.fgtpwd'))
               }
             },
             type: 'password',
-            label: '密码',
+            label: localeInject.t('login.pwd'),
             prefixIcon: 'lock',
-            placeholder: '请填写密码'
+            placeholder: localeInject.t('login.plspwd')
           }
         ]
       }
@@ -192,8 +202,7 @@ export default defineComponent({
 .user-account-login {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
   min-height: 100vh;
   background-color: #f0f2f5;
   background-image: url('@/assets/images/logo-background.jpg');
@@ -201,10 +210,8 @@ export default defineComponent({
   background-size: cover;
   background-position: center;
   .user-account-nav {
-    position: absolute;
-    top: 24px;
-    left: 44px;
     display: flex;
+    height: 65px;
     align-items: center;
     color: #f0f2f5;
     .nav-logo {
@@ -227,6 +234,12 @@ export default defineComponent({
       font-weight: 500;
       line-height: 25px;
     }
+  }
+  .user-account-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 

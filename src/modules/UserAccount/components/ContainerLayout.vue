@@ -228,8 +228,13 @@ export default defineComponent({
     padding-bottom: 30px;
     .form-title-icon {
       width: 32px;
-      font-size: 32px;
+      font-size: 0;
       margin-right: 10px;
+      &:deep() {
+        & > * {
+          font-size: 32px;
+        }
+      }
     }
     .form-title-text {
       font-size: 26px;
