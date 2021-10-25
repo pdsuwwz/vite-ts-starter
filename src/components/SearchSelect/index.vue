@@ -48,7 +48,7 @@ import { debounce } from 'lodash'
 export default defineComponent({
   name: 'SearchSelect',
   props: {
-    value: {
+    modelValue: {
       type: String,
       default: ''
     },
@@ -64,18 +64,18 @@ export default defineComponent({
     }
   },
   emits: [
-    'input',
+    'update:modelValue',
     'change',
     'select'
   ],
   setup (props) {
-    const { ctx } = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
 
     const loading = ref(false)
     const searchValue = ref('')
 
     watch(
-      () => props.value,
+      () => props.modelValue,
       (val) => {
         searchValue.value = val
       },
@@ -87,8 +87,8 @@ export default defineComponent({
     watch(
       () => searchValue,
       debounce(function (val) {
-        ctx.$emit('input', val)
-        ctx.$emit('change', val)
+        proxy.$emit('update:modelValue', val)
+        proxy.$emit('change', val)
       }, 300)
     )
 

@@ -1,10 +1,15 @@
 <template>
   <div class="user-account-login">
     <div class="user-account-nav">
-      <div class="nav-logo"></div>
-      <div class="nav-circle"></div>
-      <div class="nav-title">
-        {{ _t('base.sysTitle') }}
+      <div class="nav-left">
+        <div class="nav-logo"></div>
+        <div class="nav-circle"></div>
+        <div class="nav-title">
+          {{ _t('base.sysTitle') }}
+        </div>
+      </div>
+      <div class="nav-right">
+        <Translations />
       </div>
     </div>
     <div class="user-account-body">
@@ -49,6 +54,7 @@ import { Promotion } from '@element-plus/icons'
 import UserAccountContainerLayout from '@/modules/UserAccount/components/ContainerLayout.vue'
 
 import UserAccountModule from '@/modules/UserAccount/store'
+import Translations from '@/locales/Translations.vue'
 
 import Cookie from 'js-cookie'
 import { useStore } from 'vuex'
@@ -58,7 +64,8 @@ export default defineComponent({
   name: 'UserAccountLogin',
   components: {
     UserAccountContainerLayout,
-    Promotion
+    Promotion,
+    Translations
   },
   setup () {
     const { proxy } = getCurrentInstance()
@@ -211,9 +218,15 @@ export default defineComponent({
   background-position: center;
   .user-account-nav {
     display: flex;
-    height: 65px;
-    align-items: center;
+    justify-content: space-between;
     color: #f0f2f5;
+    padding: 0px 16px;
+    .nav-left,
+    .nav-right {
+      display: flex;
+      height: 48px;
+      align-items: center;
+    }
     .nav-logo {
       width: 56px;
       height: 32px;

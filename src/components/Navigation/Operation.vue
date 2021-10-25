@@ -217,7 +217,7 @@ export default defineComponent({
     const router = useRouter()
 
     // this
-    const { ctx } = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
 
     const userRoleList = computed(() => store.state.UserAccount.userRoleList)
 

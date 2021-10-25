@@ -133,7 +133,7 @@ export default defineComponent({
     'on-submit'
   ],
   setup () {
-    const { ctx } = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
     const showPassword = ref(false)
 
     function tooglePassword () {
@@ -157,7 +157,7 @@ export default defineComponent({
 
     function getFormItemAttrs (attrs) {
       const rules = isFunction(attrs.rules)
-        ? attrs.rules.call(ctx)
+        ? attrs.rules.call(proxy)
         : ''
 
       return {
@@ -169,17 +169,17 @@ export default defineComponent({
     function getActionItemEvent (on) {
       const onEvent = {}
       Object.keys(on).forEach((onItem) => {
-        onEvent[onItem] = on[onItem].bind(ctx.$parent, ctx.$refs.boxForm)
+        onEvent[onItem] = on[onItem].bind(proxy.$parent, proxy.$refs.boxForm)
       })
       return onEvent
     }
 
     function handleClickLink (link) {
-      link.click.call(ctx.$parent, ctx.$refs.boxForm)
+      link.click.call(proxy.$parent, proxy.$refs.boxForm)
     }
 
     function onSubmit () {
-      ctx.$emit('on-submit', ctx.$refs.boxForm)
+      proxy.$emit('on-submit', proxy.$refs.boxForm)
     }
 
     return {

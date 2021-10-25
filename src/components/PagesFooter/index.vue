@@ -35,8 +35,8 @@ export default defineComponent({
     const store = useStore()
 
     // this
-    const { ctx } = getCurrentInstance()
-    console.log(ctx)
+    const { proxy } = getCurrentInstance()
+    console.log(proxy)
 
     return {
     }

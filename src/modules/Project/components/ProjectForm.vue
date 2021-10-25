@@ -84,7 +84,7 @@ export default defineComponent({
     'modal.confirm'
   ],
   setup () {
-    const { ctx } = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
     const store = useStore()
 
     const isLoading = ref(false)
@@ -95,10 +95,10 @@ export default defineComponent({
     })
 
     function handleCancel () {
-      ctx.$emit('modal.close')
+      proxy.$emit('modal.close')
     }
     function onSubmit () {
-      ctx.$refs.refForm.validate(async (valid) => {
+      proxy.$refs.refForm.validate(async (valid) => {
         if (!valid) return
         isLoading.value = true
 
@@ -111,11 +111,11 @@ export default defineComponent({
         }
 
         await store.dispatch(ProjectModule.getAction('getProjectList'))
-        ctx.$message({
+        proxy.$message({
           message: '创建成功',
           type: 'success'
         })
-        ctx.$emit('modal.confirm')
+        proxy.$emit('modal.confirm')
       })
     }
 

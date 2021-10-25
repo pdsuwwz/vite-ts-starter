@@ -51,7 +51,7 @@ export default defineComponent({
     const setupUseLocaleInject = useLocaleInject()
 
     // this
-    const { ctx } = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
 
     const route = useRoute()
     const router = useRouter()

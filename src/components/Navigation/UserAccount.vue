@@ -147,9 +147,6 @@ export default defineComponent({
     const router = useRouter()
     const { proxy } = getCurrentInstance()
 
-    // this
-    const { ctx } = getCurrentInstance()
-
     return {
       ...useUserInfo(store, router),
       ...useLogout(store, router, route),

@@ -1,6 +1,6 @@
 <template>
-  <a
-    :href="`${$route.params.locale ? '/' + $route.params.locale + '/' : '/'}result/${dataset.id}/overview`"
+  <router-link
+    :to="`${$route.params.locale ? '/' + $route.params.locale + '/' : '/'}result/${dataset.id}/overview`"
   >
     <ul class="project-item-container">
       <li
@@ -63,11 +63,11 @@
           ></i>
         </span>
         <span class="project-item-action__status">
-          {{ dataset.isPublished ? '停止' : '发布' }}
+          {{ dataset.isPublished ? _t('project.stop') : _t('project.publish') }}
         </span>
       </li>
     </ul>
-  </a>
+  </router-link>
 </template>
 
 <script>
@@ -89,7 +89,7 @@ export default defineComponent({
     }
   },
   setup (props) {
-    const { ctx } = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
     const isLoading = ref(false)
     const getActionIcon = computed(() => {
       return props.dataset.isPublished
@@ -117,8 +117,8 @@ export default defineComponent({
       // TODO: Hide it temporarily
       // if (error) return
 
-      ctx.$message({
-        message: '修改成功!'
+      proxy.$message({
+        message: 'Successfully'
       })
 
       props.dataset.isPublished = !props.dataset.isPublished

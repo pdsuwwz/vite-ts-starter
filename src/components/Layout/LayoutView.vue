@@ -5,14 +5,14 @@
         :fixed="false"
       >
         <NavigationSideGoBack
-          title="测试返回上一页面"
+          :title="_t('base.goback')"
         />
       </NavigationNavBar>
     </template>
     <template #side>
       <LayoutSection
         has-divider
-        :title="_t('manuscript.prt')"
+        :title="_t('result.title')"
       >
         <ul>
           <li>111</li>

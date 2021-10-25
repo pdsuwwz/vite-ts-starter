@@ -54,7 +54,7 @@ export default defineComponent({
     const route = useRoute()
 
     // this
-    // const { ctx } = getCurrentInstance()
+    // const { proxy } = getCurrentInstance()
 
     // watch route
     let breadCrumbList = reactive([])

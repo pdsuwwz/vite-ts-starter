@@ -12,21 +12,23 @@
 </template>
 
 <script>
-import { defineComponent, reactive } from 'vue'
+import { useLocaleInject } from 'element-plus'
+import { computed, defineComponent, reactive } from 'vue'
 
 export default defineComponent({
   name: 'ProjectTableHeader',
   setup () {
-    const list = reactive([
+    const localeInject = useLocaleInject()
+    const list = computed(() => [
       {
-        name: '名称'
+        name: localeInject.t('project.name')
       },
       {
-        name: '创建日期',
+        name: localeInject.t('project.createDate'),
         width: '18%'
       },
       {
-        name: '状态',
+        name: localeInject.t('project.state'),
         width: '19%'
       }
     ])
@@ -40,6 +42,8 @@ export default defineComponent({
       }
     }
     return {
+      localeInject,
+
       list,
 
       getHeadItem
