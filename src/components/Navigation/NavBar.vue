@@ -10,6 +10,7 @@
         <slot></slot>
         <div style="flex: 1;"></div>
         <NavigationSideAction />
+        <Translations dark />
       </div>
     </header>
   </div>
@@ -17,11 +18,13 @@
 
 <script>
 import { defineComponent } from 'vue'
+import Translations from '@/locales/Translations.vue'
 import NavigationSideAction from '@/components/Navigation/Side/SideAction.vue'
 
 export default defineComponent({
   name: 'NavigationNavBar',
   components: {
+    Translations,
     NavigationSideAction
   },
   props: {

@@ -21,10 +21,10 @@ export default defineComponent({
     'click'
   ],
   setup () {
-    const { ctx } = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
     const title = ref('信永中和')
     function handleClick () {
-      ctx.$emit('click')
+      proxy.$emit('click')
     }
 
     return {
@@ -48,7 +48,7 @@ export default defineComponent({
       padding: 0 12px;
       margin-right: 5px;
       &:last-child {
-        margin-right: 0;
+        // margin-right: 0;
       }
     }
   }

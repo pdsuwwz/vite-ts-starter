@@ -12,9 +12,9 @@
       >
         <img
           src="@/assets/images/project-empty.svg"
-          alt="空状态"
+          alt="Empty"
         >
-        <span>项目列表为空</span>
+        <span>{{ _t('base.empty') }}</span>
       </div>
     </div>
   </div>

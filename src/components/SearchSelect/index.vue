@@ -69,7 +69,7 @@ export default defineComponent({
     'select'
   ],
   setup (props) {
-    const { ctx } = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
 
     const loading = ref(false)
     const searchValue = ref('')
@@ -87,8 +87,8 @@ export default defineComponent({
     watch(
       () => searchValue,
       debounce(function (val) {
-        ctx.$emit('input', val)
-        ctx.$emit('change', val)
+        proxy.$emit('input', val)
+        proxy.$emit('change', val)
       }, 300)
     )
 

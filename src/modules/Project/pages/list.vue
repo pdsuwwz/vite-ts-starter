@@ -9,7 +9,7 @@
     </template>
 
     <template #side>
-      <LayoutSection :title="localeInject.t('base.mess')">
+      <LayoutSection :title="localeInject.t('project.manageTitle')">
         <el-button
           type="primary"
           size="large"
@@ -81,12 +81,12 @@ export default defineComponent({
   },
   // https://github.com/vuejs/vue-next/issues/3649
   setup () {
-    const { ctx } = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
     const store = useStore()
     const localeInject = useLocaleInject()
 
     function handlePrompt () {
-      this.$ModalPrompt({
+      proxy.$ModalPrompt({
         title: '删除项目',
         content: '此操作将永久删除该项目，确认删除吗？',
         confirmType: 'primary',
@@ -98,7 +98,7 @@ export default defineComponent({
       })
     }
     function handleCreateProject () {
-      ctx.$modalWrapper({
+      proxy.$modalWrapper({
         title: '创建项目',
         width: '50vw',
         'close-on-click-modal': false,
