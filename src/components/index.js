@@ -3,7 +3,6 @@
 import IconFont from '@/components/IconFont/index.vue'
 import OptionsMenu from '@/components/OptionsMenu/index.vue'
 import Calendar from '@/components/Calendar/index.vue'
-import Navigation from '@/components/Navigation/index.vue'
 import PagesFooter from '@/components/PagesFooter/index.vue'
 import Tooltip from '@/components/Tooltip.vue'
 import LayoutArea from '@/components/Layout/LayoutArea.vue'
@@ -21,7 +20,6 @@ const componentList = [
   IconFont,
   OptionsMenu,
   Calendar,
-  Navigation,
   PagesFooter,
   Tooltip,
   LayoutArea,

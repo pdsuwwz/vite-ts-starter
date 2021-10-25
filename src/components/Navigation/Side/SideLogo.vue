@@ -18,12 +18,16 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref } from 'vue'
+import { useLocaleInject } from 'element-plus'
 
 export default defineComponent({
   name: 'NavigationSideLogo',
   setup () {
-    const title = ref('信永中和')
+    const localeInject = useLocaleInject()
+
+    const title = computed(() => localeInject.t('base.sysTitle'))
+
     return {
       title
     }

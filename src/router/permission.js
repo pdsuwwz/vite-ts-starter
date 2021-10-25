@@ -2,6 +2,7 @@ import router from '@/router'
 import store from '@/store'
 import Cookie from 'js-cookie'
 import { allowlist } from '@/router/auth-list'
+import { sysTitle } from '@/locales/data'
 
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -14,7 +15,7 @@ NProgress.configure({
 router.beforeEach(async (to, from, next) => {
   NProgress.start()
 
-  document.title = `${to.meta.title || ''} - 信永中和`
+  document.title = `${to.meta.title || ''} - ${sysTitle}`
 
   console.log('😄😄😄 ', to)
 
@@ -28,8 +29,6 @@ router.beforeEach(async (to, from, next) => {
     next()
     return
   }
-
-  // console.log('from.matched：', from.matched)
 
   // 获取用户信息
   const { data, error } = await store.dispatch('UserAccount/getUserInfo')
@@ -45,7 +44,7 @@ router.beforeEach(async (to, from, next) => {
   }
 
   if (data.user.username && Cookie.get('name') === data.user.username) {
-    // TODO: 需要配合后端 response 中的 language 一起使用
+    // TODO: It must be used together with the backend
     store.dispatch('UserAccount/setLanguage', {
       locale: currentRouteLocale || data.language
     })

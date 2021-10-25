@@ -1,7 +1,9 @@
+import { sysTitle } from '@/locales/data'
+
 /* English namespaced */
 export default {
   base: {
-    sysTitle: 'Vite Starter',
+    sysTitle: sysTitle,
     goback: 'Back to the previous page',
     empty: 'No data available'
   },

@@ -5,18 +5,18 @@
     :width="dialogWidth"
     :custom-class="getDialogClassName"
     v-bind="$attrs"
-    @closed="handleClosed"
+    @closed="handleRealClosed"
   >
     <template
       #title
     >
       <IconFont
-        v-if="headreIcon"
-        :icon="headreIcon"
-        class="admin-back-icon"
+        v-if="headerIcon"
+        :icon="headerIcon"
+        class="modal-header__icon"
       />
       <span
-        class="admin-back-title"
+        class="modal-header__title"
       >{{ title }}</span>
       <span
         v-if="headerDescText"
@@ -42,56 +42,24 @@
       <component
         :is="getComponent"
         ref="refComponent"
-        v-model="getComponentAttributes"
+        v-model="componantData"
         class="modal-container__component"
       />
       <div class="modal-container__footer">
-        <template v-if="!isPower">
-          <el-button
-            plain
-            round
-            class="dark-cancel-button"
-            @click="clickCancle"
-          >
-            {{ _t('base.gb') }}
-          </el-button>
-        </template>
-        <template v-if="isDark && isPower">
-          <el-button
-            plain
-            round
-            class="dark-cancel-button"
-            @click="clickCancle"
-          >
-            {{ _t('base.ce') }}
-          </el-button>
-          <el-button
-            type="primary"
-            class="dark-button"
-            round
-            @click="clickConfirm"
-          >
-            {{ confirmText ? confirmText : _t('base.suc') }}
-          </el-button>
-        </template>
-        <template v-else-if="!isDark && isPower">
-          <el-button
-            class="dialog-confirm-cancle"
-            plain
-            @click="clickCancle"
-          >
-            {{ _t('base.ce') }}
-          </el-button>
-          <el-button
-            :type="backTemplate ? 'danger' : 'primary' && publicTemplate ? '' : 'primary'"
-            :class="{ publicColor: publicTemplate }"
-            round
-            :disabled="disabledConfirmButton"
-            @click="clickConfirm"
-          >
-            {{ confirmText ? confirmText : _t('base.suc') }}
-          </el-button>
-        </template>
+        <el-button
+          plain
+          round
+          @click="handleCancel()"
+        >
+          取消
+        </el-button>
+        <el-button
+          type="primary"
+          round
+          @click="handleConfirm()"
+        >
+          {{ confirmText || '确定' }}
+        </el-button>
       </div>
     </div>
   </el-dialog>
@@ -102,11 +70,8 @@ import {
   defineComponent,
   getCurrentInstance,
   ref,
-  computed,
-  onMounted,
-  nextTick
+  computed
 } from 'vue'
-import { useStore } from 'vuex'
 
 export default defineComponent({
   name: 'Modal',
@@ -119,7 +84,7 @@ export default defineComponent({
       type: String,
       default: ''
     },
-    headreIcon: {
+    headerIcon: {
       type: String,
       default: ''
     },
@@ -135,27 +100,15 @@ export default defineComponent({
       type: Boolean,
       default: false
     },
-    backTemplate: {
-      type: Boolean,
-      default: false
-    },
-    isDark: {
-      type: Boolean,
-      default: false
-    },
-    isPower: {
-      type: Boolean,
-      default: true
-    },
-    publicTemplate: {
-      type: Boolean,
-      default: false
+    componantData: {
+      type: Object,
+      default () {
+        return {}
+      }
     }
   },
   setup (props, { attrs }) {
     const { proxy } = getCurrentInstance()
-    const store = useStore()
-
     const visible = ref(false)
 
     const getDialogClassName = computed(() => {
@@ -169,28 +122,27 @@ export default defineComponent({
       return name
     })
 
-    const getComponentAttributes = attrs.componantData
-
     const refComponent = ref(null)
-
-    const clickCancle = () => {
+    const handleCancel = () => {
       visible.value = false
     }
-
-    const fullLoading = ref(false)
-    const clickConfirm = async () => {
+    const handleConfirm = async () => {
       const instance = refComponent.value
       try {
         await attrs.onConfirm(instance, proxy)
         visible.value = false
       } catch (error) {
-        // console.dir(error)
+        if (process.env.NODE_ENV === 'development') {
+          console.dir(error)
+        }
       }
     }
 
-    const handleClosed = () => {
+    const handleRealClosed = () => {
       proxy.$.vnode.destroy()
     }
+
+    const fullLoading = ref(false)
 
     return {
       visible,
@@ -198,33 +150,32 @@ export default defineComponent({
       getComponent,
       fullLoading,
       refComponent,
-      getComponentAttributes,
-      clickCancle,
-      clickConfirm,
+      handleCancel,
+      handleConfirm,
 
-      handleClosed
+      handleRealClosed
     }
   }
 })
 </script>
 
-<style scoped lang="scss">
-  :deep() {
-      .modal-container__component {
-        padding: 24px;
-        .el-textarea__inner,.el-input__inner  {
-          padding: 8px;
-        }
-      }
-        .modal-container__footer {
-            height: 54px;
-            line-height: 54px;
-            text-align: right;
-            padding-right: 24px;
-            border-top: 1px solid #DCDFE6FF;
-        }
-      }
-
+<style lang="scss" scoped>
+:deep() {
+  .modal-container__component {
+    padding: 24px;
+    .el-textarea__inner,
+    .el-input__inner  {
+      padding: 8px;
+    }
+  }
+  .modal-container__footer {
+      height: 54px;
+      line-height: 54px;
+      text-align: right;
+      padding-right: 24px;
+      border-top: 1px solid #DCDFE6FF;
+  }
+}
 </style>
 <style lang="scss">
 .modal-wrapper-containers-dialog {
@@ -233,11 +184,11 @@ export default defineComponent({
   .el-dialog__header {
     height: 54px;
     border-bottom: 1px solid #DCDFE6FF;
-    .admin-back-icon {
+    .modal-header__icon {
       width: 20px;
       height: 20px;
     }
-    .admin-back-title {
+    .modal-header__title {
       margin-left: 8px;
       font-size: 18px;
       color: #303133;
@@ -246,38 +197,5 @@ export default defineComponent({
   .el-dialog__body {
     padding: 0;
   }
-  .dark-cancel-button {
-    color:#203062 !important;
-    border: 1px solid #203062 !important;
-  }
-  .dark-cancel-button:hover {
-    background-color: #fff;
-  }
-  .dark-button {
-    background-color:#203062;
-    border: none;
-  }
-  .el-button:focus {
-    // color: #303133FF;
-    // border-color: #DCDFE6FF;
-    // background-color: #fff;
-  }
-    .dialog-confirm-cancle {
-        border-radius: 15px;
-    }
-    .publicColor {
-      color: #fff;
-      background-color: #203062;
-      border: none;
-      &:hover {
-        background-color: none;
-      }
-    }
-    .dialog-confirm-confirm,.dialog-confirm-confirm:focus, .dialog-confirm-confirm:hover {
-      // color: #fff;
-      // background-color: #F37021FF;
-      // border-radius: 15px;
-    }
-
 }
 </style>
