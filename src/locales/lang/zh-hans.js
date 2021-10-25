@@ -1,7 +1,9 @@
 /* 中文 按模块划分 */
 export default {
   base: {
-    sysTitle: 'Vite 启动项目'
+    sysTitle: 'Vite 启动项目',
+    goback: '返回',
+    empty: '无可用数据'
   },
   login: {
     hydl: '欢迎登录',
@@ -13,5 +15,16 @@ export default {
     plsemail: '请填写邮箱',
     plscurrentemail: '请输入正确的邮箱地址',
     plspwd: '请填写密码'
+  },
+  project: {
+    manageTitle: '项目管理',
+    name: '名称',
+    createDate: '创建日期',
+    state: '状态',
+    publish: '发布',
+    stop: '停止'
+  },
+  result: {
+    title: '项目详情'
   }
 }

@@ -1,7 +1,9 @@
 /* English namespaced */
 export default {
   base: {
-    sysTitle: 'Vite Starter'
+    sysTitle: 'Vite Starter',
+    goback: 'Back to the previous page',
+    empty: 'No data available'
   },
   login: {
     hydl: 'Hi, Welcome',
@@ -13,5 +15,16 @@ export default {
     plsemail: 'Please enter a email',
     plscurrentemail: 'Please enter the correct email',
     plspwd: 'Please enter a password'
+  },
+  project: {
+    manageTitle: 'Project management',
+    name: 'Project name',
+    createDate: 'Create date',
+    state: 'State',
+    publish: 'Publish',
+    stop: 'Stop'
+  },
+  result: {
+    title: 'Project details'
   }
 }
