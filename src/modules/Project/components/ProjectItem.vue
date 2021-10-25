@@ -118,7 +118,7 @@ export default defineComponent({
       // if (error) return
 
       proxy.$message({
-        message: 'Successfully'
+        message: 'Successful!'
       })
 
       props.dataset.isPublished = !props.dataset.isPublished

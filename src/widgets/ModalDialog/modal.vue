@@ -2,9 +2,10 @@
   <el-dialog
     v-model="visible"
     :title="title"
+    :show-close="false"
     :width="dialogWidth"
     :custom-class="getDialogClassName"
-    v-bind="$attrs"
+    v-bind="getOriginAttrs()"
     @closed="handleRealClosed"
   >
     <template
@@ -45,7 +46,10 @@
         v-model="componantData"
         class="modal-container__component"
       />
-      <div class="modal-container__footer">
+      <div
+        v-if="!hideFooter"
+        class="modal-container__footer"
+      >
         <el-button
           plain
           round
@@ -70,11 +74,13 @@ import {
   defineComponent,
   getCurrentInstance,
   ref,
-  computed
+  computed,
+  reactive
 } from 'vue'
 
 export default defineComponent({
   name: 'Modal',
+  inheritAttrs: false,
   props: {
     title: {
       type: String,
@@ -97,6 +103,10 @@ export default defineComponent({
       default: '500px'
     },
     disabledConfirmButton: {
+      type: Boolean,
+      default: false
+    },
+    hideFooter: {
       type: Boolean,
       default: false
     },
@@ -144,6 +154,25 @@ export default defineComponent({
 
     const fullLoading = ref(false)
 
+    const getOriginAttrs = () => {
+      const filterList = [
+        'onConfirm',
+        'onCancel',
+        'renderComponent',
+        'components'
+      ]
+      const resultAttrs = reactive({})
+      Object.keys(attrs)
+        .filter(
+          (attrKey) => !filterList.includes(attrKey)
+        ).forEach(
+          (attrKey) => {
+            resultAttrs[attrKey] = attrs[attrKey]
+          }
+        )
+      return resultAttrs
+    }
+
     return {
       visible,
       getDialogClassName,
@@ -152,6 +181,7 @@ export default defineComponent({
       refComponent,
       handleCancel,
       handleConfirm,
+      getOriginAttrs,
 
       handleRealClosed
     }
@@ -191,6 +221,7 @@ export default defineComponent({
     .modal-header__title {
       margin-left: 8px;
       font-size: 18px;
+      font-weight: 500;
       color: #303133;
     }
   }

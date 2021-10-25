@@ -10,6 +10,7 @@
         <slot></slot>
         <div style="flex: 1;"></div>
         <NavigationSideAction />
+        <NavigationAvatar />
         <Translations dark />
       </div>
     </header>
@@ -20,12 +21,14 @@
 import { defineComponent } from 'vue'
 import Translations from '@/locales/Translations.vue'
 import NavigationSideAction from '@/components/Navigation/Side/SideAction.vue'
+import NavigationAvatar from '@/components/Navigation/Avatar.vue'
 
 export default defineComponent({
   name: 'NavigationNavBar',
   components: {
     Translations,
-    NavigationSideAction
+    NavigationSideAction,
+    NavigationAvatar
   },
   props: {
     fixed: {

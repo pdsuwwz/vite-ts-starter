@@ -12,19 +12,13 @@
       <LayoutSection :title="localeInject.t('project.manageTitle')">
         <el-button
           type="primary"
-          size="large"
           class="create-action"
           @click="handleCreateProject()"
         >
           <IconFont
             icon="iconestablish"
           />
-          创建项目
-        </el-button>
-        <el-button
-          @click="handlePrompt()"
-        >
-          测试 prompt
+          {{ _t('project.create') }}
         </el-button>
       </LayoutSection>
     </template>
@@ -54,7 +48,8 @@ import {
   defineComponent,
   getCurrentInstance,
   onBeforeMount,
-  onMounted
+  onMounted,
+  reactive
 } from 'vue'
 import { useLocaleInject } from 'element-plus'
 
@@ -85,26 +80,40 @@ export default defineComponent({
     const store = useStore()
     const localeInject = useLocaleInject()
 
-    function handlePrompt () {
-      proxy.$ModalPrompt({
-        title: '删除项目',
-        content: '此操作将永久删除该项目，确认删除吗？',
-        confirmType: 'primary',
-        textConfirm: '删除',
-        textClose: '放弃',
-        async onConfirm () {
-          await sleep(3000)
-        }
-      })
-    }
     function handleCreateProject () {
-      proxy.$modalWrapper({
-        title: '创建项目',
+      const formData = reactive({
+        name: '',
+        corpName: '',
+        notes: ''
+      })
+      proxy.$ModalDialog({
+        title: localeInject.t('project.create'),
+        top: '10vh',
         width: '50vw',
+        'show-close': true,
         'close-on-click-modal': false,
-        hideFooter: true,
+        'close-on-press-escape': false,
         renderComponent: {
+          data: formData,
           component: ProjectForm
+        },
+        async onConfirm (instance, context) {
+          const isValid = await instance.validateRules()
+          if (!isValid) return Promise.reject(new Error('error'))
+
+          context.fullLoading = true
+          const { error, data } = await store.dispatch(
+            ProjectModule.getAction('createProject'),
+            formData
+          )
+
+          context.fullLoading = false
+
+          if (error) {
+            return Promise.reject(new Error('error'))
+          }
+
+          store.dispatch(ProjectModule.getAction('getProjectList'))
         }
       })
     }
@@ -118,7 +127,6 @@ export default defineComponent({
 
     return {
       localeInject,
-      handlePrompt,
       handleCreateProject,
       handleSelectSearch
     }
@@ -129,7 +137,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .create-action {
-  padding: 13px 20px;
+  padding: 10px 20px;
   width: 100%;
+  font-weight: 600;
 }
 </style>

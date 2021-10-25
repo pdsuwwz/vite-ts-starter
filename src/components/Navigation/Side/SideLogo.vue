@@ -7,7 +7,7 @@
     >
       <img
         class="side-logo-img"
-        src="@/assets/svg/shinewing-dark.svg"
+        src="@/assets/images/vue.svg"
         alt="商标"
       >
       <h1 class="side-logo-title">
@@ -45,7 +45,7 @@ export default defineComponent({
     height: 100%;
     color: #303133;
     .side-logo-img {
-      height: 32px;
+      width: 40px;
     }
     .side-logo-title {
       height: 32px;

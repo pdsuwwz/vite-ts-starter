@@ -20,6 +20,7 @@ export default {
   },
   project: {
     manageTitle: 'Project management',
+    create: 'New Project',
     name: 'Project name',
     createDate: 'Create date',
     state: 'State',

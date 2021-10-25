@@ -18,7 +18,8 @@ export default {
   },
   project: {
     manageTitle: '项目管理',
-    name: '名称',
+    create: '创建项目',
+    name: '项目名称',
     createDate: '创建日期',
     state: '状态',
     publish: '发布',

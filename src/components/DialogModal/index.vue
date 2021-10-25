@@ -152,7 +152,6 @@ export default defineComponent({
       min-width: 118px;
       background-color: #1e3264;
       color: #fff;
-      background-image: url('@/assets/images/create-project-dialog-left.png');
       background-size: cover;
       background-repeat: no-repeat;
     }
