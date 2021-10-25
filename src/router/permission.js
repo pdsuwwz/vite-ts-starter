@@ -53,7 +53,7 @@ router.beforeEach(async (to, from, next) => {
     return
   }
 
-  ElMessage.error('登录失败，请重新登录')
+  // ElMessage.error('登录失败，请重新登录')
   Cookie.remove('token')
   Cookie.remove('name')
   store.dispatch('UserAccount/setLanguage', {
