@@ -6,7 +6,10 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    
+
+env:
+  VITE_ROUTER_MODE: hash
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,8 +21,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build
-        env:
-          VITE_ROUTER_MODE: hash
         run: yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
