@@ -26,7 +26,7 @@ export default defineComponent({
   setup () {
     const localeInject = useLocaleInject()
 
-    const title = computed(() => localeInject.t('base.sysTitle'))
+    const title = computed(() => localeInject.t('base.systemTitle'))
 
     return {
       title

@@ -2,7 +2,7 @@ import router from '@/router'
 import store from '@/store'
 import Cookie from 'js-cookie'
 import { allowlist } from '@/router/auth-list'
-import { sysTitle } from '@/locales/data'
+import { systemTitle } from '@/locales/data'
 
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -15,7 +15,7 @@ NProgress.configure({
 router.beforeEach(async (to, from, next) => {
   NProgress.start()
 
-  document.title = `${to.meta.title || ''} - ${sysTitle}`
+  document.title = `${to.meta.title || ''} - ${systemTitle}`
 
   console.log('😄😄😄 ', to)
 

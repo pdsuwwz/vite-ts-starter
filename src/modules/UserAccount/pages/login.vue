@@ -5,7 +5,7 @@
         <div class="nav-logo"></div>
         <div class="nav-circle"></div>
         <div class="nav-title">
-          {{ _t('base.sysTitle') }}
+          {{ _t('base.systemTitle') }}
         </div>
       </div>
       <div class="nav-right">

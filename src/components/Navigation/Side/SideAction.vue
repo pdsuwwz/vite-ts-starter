@@ -29,7 +29,7 @@ export default defineComponent({
       proxy.$emit('click')
     }
 
-    const title = computed(() => localeInject.t('base.sysTitle'))
+    const title = computed(() => localeInject.t('base.systemTitle'))
 
     return {
       title,

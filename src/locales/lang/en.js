@@ -1,9 +1,9 @@
-import { sysTitle } from '@/locales/data'
+import { systemTitle } from '@/locales/data'
 
 /* English namespaced */
 export default {
   base: {
-    sysTitle: sysTitle,
+    systemTitle: systemTitle,
     goback: 'Back to the previous page',
     empty: 'No data available'
   },

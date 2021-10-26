@@ -166,7 +166,7 @@ function extractFileNameFromContentDispositionHeader (value) {
   return null
 }
 
-export function downloadFile (boldData, filename = 'shinewing', type) {
+export function downloadFile (boldData, filename = 'test-filename', type) {
   // TODO: https://blog.csdn.net/weixin_42142057/article/details/97655591
   const blob = boldData instanceof Blob
     ? boldData
