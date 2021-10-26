@@ -29,11 +29,10 @@ export const codeMessage = {
   504: '网关超时。'
 }
 
-// 创建axios实例
+// Instance for axios
 const service = axios.create({
-  // api 的 base_url
+  // API from the environment variable
   baseURL: import.meta.env.VITE_BASE_API,
-  // 请求超时时间
   timeout: 15000
 })
 
@@ -167,7 +166,7 @@ function extractFileNameFromContentDispositionHeader (value) {
   return null
 }
 
-export function downloadFile (boldData, filename = 'shinewing', type) {
+export function downloadFile (boldData, filename = 'test-filename', type) {
   // TODO: https://blog.csdn.net/weixin_42142057/article/details/97655591
   const blob = boldData instanceof Blob
     ? boldData

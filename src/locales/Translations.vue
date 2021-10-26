@@ -24,7 +24,7 @@
   </el-dropdown>
 </template>
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, nextTick, ref } from 'vue'
 import { localesMapping } from '@/locales'
 import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
@@ -43,15 +43,17 @@ export default defineComponent({
     const store = useStore()
     const localesList = ref(localesMapping)
     const handleChange = (targetLocaleItem) => {
-      const { localeCode } = targetLocaleItem
-      router.replace({
-        params: {
-          ...route.params,
+      setTimeout(() => {
+        const { localeCode } = targetLocaleItem
+        router.replace({
+          params: {
+            ...route.params,
+            locale: localeCode
+          }
+        })
+        store.dispatch('UserAccount/setLanguage', {
           locale: localeCode
-        }
-      })
-      store.dispatch('UserAccount/setLanguage', {
-        locale: localeCode
+        })
       })
     }
     return {

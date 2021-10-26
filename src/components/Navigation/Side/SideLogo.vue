@@ -7,7 +7,7 @@
     >
       <img
         class="side-logo-img"
-        src="@/assets/svg/shinewing-dark.svg"
+        src="@/assets/images/vue.svg"
         alt="商标"
       >
       <h1 class="side-logo-title">
@@ -18,12 +18,16 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref } from 'vue'
+import { useLocaleInject } from 'element-plus'
 
 export default defineComponent({
   name: 'NavigationSideLogo',
   setup () {
-    const title = ref('信永中和')
+    const localeInject = useLocaleInject()
+
+    const title = computed(() => localeInject.t('base.systemTitle'))
+
     return {
       title
     }
@@ -41,7 +45,7 @@ export default defineComponent({
     height: 100%;
     color: #303133;
     .side-logo-img {
-      height: 32px;
+      width: 40px;
     }
     .side-logo-title {
       height: 32px;

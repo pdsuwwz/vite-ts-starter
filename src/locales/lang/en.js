@@ -1,7 +1,9 @@
+import { systemTitle } from '@/locales/data'
+
 /* English namespaced */
 export default {
   base: {
-    sysTitle: 'Vite Starter',
+    systemTitle: systemTitle,
     goback: 'Back to the previous page',
     empty: 'No data available'
   },
@@ -18,6 +20,7 @@ export default {
   },
   project: {
     manageTitle: 'Project management',
+    create: 'New Project',
     name: 'Project name',
     createDate: 'Create date',
     state: 'State',

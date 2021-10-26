@@ -5,7 +5,7 @@
         <div class="nav-logo"></div>
         <div class="nav-circle"></div>
         <div class="nav-title">
-          {{ _t('base.sysTitle') }}
+          {{ _t('base.systemTitle') }}
         </div>
       </div>
       <div class="nav-right">
@@ -77,8 +77,8 @@ export default defineComponent({
     const inputErrorEmail = ref('')
     const inputErrorPassword = ref('')
     const formData = reactive({
-      email: 'consult@shinewing.com',
-      password: 'shinewing'
+      email: 'vite.admin@gmail.com',
+      password: '123456'
     })
 
     const localeInject = useLocaleInject()

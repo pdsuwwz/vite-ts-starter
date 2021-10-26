@@ -58,6 +58,7 @@ const ProjectModule = {
         error: 0,
         data: {}
       }
+      await sleep(1000)
       return this.filterResponse(res, () => {
         state.projectList.push(JSON.parse(JSON.stringify(projectDetail)))
       })

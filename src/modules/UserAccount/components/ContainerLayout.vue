@@ -201,7 +201,7 @@ export default defineComponent({
 .user-account-container-layout {
   width: 438px;
   margin-right: 80px;
-  padding: 60px 34px;
+  padding: 50px 34px 60px 34px;
   background: #fff;
   box-shadow: 3px 6px 12px 0px rgba(0, 0, 0, 0.15), 1px 4px 8px 0px rgba(0, 0, 0, 0.15);
   border-radius: 6px;

@@ -13,7 +13,8 @@
 </template>
 
 <script>
-import { defineComponent, getCurrentInstance, ref } from 'vue'
+import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
+import { useLocaleInject } from 'element-plus'
 
 export default defineComponent({
   name: 'NavigationSideAction',
@@ -22,10 +23,13 @@ export default defineComponent({
   ],
   setup () {
     const { proxy } = getCurrentInstance()
-    const title = ref('信永中和')
+    const localeInject = useLocaleInject()
+
     function handleClick () {
       proxy.$emit('click')
     }
+
+    const title = computed(() => localeInject.t('base.systemTitle'))
 
     return {
       title,
