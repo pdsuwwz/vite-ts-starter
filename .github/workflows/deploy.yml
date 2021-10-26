@@ -19,6 +19,8 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
+        env:
+          VITE_ROUTER_MODE: hash
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
