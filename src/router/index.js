@@ -5,7 +5,7 @@ import {
 } from 'vue-router'
 import routes from './routes'
 
-const history = import.meta.env.VITE_ROUTER_MODE === 'hash'
+const history = process.env.VITE_ROUTER_MODE === 'hash'
   ? createWebHashHistory()
   : createWebHistory()
 
