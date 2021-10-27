@@ -8,6 +8,7 @@
   "scripts": {
     "serve": "vite --host",
     "build": "vite build",
+    "deploy:gh-pages": "cross-env VITE_ROUTER_MODE=hash yarn build",
     "preview": "vite preview"
   },
   "keywords": [

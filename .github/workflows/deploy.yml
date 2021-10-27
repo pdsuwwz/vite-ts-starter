@@ -16,16 +16,11 @@ jobs:
         with:
           node-version: 12.20.x
 
-      - name: Create env file
-        run: |
-          touch .env.local
-          echo VITE_ROUTER_MODE=hash >> .env.local
-
       - name: Install dependencies
         run: yarn install
 
       - name: Build
-        run: yarn build
+        run: yarn deploy:gh-pages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
