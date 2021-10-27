@@ -15,7 +15,11 @@ const htmlPlugin = () => {
     }
   }
 }
+
 export default defineConfig({
+  base: process.env.VITE_ROUTER_MODE === 'hash'
+    ? ''
+    : '/',
   plugins: [
     vue(),
     htmlPlugin(),
