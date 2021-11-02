@@ -2,8 +2,7 @@
   "name": "vite-starter",
   "description": "Starter template for Vue 3",
   "version": "0.0.1",
-  "private": true,
-  "author": "Wisdom",
+  "author": "Wisdom <pdsu.wwz@foxmail.com>",
   "license": "MIT",
   "scripts": {
     "serve": "vite --host",
