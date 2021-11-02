@@ -16,11 +16,3 @@ Local Development
 ```bash
 yarn serve
 ```
-
-## Deploy
-
-Deploy App to GitHub Pages
-
-```bash
-yarn deploy:gh-pages
-```
