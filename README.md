@@ -7,6 +7,12 @@
 
 🐟 Starter template for Vue 3
 
+**Live demo:** [Vite Starter](https://pdsuwwz.github.io/vite-starter)
+
+## Environment Support
+
+* Vue 3.x
+
 ## Install
 
 Install node dependencies in all packages
