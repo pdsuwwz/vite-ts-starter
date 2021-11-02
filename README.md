@@ -5,8 +5,6 @@
 [![Author](https://img.shields.io/badge/Author-pdsuwwz-9cf)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/vite-starter?color=blue)](https://github.com/pdsuwwz/vite-starter/blob/master/LICENSE)
 
-
-
 🐟 Starter template for Vue 3
 
 ## Install
