@@ -217,9 +217,11 @@ export default defineComponent({
   }
   .input-icon-prefix {
     padding-left: 6px;
+    height: 100%;
   }
   .input-icon-lock {
     cursor: pointer;
+    height: 100%;
   }
   .form-title {
     display: flex;

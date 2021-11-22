@@ -27,16 +27,6 @@
               <span class="header-title">
                 {{ headerTitle }}
               </span>
-              <span
-                v-if="headerDescText"
-                class="header-desc"
-                :class="headerDescType"
-              >
-                <i
-                  class="el-icon-warning"
-                ></i>
-                <span>{{ headerDescText }}</span>
-              </span>
             </div>
             <div
               class="right-close"
@@ -82,10 +72,6 @@ export default defineComponent({
       default: false
     },
     headerTitle: {
-      type: String,
-      default: ''
-    },
-    headerDescText: {
       type: String,
       default: ''
     },
@@ -174,19 +160,6 @@ export default defineComponent({
             font-size: 18px;
             font-weight: 500;
             color: #303133;
-          }
-          .header-desc {
-            font-size: 14px;
-            font-weight: 400;
-            padding-left: 12px;
-            color: #606266;
-            &.warning {
-              color: #faad14;
-            }
-            i {
-              font-size: 15px;
-              padding-right: 5px;
-            }
           }
         }
         .right-close {

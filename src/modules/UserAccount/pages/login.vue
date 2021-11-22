@@ -28,9 +28,6 @@
           <el-icon>
             <Promotion />
           </el-icon>
-          <!-- <i
-            class="el-icon-s-promotion"
-          ></i> -->
         </template>
       </UserAccountContainerLayout>
     </div>

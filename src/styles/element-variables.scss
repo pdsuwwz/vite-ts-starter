@@ -10,33 +10,41 @@ $--color-warning: #FAAD14;
 $--color-danger: #FA5555;
 $--color-info: #909399;
 
-// $--button-font-weight: 400;
 
-// $--color-text-regular: #1f2d3d;
-// $--border-color-light: #dfe4ed;
-// $--border-color-lighter: #e6ebf5;
-// $--table-border: 1px solid #dfe6ec;
-
-$--colors: (
-  "primary": (
-    "base": #4686FF,
+// 按需导入，重写覆盖自己所需样式
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": (
+      "base": $--color-primary,
+    ),
+    "success": (
+      "base":  $--color-success,
+    ),
+    "warning": (
+      "base":  $--color-warning,
+    ),
+    "danger": (
+      "base":  $--color-danger,
+    ),
+    "info": (
+      "base":  $--color-info,
+    ),
+    
   ),
-  "success": (
-    "base": #52C41A,
+  $text-color: (
+    'primary': red,
+    'regular': #606266,
+    'secondary': #909399,
+    'placeholder': #c0c4cc,
   ),
-  "warning": (
-    "base": #FAAD14,
-  ),
-  "danger": (
-    "base": #FA5555,
-  ),
-  "error": (
-    "base": #db2828,
-  ),
-  "info": (
-    "base": #909399,
+  $border-radius: (
+    'base': 4px,
+    'small': 2px,
+    'round': 20px,
+    'circle': 100%,
   ),
 );
+
 
 // :export {
 //   colorPrimary: $--color-primary;
