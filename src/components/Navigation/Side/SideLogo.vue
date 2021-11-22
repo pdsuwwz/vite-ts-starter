@@ -50,7 +50,7 @@ export default defineComponent({
     .side-logo-title {
       height: 32px;
       line-height: 32px;
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 600;
       margin-left: 12px;
     }

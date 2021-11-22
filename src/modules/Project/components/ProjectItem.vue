@@ -57,10 +57,10 @@
             v-if="!isLoading"
             :icon="getActionIcon"
           />
-          <i
+          <Loading
             v-else
-            class="el-icon-loading"
-          ></i>
+            class="transform-rotate360"
+          />
         </span>
         <span class="project-item-action__status">
           {{ dataset.isPublished ? _t('project.stop') : _t('project.publish') }}
@@ -72,6 +72,7 @@
 
 <script>
 import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
+import { Loading } from '@element-plus/icons'
 
 import { sleep } from '@/utils/request'
 
@@ -80,6 +81,9 @@ import { sleep } from '@/utils/request'
 
 export default defineComponent({
   name: 'ProjectItem',
+  components: {
+    Loading
+  },
   props: {
     dataset: {
       type: Object,

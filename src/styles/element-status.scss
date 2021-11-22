@@ -23,16 +23,16 @@
   color: #606266 !important;
 }
 
-.el-message .el-icon-success {
+.el-message .el-message-icon--success {
   color: $--color-success;
 }
-.el-message .el-icon-warning {
+.el-message .el-message-icon--warning {
   color: $--color-warning;
 }
-.el-message .el-icon-info {
+.el-message .el-message-icon--info {
   color: $--color-primary;
 }
-.el-message .el-icon-error {
+.el-message .el-message-icon--error {
   color: $--color-danger;
 }
 
@@ -80,4 +80,16 @@
 }
 textarea {
   font-family: Arial;
+}
+
+.transform-rotate360 {
+  animation: rotate-360 3s linear infinite;
+  @keyframes rotate-360 {
+    from{
+      transform: rotate(0deg)
+    }
+    to{
+      transform: rotate(360deg)
+    }
+  }
 }
