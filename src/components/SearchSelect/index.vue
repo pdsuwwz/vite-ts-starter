@@ -15,9 +15,9 @@
       v-if="loading"
       #suffix
     >
-      <i
-        class="search-loading-icon el-input__icon el-icon-loading"
-      ></i>
+      <el-icon class="search-loading-icon">
+        <loading />
+      </el-icon>
     </template>
     <template
       v-else
@@ -42,11 +42,15 @@
 
 <script>
 import { defineComponent, getCurrentInstance, nextTick, ref, watch } from 'vue'
+import { Loading } from '@element-plus/icons'
 
 import { debounce } from 'lodash'
 
 export default defineComponent({
   name: 'SearchSelect',
+  components: {
+    Loading
+  },
   props: {
     modelValue: {
       type: String,
@@ -162,6 +166,13 @@ export default defineComponent({
   .search-loading-icon {
     color: #606266;
     font-size: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+    svg {
+      animation: rotate-360 3s linear infinite;
+    }
   }
   .search-icon {
     color: #606266;

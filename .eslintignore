@@ -1,6 +1,7 @@
 build/*.js
 config/*.js
-node_modules/*.js
+node_modules
 public/stat_log.js
+src/assets/fonts/iconfont.js
 src/utils/wysihtml5.js
 src/utils/bus.js

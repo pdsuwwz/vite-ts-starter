@@ -27,12 +27,11 @@
           color: '#606266'
         }"
       >
-        <i
-          class="el-icon-warning"
+        <WarningFilled
           :style="{
             paddingRight: '6px',
           }"
-        ></i>
+        />
         <span>{{ headerDescText }}</span>
       </span>
     </template>
@@ -78,8 +77,13 @@ import {
   reactive
 } from 'vue'
 
+import { WarningFilled } from '@element-plus/icons'
+
 export default defineComponent({
   name: 'Modal',
+  components: {
+    WarningFilled
+  },
   inheritAttrs: false,
   props: {
     title: {
@@ -212,6 +216,8 @@ export default defineComponent({
   width: 500px;
   border-radius: 8px;
   .el-dialog__header {
+    display: flex;
+    align-items: center;
     height: 54px;
     border-bottom: 1px solid #DCDFE6FF;
     .modal-header__icon {
@@ -223,6 +229,13 @@ export default defineComponent({
       font-size: 18px;
       font-weight: 500;
       color: #303133;
+    }
+    .header-desc {
+      display: flex;
+      align-items: center;
+      svg {
+        height: 17px;
+      }
     }
   }
   .el-dialog__body {

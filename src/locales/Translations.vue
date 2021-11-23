@@ -8,7 +8,9 @@
     @command="handleChange"
   >
     <span>
-      Translations<i class="el-icon-arrow-down el-icon--right"></i>
+      Translations<el-icon class="el-icon--right">
+        <ArrowDown />
+      </el-icon>
     </span>
     <template #dropdown>
       <el-dropdown-menu>
@@ -29,8 +31,13 @@ import { localesMapping } from '@/locales'
 import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
 
+import { ArrowDown } from '@element-plus/icons'
+
 export default defineComponent({
   name: 'Translations',
+  components: {
+    ArrowDown
+  },
   props: {
     dark: {
       type: Boolean,
@@ -74,7 +81,8 @@ export default defineComponent({
     color: #495164;
   }
   .el-dropdown-selfdefine {
-    cursor: pointer;
+    display: flex;
+    align-items: center;
     &:hover {
       color: $--color-primary;
     }

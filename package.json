@@ -8,7 +8,9 @@
     "serve": "vite --host",
     "build": "vite build",
     "deploy:gh-pages": "cross-env VITE_ROUTER_MODE=hash yarn build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ./src --ext .js,.jsx",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx ./src"
   },
   "keywords": [
     "vue",
@@ -37,9 +39,9 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "~3.0.0-3",
-    "axios": "^0.23.0",
-    "echarts": "^5.2.1",
-    "element-plus": "^1.1.0-beta.8",
+    "axios": "^0.24.0",
+    "echarts": "^5.2.2",
+    "element-plus": "^1.2.0-beta.3",
     "js-cookie": "^3.0.1",
     "nprogress": "^0.2.0",
     "rollup-plugin-terser": "^7.0.2",
@@ -50,24 +52,24 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/eslint-parser": "^7.15.8",
-    "@vitejs/plugin-vue": "^1.9.3",
-    "@vue/cli-plugin-babel": "~4.5.14",
-    "@vue/compiler-sfc": "^3.2.20",
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@vitejs/plugin-vue": "^1.9.4",
+    "@vue/cli-plugin-babel": "~4.5.15",
+    "@vue/compiler-sfc": "^3.2.22",
     "@vue/eslint-config-standard": "^6.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.21.0",
-    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.19.1",
     "node-sass": "^4.5.3",
-    "sass": "^1.43.2",
+    "sass": "^1.43.4",
     "sass-loader": "8.0.0",
     "style-resources-loader": "^1.4.1",
-    "vite": "^2.6.7",
+    "vite": "^2.6.14",
     "vue-cli-plugin-style-resources-loader": "^0.1.4"
   }
 }
