@@ -5,7 +5,7 @@
 [![Author](https://img.shields.io/badge/Author-Wisdom-9cf)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/vite-starter?color=blue)](https://github.com/pdsuwwz/vite-starter/blob/master/LICENSE)
 
-🐟 Starter template for Vue 3
+🐟 Starter template for Vite 2.x + Vue 3.x
 
 **Live demo:** [Vite Starter](https://pdsuwwz.github.io/vite-starter)
 
