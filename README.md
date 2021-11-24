@@ -4,7 +4,7 @@
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/pdsuwwz/vite-starter/Deploy%20for%20gh%20pages/main)](https://github.com/pdsuwwz/vite-starter/deployments/activity_log?environment=github-pages)
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 [![Author](https://img.shields.io/badge/Author-Wisdom-9cf)](https://github.com/pdsuwwz)
-[![License](https://img.shields.io/github/license/pdsuwwz/vite-starter?color=blue)](https://github.com/pdsuwwz/vite-starter/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/pdsuwwz/vite-starter?color=blue)](https://github.com/pdsuwwz/vite-starter/blob/main/LICENSE)
 
 🐟 Starter template for Vite 2.x + Vue 3.x
 
@@ -28,4 +28,18 @@ Local Development
 
 ```bash
 yarn serve
+```
+
+## Test
+
+Unit Testing
+
+```bash
+yarn test
+```
+
+Test code coverage
+
+```bash
+yarn test:coverage
 ```
