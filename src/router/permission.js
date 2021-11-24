@@ -6,7 +6,6 @@ import { systemTitle } from '@/locales/data'
 
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-import { ElMessage } from 'element-plus'
 
 NProgress.configure({
   showSpinner: false
