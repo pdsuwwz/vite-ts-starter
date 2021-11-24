@@ -1,5 +1,5 @@
 module.exports = {
-  testEnvironment: 'jsdom',
+  testEnvironment: 'node',
 
   moduleFileExtensions: ['js', 'vue'],
   moduleNameMapper: {
@@ -9,12 +9,13 @@ module.exports = {
   testMatch: ['<rootDir>/__tests__/**/*.spec.js'],
   transformIgnorePatterns: ['/node_modules/'],
   transform: {
-    '^.+\\.js$': 'babel-jest',
+    '^.+\\.js$': '@sucrase/jest-plugin',
     '^.+\\.(vue)$': '@vue/vue3-jest',
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub'
   },
 
   coverageDirectory: 'coverage',
+  coverageReporters: ['html', 'lcov', 'text'],
   coverageProvider: 'v8',
   collectCoverageFrom: [
     // 'src/**/*.vue',
