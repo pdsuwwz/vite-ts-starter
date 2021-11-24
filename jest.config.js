@@ -3,15 +3,18 @@ module.exports = {
 
   moduleFileExtensions: ['js', 'vue'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(png|jpeg|jpg|gif)$': 'identity-obj-proxy',
+    '\\.(ttf|woff|woff2)$': 'identity-obj-proxy',
+    'iconfont\\.js$': 'identity-obj-proxy'
   },
 
   testMatch: ['<rootDir>/__tests__/**/*.spec.js'],
   transformIgnorePatterns: ['/node_modules/'],
   transform: {
     '^.+\\.js$': '@sucrase/jest-plugin',
-    '^.+\\.(vue)$': '@vue/vue3-jest',
-    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub'
+    '^.+\\.(vue)$': '@vue/vue3-jest'
   },
 
   coverageDirectory: 'coverage',
