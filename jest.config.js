@@ -1,7 +1,7 @@
 module.exports = {
   testEnvironment: 'node',
-
-  moduleFileExtensions: ['js', 'vue'],
+  preset: 'ts-jest',
+  moduleFileExtensions: ['js', 'ts', 'vue'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -10,10 +10,10 @@ module.exports = {
     'iconfont\\.js$': 'identity-obj-proxy'
   },
 
-  testMatch: ['<rootDir>/__tests__/**/*.spec.js'],
+  testMatch: ['<rootDir>/__tests__/**/*.spec.ts'],
   transformIgnorePatterns: ['/node_modules/'],
   transform: {
-    '^.+\\.js$': '@sucrase/jest-plugin',
+    '^.+\\.(js|ts)$': '@sucrase/jest-plugin',
     '^.+\\.(vue)$': '@vue/vue3-jest'
   },
 

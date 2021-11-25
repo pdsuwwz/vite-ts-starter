@@ -1,8 +1,7 @@
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { terser } from 'rollup-plugin-terser'
-
-const path = require('path')
 
 const htmlPlugin = () => {
   return {
@@ -10,7 +9,7 @@ const htmlPlugin = () => {
     transformIndexHtml (html) {
       return html.replace(
         /<title>(.*?)<\/title>/,
-        '<title>Vite Starter</title>'
+        '<title>Vite TS Starter</title>'
       )
     }
   }

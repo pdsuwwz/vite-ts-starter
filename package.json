@@ -1,14 +1,14 @@
 {
-  "name": "vite-starter",
-  "description": "🐟 Starter template for Vue 3",
+  "name": "vite-ts-starter",
+  "description": "🐬  A Starter template built on Vite 2.x + Vue 3.x + Typescript",
   "version": "0.0.1",
   "author": "Wisdom <pdsu.wwz@foxmail.com>",
   "license": "MIT",
   "scripts": {
     "serve": "vite --host",
-    "build": "vite build",
+    "build": "vue-tsc --noEmit && vite build",
     "deploy:gh-pages": "cross-env VITE_ROUTER_MODE=hash yarn build",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint:fix": "eslint --fix --cache --ext .js,.jsx ./src",
     "test": "jest",
@@ -20,6 +20,7 @@
     "vue-next",
     "vite",
     "jest",
+    "typescript",
     "vue3-jest",
     "admin",
     "example",
@@ -32,10 +33,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pdsuwwz/vite-starter"
+    "url": "git+https://github.com/pdsuwwz/vite-ts-starter"
   },
   "bugs": {
-    "url": "https://github.com/pdsuwwz/vite-starter/issues"
+    "url": "https://github.com/pdsuwwz/vite-ts-starter/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -60,6 +61,10 @@
     "@babel/eslint-parser": "^7.16.3",
     "@babel/preset-env": "^7.16.4",
     "@sucrase/jest-plugin": "^2.2.0",
+    "@types/jest": "^27.0.3",
+    "@types/js-cookie": "^3.0.1",
+    "@types/node": "^16.11.10",
+    "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^1.9.4",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/compiler-sfc": "^3.2.22",
@@ -80,7 +85,10 @@
     "sass": "^1.43.4",
     "sass-loader": "8.0.0",
     "style-resources-loader": "^1.4.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.5.2",
     "vite": "^2.6.14",
-    "vue-cli-plugin-style-resources-loader": "^0.1.4"
+    "vue-cli-plugin-style-resources-loader": "^0.1.4",
+    "vue-tsc": "^0.29.6"
   }
 }

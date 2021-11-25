@@ -1,4 +1,4 @@
-name: Deploy for gh pages
+name: gh-pages
 
 on:
   # set triggers here, like on push or on release
