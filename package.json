@@ -87,7 +87,6 @@
     "ts-jest": "^27.0.7",
     "typescript": "^4.5.2",
     "vite": "^2.6.14",
-    "vue-cli-plugin-style-resources-loader": "^0.1.4",
-    "vue-tsc": "^0.29.6"
+    "vue-cli-plugin-style-resources-loader": "^0.1.4"
   }
 }
