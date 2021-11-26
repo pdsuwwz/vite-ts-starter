@@ -10,7 +10,6 @@ const history = process.env.VITE_ROUTER_MODE === 'hash'
   : createWebHistory()
 
 export default createRouter({
-  base: '/',
   history,
   routes
 })
