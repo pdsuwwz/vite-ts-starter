@@ -12,9 +12,9 @@
     "allowSyntheticDefaultImports": true,
     "lib": ["esnext", "dom"],
     "types": [
-      "@types/node",
       "vite/client",
-      "jest"
+      "jest",
+      "node"
     ],
     "baseUrl": "./",
     "paths": {

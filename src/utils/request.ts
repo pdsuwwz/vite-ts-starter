@@ -1,15 +1,25 @@
-import axios from 'axios'
+import axios, { AxiosInstance } from 'axios'
 import Cookie from 'js-cookie'
 
-import { camelizeKeys, decamelizeKeys } from './camelCase'
-import Router from '../router/index'
+import { camelizeKeys, decamelizeKeys } from '@/utils/camelCase'
+import Router from '@/router'
 
 // redirect error
-function errorRedirect (url) {
+function errorRedirect (url: string) {
   Router.push(`/${url}`)
 }
+
+export interface RespData {
+  success?: boolean
+  errorCode?: number
+  error?: number | string | null
+  msg?: string
+  data?: any
+  [key: string]: any
+}
+
 // code Message
-export const codeMessage = {
+export const codeMessage: any = {
   // 200: '服务器成功返回请求的数据。',
   200: 'The server successfully returned the requested data.',
   // 201: '新建或修改数据成功。',
@@ -47,7 +57,7 @@ export const codeMessage = {
 }
 
 // Instance for axios
-const service = axios.create({
+const service: AxiosInstance = axios.create({
   // API from the environment variable
   baseURL: import.meta.env.VITE_BASE_API,
   timeout: 15000
@@ -74,7 +84,12 @@ service.interceptors.request.use(
     if (request.url === '/login') {
       return request
     }
-    request.headers.Authorization = token
+
+    Object.defineProperty(request.headers, 'Authorization', {
+      enumerable: true,
+      value: token as string
+    })
+
     return request
   },
   error => {
@@ -106,7 +121,7 @@ service.interceptors.response.use(
       return new Promise(resolve => {
         const reader = new FileReader()
         reader.onload = () => {
-          response.data = JSON.parse(reader.result)
+          response.data = JSON.parse(reader.result as string)
           resolve(camelizeKeys(response.data))
         }
 
@@ -159,7 +174,7 @@ export function sleep (time = 0) {
   })
 }
 
-function extractFileNameFromContentDispositionHeader (value) {
+function extractFileNameFromContentDispositionHeader (value: string) {
   const patterns = [
     /filename\*=[^']+'\w*'"([^"]+)";?/i,
     /filename\*=[^']+'\w*'([^;]+);?/i,
@@ -167,7 +182,7 @@ function extractFileNameFromContentDispositionHeader (value) {
     /filename=([^;]*);?/i
   ]
 
-  let responseFilename
+  let responseFilename: any
   patterns.some(regex => {
     responseFilename = regex.exec(value)
     return responseFilename !== null
@@ -183,7 +198,7 @@ function extractFileNameFromContentDispositionHeader (value) {
   return null
 }
 
-export function downloadFile (boldData, filename = 'test-filename', type) {
+export function downloadFile (boldData: any, filename = 'test-filename', type: string) {
   // TODO: https://blog.csdn.net/weixin_42142057/article/details/97655591
   const blob = boldData instanceof Blob
     ? boldData
@@ -201,10 +216,10 @@ export function downloadFile (boldData, filename = 'test-filename', type) {
   document.body.removeChild(link)
 }
 
-export function useResHeadersAPI (headers, resData) {
+export function useResHeadersAPI (headers: any, resData: any) {
   const disposition = headers['content-disposition']
   if (disposition) {
-    let filename = ''
+    let filename: any = ''
     /**
      * TODO: See
      * https://stackoverflow.com/a/40940790/13202554
