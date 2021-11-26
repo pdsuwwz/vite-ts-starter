@@ -1,17 +1,19 @@
 import { nextTick } from 'vue'
 
-import { Loading } from 'element-plus'
+import { ElLoading, ILoadingInstance, ILoadingOptions } from 'element-plus'
 
 export class ServiceLoading {
-  static instance = null
+  static instance: ILoadingInstance | null = null
 
-  static show (options) {
-    this.instance = Loading.service(options)
+  static show (options: ILoadingOptions) {
+    this.instance = ElLoading.service(options)
   }
 
   static hide () {
     nextTick(() => {
-      this.instance.close()
+      if (this.instance) {
+        this.instance.close()
+      }
     })
   }
 }

@@ -40,11 +40,12 @@
   </el-autocomplete>
 </template>
 
-<script>
-import { defineComponent, getCurrentInstance, nextTick, ref, watch } from 'vue'
+<script lang="ts">
+import { ComponentPublicInstance, defineComponent, getCurrentInstance, nextTick, PropType, ref, watch } from 'vue'
 import { Loading } from '@element-plus/icons'
 
 import { debounce } from 'lodash'
+import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({
   name: 'SearchSelect',
@@ -73,7 +74,7 @@ export default defineComponent({
     'select'
   ],
   setup (props) {
-    const { proxy } = getCurrentInstance()
+    const { proxy } = useCurrentInstance()
 
     const loading = ref(false)
     const searchValue = ref('')
@@ -102,7 +103,7 @@ export default defineComponent({
     }
   },
   methods: {
-    keydown (event) {
+    keydown (event: KeyboardEvent) {
       // 阻止中文输入法下的回车事件，避免触发 select 事件
       if (event.keyCode === 229) {
         event.returnValue = false
@@ -113,23 +114,23 @@ export default defineComponent({
         event.returnValue = false
       }
     },
-    getExecText (tags) {
+    getExecText (tags: string) {
       return tags.replace(
         // eslint-disable-next-line prefer-regex-literals
         new RegExp(/(<([^>]+)>)/, 'gi'),
         ''
       )
     },
-    handleSelect ({ value }) {
+    handleSelect ({ value }: any) {
       this.$emit('select', value)
     },
-    async handleSearch (queryString, callback) {
+    async handleSearch (queryString: string, callback: any) {
       const query = queryString
         .toLowerCase()
         // eslint-disable-next-line prefer-regex-literals
         .replace(new RegExp(/[-[\]{}()*+?.,\\^$|#\s]/g), '\\$&')
 
-      let list = []
+      let list: any[] = []
       if (!query) {
         callback(list)
         return
@@ -144,7 +145,7 @@ export default defineComponent({
         item.label = item.label
           .replace(
             new RegExp(query, 'gi'),
-            (match) => {
+            (match: string) => {
               return `<span class="search-select-highlight">${match}</span>`
             }
           )

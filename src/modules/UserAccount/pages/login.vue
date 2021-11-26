@@ -34,7 +34,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 
 import {
   computed,
@@ -56,6 +56,7 @@ import Translations from '@/locales/Translations.vue'
 import Cookie from 'js-cookie'
 import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
+import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({
   name: 'UserAccountLogin',
@@ -65,7 +66,8 @@ export default defineComponent({
     Translations
   },
   setup () {
-    const { proxy } = getCurrentInstance()
+    const { proxy } = useCurrentInstance()
+
     const store = useStore()
     const route = useRoute()
     const router = useRouter()
@@ -92,7 +94,7 @@ export default defineComponent({
             },
             text: localeInject.t('login.signin'),
             on: {
-              click (refForm) {
+              click (refForm: any) {
                 proxy.onSubmit(refForm)
               }
             }
@@ -149,10 +151,10 @@ export default defineComponent({
       isLoading.value = loading
     }
 
-    function onSubmit (refForm) {
+    function onSubmit (refForm: any) {
       if (isLoading.value) return
 
-      refForm.validate(async valid => {
+      refForm.validate(async (valid: boolean) => {
         if (!valid) return
         inputErrorEmail.value = ''
         inputErrorPassword.value = ''

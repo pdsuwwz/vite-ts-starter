@@ -6,11 +6,11 @@
   </el-config-provider>
 </template>
 
-<script>
+<script lang="ts">
 import { ElConfigProvider } from 'element-plus'
 import { useRoute, useRouter } from 'vue-router'
 import { computed, watch } from 'vue'
-import { useStore } from 'vuex'
+import { Store, useStore } from 'vuex'
 
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import en from 'element-plus/lib/locale/lang/en'
@@ -18,7 +18,7 @@ import en from 'element-plus/lib/locale/lang/en'
 import selfEn from '@/locales/lang/en'
 import selfZhHans from '@/locales/lang/zh-hans'
 
-const useLanguage = (store, route) => {
+const useLanguage = (store: Store<any>) => {
   const currentLocale = computed(() => {
     let locale = null
 
@@ -66,7 +66,7 @@ export default {
     )
 
     return {
-      ...useLanguage(store, route)
+      ...useLanguage(store)
     }
   }
 }

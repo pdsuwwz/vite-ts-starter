@@ -21,11 +21,11 @@
   </el-tooltip>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Tooltip',
+  name: 'TooltipCustom',
   props: {
     content: {
       type: String,

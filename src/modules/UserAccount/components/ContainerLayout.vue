@@ -83,13 +83,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 
 import { defineComponent, getCurrentInstance, ref } from 'vue'
 
 import { omit } from 'lodash'
 
 import { isFunction } from '@/utils/type'
+import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({
   name: 'UserAccountContainerLayout',
@@ -133,14 +134,15 @@ export default defineComponent({
     'on-submit'
   ],
   setup () {
-    const { proxy } = getCurrentInstance()
+    const { proxy } = useCurrentInstance()
     const showPassword = ref(false)
+    const boxForm = ref()
 
     function tooglePassword () {
       showPassword.value = !showPassword.value
     }
-    function getInputItemAttrs (formItem) {
-      const attrs = {}
+    function getInputItemAttrs (formItem: any) {
+      const attrs: any = {}
       const isPassword = formItem.type === 'password'
       if (isPassword) {
         attrs.type = showPassword.value ? 'text' : 'password'
@@ -155,7 +157,7 @@ export default defineComponent({
       }
     }
 
-    function getFormItemAttrs (attrs) {
+    function getFormItemAttrs (attrs: any) {
       const rules = isFunction(attrs.rules)
         ? attrs.rules.call(proxy)
         : ''
@@ -166,24 +168,25 @@ export default defineComponent({
       }
     }
 
-    function getActionItemEvent (on) {
-      const onEvent = {}
+    function getActionItemEvent (on: any) {
+      const onEvent: any = {}
       Object.keys(on).forEach((onItem) => {
-        onEvent[onItem] = on[onItem].bind(proxy.$parent, proxy.$refs.boxForm)
+        onEvent[onItem] = on[onItem].bind(proxy.$parent, boxForm.value)
       })
       return onEvent
     }
 
-    function handleClickLink (link) {
-      link.click.call(proxy.$parent, proxy.$refs.boxForm)
+    function handleClickLink (link: any) {
+      link.click.call(proxy.$parent, boxForm.value)
     }
 
     function onSubmit () {
-      proxy.$emit('on-submit', proxy.$refs.boxForm)
+      proxy.$emit('on-submit', boxForm.value)
     }
 
     return {
       showPassword,
+      boxForm,
 
       tooglePassword,
       getInputItemAttrs,

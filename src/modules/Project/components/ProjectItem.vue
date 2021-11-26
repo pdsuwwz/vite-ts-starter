@@ -20,7 +20,7 @@
               <span
                 @click.prevent
               >
-                <Tooltip
+                <TooltipCustom
                   v-if="dataset.notes"
                   :content="dataset.notes"
                 >
@@ -28,7 +28,7 @@
                     icon="iconhelp"
                     class="corpname-notes"
                   />
-                </Tooltip>
+                </TooltipCustom>
               </span>
             </div>
             <p class="project-item__name-desc__fullname text_nowrap">
@@ -70,11 +70,12 @@
   </router-link>
 </template>
 
-<script>
+<script lang="ts">
 import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
 import { Loading } from '@element-plus/icons'
 
 import { sleep } from '@/utils/request'
+import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 // TODO: Hide it temporarily
 // import ProjectModule from '@/modules/Project/store'
@@ -93,7 +94,7 @@ export default defineComponent({
     }
   },
   setup (props) {
-    const { proxy } = getCurrentInstance()
+    const { proxy } = useCurrentInstance()
     const isLoading = ref(false)
     const getActionIcon = computed(() => {
       return props.dataset.isPublished

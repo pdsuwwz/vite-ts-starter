@@ -1,30 +1,27 @@
-<script>
-// import {
-//   requiredRules,
-//   validatorRules,
-//   imageListRules,
-//   requiredRadioRules
-// } from '@/utils/formRules'
+<script lang="ts">
+import { defineComponent } from 'vue'
+
 import {
   requiredRules,
   validatorRules,
   imageListRules,
   requiredRadioRules
 } from '@/utils/formRules'
-export default {
+export default defineComponent({
+  // name: 'RulesForm',
   methods: {
-    getValidatorRules (...args) {
+    getValidatorRules (...args: any[]) {
       return validatorRules(...args)
     },
-    getRequiredRules (...args) {
+    getRequiredRules (...args: any[]) {
       return requiredRules(...args)
     },
-    getRequiredRadioRules (...args) {
+    getRequiredRadioRules (...args: any[]) {
       return requiredRadioRules(...args)
     },
-    getImageListRules (...args) {
+    getImageListRules (...args: any[]) {
       return imageListRules(...args)
     }
   }
-}
+})
 </script>

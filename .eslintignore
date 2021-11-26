@@ -1,6 +1,8 @@
-build/*.js
-config/*.js
+build
+dist
+tmp
 node_modules
+coverage
 public/stat_log.js
 src/assets/fonts/iconfont.js
 src/utils/wysihtml5.js

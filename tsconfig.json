@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -9,6 +17,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "lib": ["esnext", "dom"],
     "types": [

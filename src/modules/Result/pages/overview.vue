@@ -9,7 +9,7 @@
   </LayoutSection>
 </template>
 
-<script>
+<script lang="ts">
 import { computed, defineComponent } from 'vue'
 
 import ResultStore from '@/modules/Result/store'

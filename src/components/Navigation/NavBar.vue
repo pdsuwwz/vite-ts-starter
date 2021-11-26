@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
 import Translations from '@/locales/Translations.vue'
 import NavigationSideAction from '@/components/Navigation/Side/SideAction.vue'

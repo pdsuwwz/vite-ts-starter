@@ -1,10 +1,8 @@
 
-import RulesForm from '@/mixins/RulesForm/index.vue'
-import Emitter from '@/mixins/emitter'
+import RulesForm from '@/mixins/RulesForm.vue'
 
 export default {
   mixins: [
-    RulesForm,
-    Emitter
+    RulesForm
   ]
 }

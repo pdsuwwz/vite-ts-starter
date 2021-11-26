@@ -11,7 +11,7 @@
   </ul>
 </template>
 
-<script>
+<script lang="ts">
 import { useLocaleInject } from 'element-plus'
 import { computed, defineComponent, reactive } from 'vue'
 

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // import {
 //   regexExtraSpace
 // } from '@/utils/regularExpression'
@@ -5,7 +7,11 @@ import {
   regexExtraSpace
 } from '@/utils/regularExpression'
 
-function validatorRules (validator, trigger = '', params) {
+function validatorRules(
+  validator?: any,
+  trigger = '',
+  params?: any
+): any {
   const rule = {
     required: true,
     trigger,
@@ -21,7 +27,7 @@ function requiredRules (params = {}) {
     message: '不能为空'
   }, params)
 
-  return validatorRules((rule, value, callback) => {
+  return validatorRules((rule: any, value: string, callback: any) => {
     value = value && value.trim()
     if (!value) {
       callback(new Error(message))
@@ -40,7 +46,7 @@ function requiredRadioRules (params = {}) {
     trigger: 'change',
     message: '不能为空'
   }, params)
-  return validatorRules((rule, value, callback) => {
+  return validatorRules((rule: any, value: string, callback: any) => {
     if (['boolean', 'number'].includes(typeof value)) {
       callback()
     } else if (value === '' || !value.replace(new RegExp(regexExtraSpace), '')) {
@@ -50,7 +56,7 @@ function requiredRadioRules (params = {}) {
 }
 function imageListRules (errMsg = '请上传全部图片') {
   const errSingle = '请选择一张图片'
-  const validator = (rule, value, callback) => {
+  const validator = (rule: any, value: any[], callback: any) => {
     if (!value) {
       callback(new Error(errSingle))
     } else if (Array.isArray(value) && value.some((img) => !img.url)) {

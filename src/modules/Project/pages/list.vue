@@ -41,7 +41,7 @@
   </LayoutArea>
 </template>
 
-<script>
+<script lang="ts">
 import { useStore } from 'vuex'
 import {
   computed,
@@ -64,6 +64,7 @@ import ProjectTableBody from '@/modules/Project/components/TableBody.vue'
 
 import SearchCorporation from '@/components/SearchSelect/SearchCorporation.vue'
 import { sleep } from '@/utils/request'
+import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({
   name: 'ProjectList',
@@ -76,7 +77,7 @@ export default defineComponent({
   },
   // https://github.com/vuejs/vue-next/issues/3649
   setup () {
-    const { proxy } = getCurrentInstance()
+    const { proxy } = useCurrentInstance()
     const store = useStore()
     const localeInject = useLocaleInject()
 
@@ -117,7 +118,7 @@ export default defineComponent({
         }
       })
     }
-    function handleSelectSearch (name) {
+    function handleSelectSearch (name?: string) {
       console.log('搜索项目名: ', name)
       store.dispatch(ProjectModule.getAction('getProjectList'), {
         kw: name

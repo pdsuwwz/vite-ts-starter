@@ -53,7 +53,8 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import useCurrentInstance from '@/hooks/useCurrentInstance'
 import { defineComponent, getCurrentInstance, ref } from 'vue'
 import { useStore } from 'vuex'
 
@@ -68,14 +69,14 @@ export default defineComponent({
     }
   },
   setup (props) {
-    const { proxy } = getCurrentInstance()
+    const { proxy } = useCurrentInstance()
     const store = useStore()
 
-    const refForm = ref(null)
+    const refForm = ref()
 
     const validateRules = async () => {
       return new Promise((resolve) => {
-        refForm.value.validate((valid) => {
+        refForm.value.validate((valid: boolean) => {
           if (valid) {
             resolve(true)
           } else {
