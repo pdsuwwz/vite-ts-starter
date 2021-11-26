@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { computed, defineComponent, ref } from 'vue'
 import { useLocaleInject } from 'element-plus'
 

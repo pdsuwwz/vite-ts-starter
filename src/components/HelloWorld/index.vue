@@ -1,20 +1,23 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
-// https://eslint.vuejs.org/user-guide/#faq
-// https://github.com/eslint/eslint/discussions/15015#discussioncomment-1287479
-defineProps({
-  msg: {
-    type: String,
-    default: ''
+interface Props {
+  msg: string
+}
+
+const props = withDefaults(
+  defineProps<Props>(),
+  {
+    msg: ''
   }
-})
+)
 
 const count = ref(0)
+
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>{{ props.msg }}</h1>
 
   <p>
     Recommended IDE setup:

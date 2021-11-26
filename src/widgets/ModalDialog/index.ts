@@ -1,9 +1,15 @@
-import { createVNode, render, nextTick } from 'vue'
+import { App, createVNode, render, nextTick, AppContext, RendererElement, RendererNode, VNode, ComponentPublicInstance, VNodeProps } from 'vue'
 import Modal from '@/widgets/ModalDialog/modal.vue'
 
-const extractData = (options) => {
-  const extractSlotComponents = (renderComponent) => {
-    const component = {}
+declare module 'vue' {
+  export interface VNode {
+    destroy?: any
+  }
+}
+
+const extractData = (options: { renderComponent: any; }) => {
+  const extractSlotComponents = (renderComponent: { component?: any; data?: any; }) => {
+    const component: any = {}
     let componantData = {}
 
     if (renderComponent) {
@@ -26,14 +32,14 @@ const extractData = (options) => {
 }
 
 export default {
-  install (app) {
-    app.config.globalProperties.$ModalDialog = function (options) {
+  install (app: App<any>) {
+    app.config.globalProperties.$ModalDialog = function (options: any) {
       const {
         component,
         componantData
       } = extractData(options)
 
-      let vm = createVNode(
+      let vm: VNode | null = createVNode(
         Modal,
         {
           ...options,
@@ -45,7 +51,7 @@ export default {
         app.component(name, component[name])
       }
 
-      let container = document.createElement('div')
+      let container: HTMLDivElement | null = document.createElement('div')
 
       // https://stackoverflow.com/questions/65163775/how-to-destroy-unmount-vue-js-3-components
       vm.destroy = () => {
@@ -60,10 +66,20 @@ export default {
       vm.appContext = app._context
 
       render(vm, container)
-      document.body.appendChild(container.firstElementChild)
+      if (container.firstElementChild) {
+        document.body.appendChild(container.firstElementChild)
+      }
 
       nextTick(() => {
-        vm.component.proxy.visible = true
+        if (!vm) return
+
+        if (vm.component && vm.component.proxy) {
+          (
+            vm.component.proxy as ComponentPublicInstance<{
+              visible: boolean
+            }>
+          ).visible = true
+        }
       })
 
       return vm

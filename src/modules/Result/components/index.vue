@@ -2,11 +2,11 @@
   <div class="xxx-container"></div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Xx'
+  name: 'XxBox'
 })
 
 </script>

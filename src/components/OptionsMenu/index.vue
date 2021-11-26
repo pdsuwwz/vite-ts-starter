@@ -39,7 +39,7 @@
   </el-dropdown>
 </template>
 
-<script>
+<script lang="ts">
 
 // import { isString } from '@/utils/type'
 import { isString } from '@/utils/type'

@@ -37,9 +37,11 @@
   </svg>
 </template>
 
-<script>
+<script lang="ts">
 
-export default {
+import { defineComponent, computed } from 'vue'
+
+export default defineComponent({
   name: 'IconFont',
   props: {
     icon: {
@@ -64,33 +66,39 @@ export default {
     }
   },
   emits: ['click'],
-  computed: {
-    getClassName () {
+  setup (props, { emit }) {
+    const getClassName = computed(() => {
       const className = []
-      if (this.verticalCenter) {
+      if (props.verticalCenter) {
         className.push('middle')
       }
-      if (this.cursor) {
+      if (props.cursor) {
         className.push('cursor')
       }
-      if (this.disabled) {
+      if (props.disabled) {
         className.push('disabled')
       }
       return className
+    })
+
+    const handleClick = () => {
+      !props.disabled && emit('click')
     }
-  },
-  methods: {
-    handleClick () {
-      !this.disabled && this.$emit('click')
-    },
-    getAttrs () {
-      const attrs = {}
-      this.shadow &&
+
+    const getAttrs = () => {
+      const attrs: any = {}
+      props.shadow &&
       (attrs.filter = 'url(#drop-shadow)')
       return attrs
     }
+    return {
+      getClassName,
+
+      handleClick,
+      getAttrs
+    }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

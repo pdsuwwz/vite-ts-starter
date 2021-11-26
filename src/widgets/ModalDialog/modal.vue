@@ -68,7 +68,7 @@
   </el-dialog>
 </template>
 
-<script>
+<script lang="ts">
 import {
   defineComponent,
   getCurrentInstance,
@@ -78,9 +78,10 @@ import {
 } from 'vue'
 
 import { WarningFilled } from '@element-plus/icons'
+import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({
-  name: 'Modal',
+  name: 'ModalDialog',
   components: {
     WarningFilled
   },
@@ -122,7 +123,7 @@ export default defineComponent({
     }
   },
   setup (props, { attrs }) {
-    const { proxy } = getCurrentInstance()
+    const { proxy } = useCurrentInstance()
     const visible = ref(false)
 
     const getDialogClassName = computed(() => {

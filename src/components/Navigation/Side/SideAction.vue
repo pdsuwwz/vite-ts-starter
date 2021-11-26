@@ -12,9 +12,10 @@
   </div>
 </template>
 
-<script>
-import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
+<script lang="ts">
+import { computed, defineComponent, ref } from 'vue'
 import { useLocaleInject } from 'element-plus'
+import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({
   name: 'NavigationSideAction',
@@ -22,7 +23,7 @@ export default defineComponent({
     'click'
   ],
   setup () {
-    const { proxy } = getCurrentInstance()
+    const { proxy } = useCurrentInstance()
     const localeInject = useLocaleInject()
 
     function handleClick () {

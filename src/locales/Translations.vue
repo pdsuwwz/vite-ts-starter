@@ -25,7 +25,7 @@
     </template>
   </el-dropdown>
 </template>
-<script>
+<script lang="ts">
 import { defineComponent, nextTick, ref } from 'vue'
 import { localesMapping } from '@/locales'
 import { useStore } from 'vuex'
@@ -34,7 +34,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { ArrowDown } from '@element-plus/icons'
 
 export default defineComponent({
-  name: 'Translations',
+  name: 'TranslationsBox',
   components: {
     ArrowDown
   },

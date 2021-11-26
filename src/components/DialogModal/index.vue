@@ -57,7 +57,7 @@
   </el-dialog>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, nextTick, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
@@ -102,6 +102,7 @@ export default defineComponent({
       emit('update:modelValue', false)
     }
     const handleConfirm = () => {
+
     }
     return {
       dialogRef,

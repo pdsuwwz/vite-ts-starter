@@ -5,7 +5,6 @@ import { allowlist } from '@/router/auth-list'
 import { systemTitle } from '@/locales/data'
 
 import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
 
 NProgress.configure({
   showSpinner: false
