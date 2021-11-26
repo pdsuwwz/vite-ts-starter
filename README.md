@@ -13,6 +13,7 @@
 ## Environment Support
 
 * Vue 3.x
+* Node >= 14.18.x
 
 ## Install
 
