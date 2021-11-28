@@ -17,7 +17,6 @@ import ElementPlus from 'element-plus'
 
 import Fonts from '@/assets/fonts'
 
-import { sync } from 'vuex-router-sync'
 import GlobalComponents from '@/components'
 import Mixin from './mixins'
 import Widgets from './widgets'
@@ -29,8 +28,6 @@ const app = createApp(App)
 app
   .use(router)
   .use(store)
-
-sync(store, router)
 
 app
   .use(ElementPlus, {

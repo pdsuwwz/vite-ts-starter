@@ -22,7 +22,7 @@ export function login (data) {
     }
   }
 }
-export function logout (data) {
+export function logout () {
   return request({
     url: '/logout',
     method: 'post',
@@ -30,7 +30,7 @@ export function logout (data) {
   })
 }
 
-export function getUserInfoData (params) {
+export function getUserInfoData(params = {}) {
   // return request({
   //   url: '/user_info',
   //   method: 'get',

@@ -1,3 +1,4 @@
+import { Module } from 'vuex'
 import { sleep } from '@/utils/request'
 import {
   login,
@@ -8,7 +9,15 @@ import {
 import MUTATION from '@/modules/UserAccount/store/mutations-type'
 import mixin from '@/store/utils/mixin'
 
-const UserAccountModule = {
+import { IGlobalState } from '@/store'
+
+export interface IUserAccountState {
+  locale: string
+  demoList: any
+  userInfo: any
+}
+
+const UserAccountModule: Module<IUserAccountState, IGlobalState> = {
   namespaced: true,
   _name: 'UserAccount',
   state: {
@@ -52,6 +61,7 @@ const UserAccountModule = {
     async login ({ state, commit }, data) {
       await sleep(1000)
       const res = await login(data)
+      this.filterResponse({}, () => 1)
       return this.filterResponse(res, null, () => {})
     },
     async logout ({ state, commit }) {
@@ -61,6 +71,7 @@ const UserAccountModule = {
     async getUserInfo ({ commit }) {
       const res = await getUserInfoData()
       await sleep(1000)
+      this.filterResponse
       return this.filterResponse(res, ({ data }) => {
         commit(MUTATION.UPDATE_USER_INFO, data)
       })

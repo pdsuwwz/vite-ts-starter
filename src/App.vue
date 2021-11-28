@@ -10,17 +10,19 @@
 import { ElConfigProvider } from 'element-plus'
 import { useRoute, useRouter } from 'vue-router'
 import { computed, watch } from 'vue'
-import { Store, useStore } from 'vuex'
+import { Store } from 'vuex'
 
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import en from 'element-plus/lib/locale/lang/en'
 
 import selfEn from '@/locales/lang/en'
 import selfZhHans from '@/locales/lang/zh-hans'
+import useBaseStore from './hooks/useBaseStore'
+import { IGlobalState } from '@/store'
 
-const useLanguage = (store: Store<any>) => {
+const useLanguage = (store: Store<IGlobalState>) => {
   const currentLocale = computed(() => {
-    let locale = null
+    let locale: any = null
 
     switch (store.state.UserAccount.locale) {
       case 'zh-hans':
@@ -50,7 +52,7 @@ export default {
     ElConfigProvider
   },
   setup () {
-    const store = useStore()
+    const store = useBaseStore()
     const route = useRoute()
     const router = useRouter()
 
