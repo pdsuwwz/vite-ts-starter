@@ -92,7 +92,7 @@ export default defineComponent({
     const route = useRoute()
     const router = useRouter()
 
-    const dialogRef = ref(null)
+    const dialogRef = ref()
     const handleClose = () => {
       nextTick(() => {
         dialogRef.value.visible = false
