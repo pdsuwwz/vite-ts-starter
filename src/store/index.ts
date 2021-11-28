@@ -1,19 +1,18 @@
 import { createStore } from 'vuex'
 
-/**
- * plugins mount
- */
-// import plugins from '@/store/plugins'
+import UserAccount, { IUserAccountState } from '@/modules/UserAccount/store'
+import Project, { IProjectModule } from '@/modules/Project/store'
+import ResultModule, { IResultModule } from '@/modules/Result/store'
+
 import plugins from '@/store/plugins'
 
-/**
- * modules mount
- */
-import UserAccount from '@/modules/UserAccount/store'
-import Project from '@/modules/Project/store'
-import ResultModule from '@/modules/Result/store'
+export interface IGlobalState {
+  UserAccount: IUserAccountState
+  Result: IResultModule
+  Project: IProjectModule
+}
 
-const store = createStore({
+const store = createStore<IGlobalState>({
   modules: {
     UserAccount: UserAccount,
     Project: Project,

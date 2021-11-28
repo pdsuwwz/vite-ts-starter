@@ -23,7 +23,7 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 
-import { useStore } from 'vuex'
+import useBaseStore from '@/hooks/useBaseStore'
 
 import ProjectItem from '@/modules/Project/components/ProjectItem.vue'
 
@@ -33,7 +33,7 @@ export default defineComponent({
     ProjectItem
   },
   setup () {
-    const store = useStore()
+    const store = useBaseStore()
     const projectList = computed(() => store.state.Project.projectList)
     return {
       projectList

@@ -122,7 +122,7 @@ export default defineComponent({
       }
     }
   },
-  setup (props, { attrs }) {
+  setup (props, { attrs }: { attrs: any; }) {
     const { proxy } = useCurrentInstance()
     const visible = ref(false)
 

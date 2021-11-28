@@ -12,8 +12,24 @@ import {
   projectDetail,
   projectList
 } from '@/modules/Project/data'
+import { Module } from 'vuex'
+import { IGlobalState } from '@/store'
 
-const ProjectModule = {
+export interface ProjectDetailProps {
+  corpName: string | null
+  createTime: string | null
+  id: string | null
+  isPublished: true
+  name: string | null
+  notes: string | null
+}
+export interface IProjectModule {
+  demoList: any
+  projectList: any[]
+  projectDetail: ProjectDetailProps
+}
+
+const ProjectModule: Module<IProjectModule, IGlobalState> = {
   namespaced: true,
   _name: 'Project',
   state: {

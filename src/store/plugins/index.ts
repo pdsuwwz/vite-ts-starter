@@ -1,10 +1,20 @@
-/**
- * plugins all export
- */
+import { getFilterResponse } from '@/store/utils/mixin'
+import router from '@/router'
+import { Store } from 'vuex'
+import { IGlobalState } from '@/store'
 
-// import mounted from '@/store/plugins/mounted'
-import mounted from '@/store/plugins/mounted'
+const mixinPlugins = (store: Store<IGlobalState>) => {
+  (store as any).filterResponse = getFilterResponse;
+  (store as any).router = router
+}
 
 export default [
-  mounted
+  mixinPlugins
 ]
+
+declare module 'vuex' {
+  export interface Store<S> {
+    filterResponse: typeof getFilterResponse
+    readonly state: S
+  }
+}
