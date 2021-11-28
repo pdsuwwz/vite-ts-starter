@@ -61,7 +61,6 @@ const UserAccountModule: Module<IUserAccountState, IGlobalState> = {
     async login ({ state, commit }, data) {
       await sleep(1000)
       const res = await login(data)
-      this.filterResponse({}, () => 1)
       return this.filterResponse(res, null, () => {})
     },
     async logout ({ state, commit }) {
