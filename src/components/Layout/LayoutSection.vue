@@ -81,6 +81,8 @@ export default defineComponent({
     }
   }
   .layout-section-container__content {
+    display: flex;
+    flex-direction: column;
     position: relative;
     margin-top: 16px;
     flex: auto;
@@ -91,6 +93,7 @@ export default defineComponent({
     }
     .layout-section-container__content-inner {
       &.is-flex {
+        flex: 1;
         display: flex;
         flex-direction: column;
         height: 100%;

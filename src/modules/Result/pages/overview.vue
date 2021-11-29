@@ -3,7 +3,7 @@
     flex-content
     :title="overviewData.title"
   >
-    <div style="height: 100%; border: 1px solid ;">
+    <div style="height: 100%; flex: 1; border: 1px solid ;">
       {{ overviewData.content }}
     </div>
   </LayoutSection>
