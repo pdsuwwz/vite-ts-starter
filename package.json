@@ -53,9 +53,9 @@
     "js-cookie": "^3.0.1",
     "nprogress": "^0.2.0",
     "rollup-plugin-terser": "^7.0.2",
-    "vue": "^3.0.7",
-    "vue-router": "^4.0.4",
-    "vuex": "^4.0.0"
+    "vue": "^3.2.23",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
