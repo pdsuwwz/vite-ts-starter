@@ -68,7 +68,7 @@ export default defineComponent({
   emits: ['click'],
   setup (props, { emit }) {
     const getClassName = computed(() => {
-      const className = []
+      const className: string[] = []
       if (props.verticalCenter) {
         className.push('middle')
       }
