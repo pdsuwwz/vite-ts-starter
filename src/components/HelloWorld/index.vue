@@ -12,12 +12,14 @@ const props = withDefaults(
   }
 )
 
+const isProd = import.meta.env.PROD
 const count = ref(0)
 
 </script>
 
 <template>
   <h1>{{ props.msg }}</h1>
+  <h1>{{ isProd }}</h1>
 
   <p>
     Recommended IDE setup:
