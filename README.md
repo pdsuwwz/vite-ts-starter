@@ -1,5 +1,6 @@
 # vite-ts-starter
 
+[![Github last commit](https://img.shields.io/github/last-commit/pdsuwwz/vite-ts-starter)](https://github.com/pdsuwwz/vite-ts-starter)
 [![Deploy](https://github.com/pdsuwwz/vite-ts-starter/workflows/gh-pages/badge.svg)](https://github.com/pdsuwwz/vite-ts-starter/actions/workflows/deploy.yml)
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/pdsuwwz/vite-ts-starter/gh-pages/main)](https://github.com/pdsuwwz/vite-ts-starter/deployments/activity_log?environment=github-pages)
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
