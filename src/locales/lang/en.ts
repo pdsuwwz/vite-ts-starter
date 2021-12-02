@@ -16,7 +16,8 @@ export default {
     fgtpwd: 'Forgot password?',
     plsemail: 'Please enter a email',
     plscurrentemail: 'Please enter the correct email',
-    plspwd: 'Please enter a password'
+    plspwd: 'Please enter a password',
+    signout: 'Sign out'
   },
   project: {
     manageTitle: 'Project management',
