@@ -51,7 +51,7 @@ export default defineComponent({
         click: () => {
           Cookie.remove('token')
           Cookie.remove('name')
-          router.replace(`/${route.params.locale ? route.params.locale + '/' : ''}user/login`)
+          window.location.reload()
         }
       }
     ])
