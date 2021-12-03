@@ -92,7 +92,7 @@ export default defineComponent({
         return {}
       }
     }
-  },
+  } as const,
   setup (props) {
     const { proxy } = useCurrentInstance()
     const isLoading = ref(false)

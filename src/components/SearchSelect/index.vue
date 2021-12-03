@@ -67,7 +67,7 @@ export default defineComponent({
         return () => {}
       }
     }
-  },
+  } as const,
   emits: [
     'update:modelValue',
     'change',
