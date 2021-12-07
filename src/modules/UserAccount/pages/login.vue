@@ -45,8 +45,8 @@ import {
   reactive,
   ref
 } from 'vue'
-import { useLocaleInject } from 'element-plus'
-import { Promotion } from '@element-plus/icons'
+import { useLocale } from 'element-plus'
+import { Promotion } from '@element-plus/icons-vue'
 
 import UserAccountContainerLayout from '@/modules/UserAccount/components/ContainerLayout.vue'
 
@@ -80,7 +80,7 @@ export default defineComponent({
       password: '123456'
     })
 
-    const localeInject = useLocaleInject()
+    const localeInject = useLocale()
 
     const configLogin = computed(() => {
       return {

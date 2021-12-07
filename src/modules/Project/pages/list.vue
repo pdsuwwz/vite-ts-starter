@@ -51,7 +51,7 @@ import {
   onMounted,
   reactive
 } from 'vue'
-import { useLocaleInject } from 'element-plus'
+import { useLocale } from 'element-plus'
 
 import ProjectModule from '@/modules/Project/store'
 
@@ -79,7 +79,7 @@ export default defineComponent({
   setup () {
     const { proxy } = useCurrentInstance()
     const store = useStore()
-    const localeInject = useLocaleInject()
+    const localeInject = useLocale()
 
     function handleCreateProject () {
       const formData = reactive({

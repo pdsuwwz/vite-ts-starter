@@ -21,7 +21,7 @@
 Install node dependencies in all packages
 
 ```bash
-yarn install
+pnpm install
 ```
 
 ## Run
@@ -29,7 +29,7 @@ yarn install
 Local Development
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ## Test
@@ -37,11 +37,11 @@ yarn dev
 Unit Testing
 
 ```bash
-yarn test
+pnpm test
 ```
 
 Test code coverage
 
 ```bash
-yarn test:coverage
+pnpm test:coverage
 ```

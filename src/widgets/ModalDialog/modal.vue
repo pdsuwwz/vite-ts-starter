@@ -77,7 +77,7 @@ import {
   reactive
 } from 'vue'
 
-import { WarningFilled } from '@element-plus/icons'
+import { WarningFilled } from '@element-plus/icons-vue'
 import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({

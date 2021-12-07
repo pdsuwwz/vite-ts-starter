@@ -12,13 +12,13 @@
 </template>
 
 <script lang="ts">
-import { useLocaleInject } from 'element-plus'
+import { useLocale } from 'element-plus'
 import { computed, defineComponent, reactive } from 'vue'
 
 export default defineComponent({
   name: 'ProjectTableHeader',
   setup () {
-    const localeInject = useLocaleInject()
+    const localeInject = useLocale()
     const list = computed(() => [
       {
         name: localeInject.t('project.name')

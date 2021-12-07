@@ -34,7 +34,7 @@ import { localesMapping } from '@/locales'
 import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
 
-import { ArrowDown } from '@element-plus/icons'
+import { ArrowDown } from '@element-plus/icons-vue'
 import LogoIcon from '@/locales/LogoIcon.vue'
 
 export default defineComponent({

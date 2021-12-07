@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue'
-import { useLocaleInject } from 'element-plus'
+import { useLocale } from 'element-plus'
 import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({
@@ -24,7 +24,7 @@ export default defineComponent({
   ],
   setup () {
     const { proxy } = useCurrentInstance()
-    const localeInject = useLocaleInject()
+    const localeInject = useLocale()
 
     function handleClick () {
       proxy.$emit('click')
