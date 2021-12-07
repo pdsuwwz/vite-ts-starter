@@ -72,7 +72,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
-import { Loading } from '@element-plus/icons'
+import { Loading } from '@element-plus/icons-vue'
 
 import { sleep } from '@/utils/request'
 import useCurrentInstance from '@/hooks/useCurrentInstance'
@@ -170,6 +170,7 @@ export default defineComponent({
       background-color: #ecf3ff;
       margin-right: 16px;
       & > svg {
+        width: 20px;
         font-size: 20px;
         color: $--color-primary
       }
@@ -211,6 +212,7 @@ export default defineComponent({
     .project-item-action__icon {
       width: 20px;
       & > svg {
+        width: 100%;
         font-size: 20px;
       }
     }

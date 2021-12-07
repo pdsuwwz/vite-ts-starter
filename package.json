@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "deploy:gh-pages": "cross-env VITE_ROUTER_MODE=hash yarn build",
+    "deploy:gh-pages": "cross-env VITE_ROUTER_MODE=hash pnpm build",
     "preview": "vite preview --host",
     "lint": "eslint ./src --ext .js,.ts,.jsx,.tsx,.vue",
     "lint:fix": "eslint --fix --cache --ext .js,.ts,.jsx,.tsx,.vue ./src",
@@ -43,6 +43,7 @@
     "url": "https://github.com/pdsuwwz/vite-ts-starter/issues"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^0.2.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
@@ -52,6 +53,7 @@
     "echarts": "^5.2.2",
     "element-plus": "^1.2.0-beta.4",
     "js-cookie": "^3.0.1",
+    "lodash": "^4.17.21",
     "nprogress": "^0.2.0",
     "rollup-plugin-terser": "^7.0.2",
     "vue": "^3.2.23",

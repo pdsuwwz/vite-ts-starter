@@ -19,12 +19,12 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue'
-import { useLocaleInject } from 'element-plus'
+import { useLocale } from 'element-plus'
 
 export default defineComponent({
   name: 'NavigationSideLogo',
   setup () {
-    const localeInject = useLocaleInject()
+    const localeInject = useLocale()
 
     const title = computed(() => localeInject.t('base.systemTitle'))
 

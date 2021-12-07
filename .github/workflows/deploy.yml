@@ -16,11 +16,14 @@ jobs:
         with:
           node-version: 14.18.x
 
+      - name: Install pnpm
+        run: npm i -g pnpm
+
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Build
-        run: yarn deploy:gh-pages
+        run: pnpm deploy:gh-pages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
