@@ -55,7 +55,6 @@
     "js-cookie": "^3.0.1",
     "lodash": "^4.17.21",
     "nprogress": "^0.2.0",
-    "rollup-plugin-terser": "^7.0.2",
     "vue": "^3.2.24",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
@@ -84,12 +83,11 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.4",
     "jest-transform-stub": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.45.0",
-    "sass-loader": "8.0.0",
     "style-resources-loader": "^1.5.0",
     "ts-jest": "^27.1.1",
     "typescript": "^4.5.3",
-    "vite": "^2.7.1",
-    "vue-cli-plugin-style-resources-loader": "^0.1.5"
+    "vite": "^2.7.1"
   }
 }
