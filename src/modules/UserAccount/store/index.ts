@@ -70,7 +70,6 @@ const UserAccountModule: Module<IUserAccountState, IGlobalState> = {
     async getUserInfo ({ commit }) {
       const res = await getUserInfoData()
       await sleep(1000)
-      this.filterResponse
       return this.filterResponse(res, ({ data }) => {
         commit(MUTATION.UPDATE_USER_INFO, data)
       })
