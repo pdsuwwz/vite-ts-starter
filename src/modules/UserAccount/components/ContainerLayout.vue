@@ -213,6 +213,7 @@ export default defineComponent({
     letter-spacing: 1px;
   }
   .form-custom-label {
+    flex: 1;
     display: flex;
     justify-content: space-between;
     font-size: 14px;

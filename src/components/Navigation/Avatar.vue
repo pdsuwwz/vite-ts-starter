@@ -84,5 +84,6 @@ export default defineComponent({
   display: flex;
   align-items: center;
   user-select: none;
+  white-space: nowrap;
 }
 </style>
