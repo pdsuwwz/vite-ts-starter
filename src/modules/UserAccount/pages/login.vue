@@ -221,6 +221,9 @@ export default defineComponent({
     justify-content: space-between;
     color: #484848;
     padding: 0px 16px;
+    box-shadow: 0px -3px 8px 3px #c6c6c6;
+    // box-shadow: 0 1px 4px 3px rgb(0 21 41 / 8%);
+    background-color: rgba(#fff, 10%);
     .nav-left,
     .nav-right {
       display: flex;
