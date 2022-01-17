@@ -24,6 +24,7 @@
         </section>
       </div>
     </div>
+    <Footer show-border />
   </div>
 </template>
 

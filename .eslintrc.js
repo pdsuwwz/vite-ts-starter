@@ -74,6 +74,7 @@ module.exports = {
     '@typescript-eslint/semi': ['error', 'never'],
     // vue
     'vue/no-v-html': 'off',
+    'vue/multi-word-component-names': 0,
     'vue/singleline-html-element-content-newline': 'off',
     'vue/require-default-prop': 'off',
     'vue/html-closing-bracket-spacing': 'error',

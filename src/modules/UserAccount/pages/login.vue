@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="nav-right">
-        <Translations />
+        <Translations dark />
       </div>
     </div>
     <div class="user-account-body">
@@ -31,6 +31,7 @@
         </template>
       </UserAccountContainerLayout>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -218,7 +219,7 @@ export default defineComponent({
   .user-account-nav {
     display: flex;
     justify-content: space-between;
-    color: #f0f2f5;
+    color: #484848;
     padding: 0px 16px;
     .nav-left,
     .nav-right {
@@ -239,7 +240,7 @@ export default defineComponent({
       height: 6px;
       margin: 0 10px;
       border-radius: 50%;
-      background: #f0f2f5;
+      background: #484848;
     }
     .nav-title {
       font-size: 18px;
