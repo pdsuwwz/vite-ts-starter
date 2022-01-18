@@ -21,7 +21,7 @@ specifiers:
   '@vue/compiler-sfc': ^3.2.27
   '@vue/test-utils': ^2.0.0-rc.18
   '@vue/vue3-jest': ^27.0.0-alpha.4
-  axios: ^0.24.0
+  axios: 0.25.0
   babel-jest: ^27.4.6
   babel-plugin-transform-vite-meta-env: ^1.0.3
   cross-env: ^7.0.3
@@ -54,7 +54,7 @@ dependencies:
   '@fortawesome/free-regular-svg-icons': 5.15.4
   '@fortawesome/free-solid-svg-icons': 5.15.4
   '@fortawesome/vue-fontawesome': 3.0.0-5_9e890373d14094b922d693b29dbd6766
-  axios: 0.24.0
+  axios: 0.25.0
   echarts: 5.2.2
   element-plus: 1.3.0-beta.5_vue@3.2.27
   js-cookie: 3.0.1
@@ -2144,8 +2144,8 @@ packages:
     hasBin: true
     dev: true
 
-  /axios/0.24.0:
-    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+  /axios/0.25.0:
+    resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
     dependencies:
       follow-redirects: 1.14.7
     transitivePeerDependencies:
