@@ -185,9 +185,9 @@ export default defineComponent({
         color: #303133;
         .project-item__name-desc__corpname-maintext {
           max-width: 80%;
+          margin-right: 10px;
         }
         .corpname-notes {
-          margin-left: 10px;
           font-size: 15px;
           color: $--color-info;
           cursor: pointer;
