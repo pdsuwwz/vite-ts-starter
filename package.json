@@ -45,9 +45,9 @@
   "dependencies": {
     "@element-plus/icons-vue": "^0.2.6",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/free-brands-svg-icons": "6.0.0",
+    "@fortawesome/free-regular-svg-icons": "6.0.0",
+    "@fortawesome/free-solid-svg-icons": "6.0.0",
     "@fortawesome/vue-fontawesome": "~3.0.0-5",
     "axios": "0.25.0",
     "echarts": "^5.3.0",
