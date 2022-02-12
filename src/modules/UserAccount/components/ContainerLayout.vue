@@ -219,13 +219,22 @@ export default defineComponent({
     font-size: 14px;
     font-weight: 600;
   }
+  &:deep(){
+    .el-input__prefix-inner {
+      margin-left: -4px;
+      align-items: center;
+    }
+    .el-input__suffix-inner {
+      align-items: center;
+    }
+  }
   .input-icon-prefix {
     padding-left: 6px;
-    height: 100%;
+    // height: 100%;
   }
   .input-icon-lock {
     cursor: pointer;
-    height: 100%;
+    // height: 100%;
   }
   .form-title {
     display: flex;
