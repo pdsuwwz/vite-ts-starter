@@ -76,6 +76,7 @@ import { Loading } from '@element-plus/icons-vue'
 
 import { sleep } from '@/utils/request'
 import useCurrentInstance from '@/hooks/useCurrentInstance'
+import { ElMessage } from 'element-plus'
 
 // TODO: Hide it temporarily
 // import ProjectModule from '@/modules/Project/store'
@@ -122,7 +123,7 @@ export default defineComponent({
       // TODO: Hide it temporarily
       // if (error) return
 
-      proxy.$message({
+      ElMessage.success({
         message: 'Successful!'
       })
 
