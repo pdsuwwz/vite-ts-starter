@@ -10,6 +10,12 @@
 
 **Live demo:** [Vite TS Starter](https://pdsuwwz.github.io/vite-ts-starter)
 
+## Screenshot
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/19891724/154829635-46de24db-e4c5-409f-9fa5-6a9770ace166.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/19891724/154829667-a84787b0-0104-4466-bb9e-9f586be66778.png">
+
+
 ## Environment Support
 
 * Vue 3.x
