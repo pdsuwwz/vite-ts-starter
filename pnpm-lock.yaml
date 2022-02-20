@@ -26,7 +26,7 @@ specifiers:
   babel-plugin-transform-vite-meta-env: ^1.0.3
   cross-env: ^7.0.3
   echarts: ^5.3.0
-  element-plus: 2.0.1
+  element-plus: 2.0.2
   eslint: ^8.9.0
   eslint-plugin-html: ^6.2.0
   eslint-plugin-import: ^2.25.4
@@ -56,7 +56,7 @@ dependencies:
   '@fortawesome/vue-fontawesome': 3.0.0-5_57300062c04de25e6ec7d83402663243
   axios: 0.26.0
   echarts: 5.3.0
-  element-plus: 2.0.1_vue@3.2.31
+  element-plus: 2.0.2_vue@3.2.31
   js-cookie: 3.0.1
   lodash: 4.17.21
   nprogress: 0.2.0
@@ -2687,8 +2687,8 @@ packages:
     resolution: {integrity: sha512-cId+QwWrV8R1UawO6b9BR1hnkJ4EJPCPAr4h315vliHUtVUJDk39Sg1PMNnaWKfj5x+93ssjeJ9LKL6r8LaMiA==}
     dev: true
 
-  /element-plus/2.0.1_vue@3.2.31:
-    resolution: {integrity: sha512-Cdx3JhbMNGwVsU12DUewIltJ1hUYVSgx2iBB8AuNzzOxAqcxSA9e7p2lfNp8oCBQeh4ThRSaOkdLnJyO4mS3qQ==}
+  /element-plus/2.0.2_vue@3.2.31:
+    resolution: {integrity: sha512-URjC0HwwiqtlLxqTmHXQ31WXrdAq4ChWyyn52OcQs3PRsnMPfahGVq2AWnfzzlzlhVeI5lY3HQiuB1zDathS+g==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -2699,10 +2699,13 @@ packages:
       async-validator: 4.0.7
       dayjs: 1.10.7
       lodash: 4.17.21
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.1_lodash-es@4.17.21+lodash@4.17.21
       memoize-one: 6.0.0
       normalize-wheel-es: 1.1.1
       vue: 3.2.31
     transitivePeerDependencies:
+      - '@types/lodash-es'
       - '@vue/composition-api'
     dev: false
 
@@ -4390,6 +4393,21 @@ packages:
     dependencies:
       p-locate: 4.1.0
     dev: true
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
+  /lodash-unified/1.0.1_lodash-es@4.17.21+lodash@4.17.21:
+    resolution: {integrity: sha512-Py+twfpWn+2dFQWCuGcp21WiQRwZwnm1cyE3piSt/VtBVKVyxlR58WgOVRzXtmdmDRGJKH8F8GPaA29WK/yK8g==}
+    peerDependencies:
+      '@types/lodash-es': '*'
+      lodash: '*'
+      lodash-es: '*'
+    dependencies:
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+    dev: false
 
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=}
