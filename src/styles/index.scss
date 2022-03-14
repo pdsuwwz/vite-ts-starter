@@ -1,9 +1,8 @@
 
-@import '@/styles/global-class.scss';
-@import '@/styles/element-variables.scss';
-@import '@/styles/theme.scss';
-@import '@/styles/element-status.scss';
-@import 'nprogress/nprogress.css';
+@use '@/styles/global-class.scss';
+@use '@/styles/theme.scss';
+@use '@/styles/element-status.scss';
+@use 'nprogress/nprogress.css';
 
 body {
   width: 100vw;

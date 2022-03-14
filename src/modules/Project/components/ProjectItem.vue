@@ -173,7 +173,7 @@ export default defineComponent({
       & > svg {
         width: 20px;
         font-size: 20px;
-        color: $--color-primary
+        color: $color-primary
       }
     }
     .project-item__name-desc {
@@ -190,13 +190,13 @@ export default defineComponent({
         }
         .corpname-notes {
           font-size: 15px;
-          color: $--color-info;
+          color: $color-info;
           cursor: pointer;
         }
       }
       .project-item__name-desc__fullname {
         font-size: 12px;
-        color: $--color-info;
+        color: $color-info;
       }
     }
   }
@@ -222,10 +222,10 @@ export default defineComponent({
     }
 
     &.active {
-      color: $--color-primary;
+      color: $color-primary;
     }
     &.loading {
-      color: $--color-primary;
+      color: $color-primary;
     }
     &:hover {
       color: #6b9eff;

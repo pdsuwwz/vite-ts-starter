@@ -95,8 +95,8 @@ export default defineComponent({
   .icon-outer {
     display: flex;
     align-items: center;
-    &:hover {
-      color: $--color-primary;
+    &:hover > * {
+      color: $color-primary;
     }
   }
   .custom-dropdown-item {
