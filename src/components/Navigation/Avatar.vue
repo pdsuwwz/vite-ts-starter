@@ -76,7 +76,7 @@ export default defineComponent({
   user-select: none;
   img {
     width: 24px;
-    border: 1px solid $--color-primary;
+    border: 1px solid $color-primary;
     border-radius: 50%;
   }
 }

@@ -196,6 +196,6 @@ export default defineComponent({
   }
 }
 .search-select-highlight {
-  color: $--color-primary;
+  color: $color-primary;
 }
 </style>

@@ -55,7 +55,7 @@ export default defineComponent({
     grid-column-start: span 2;
   }
   .fitting-operate {
-    color: $--color-primary;
+    color: $color-primary;
     cursor: pointer;
   }
 }

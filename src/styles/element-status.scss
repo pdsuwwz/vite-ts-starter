@@ -1,3 +1,5 @@
+@use '@/styles/element-variables.scss' as *;
+
 .el-form-item__label {
   color: #606266;
 }
@@ -24,16 +26,16 @@
 }
 
 .el-message .el-message-icon--success {
-  color: $--color-success;
+  color: $color-success;
 }
 .el-message .el-message-icon--warning {
-  color: $--color-warning;
+  color: $color-warning;
 }
 .el-message .el-message-icon--info {
-  color: $--color-primary;
+  color: $color-primary;
 }
 .el-message .el-message-icon--error {
-  color: $--color-danger;
+  color: $color-danger;
 }
 
 .el-button {

@@ -1,17 +1,18 @@
 
-@import "element-plus/theme-chalk/src/index";
+@use '@/styles/element-variables.scss' as *;
+@use "element-plus/theme-chalk/src/index" as *;
 
 
 
 #nprogress .bar {
-  background: $--color-primary !important;
+  background: $color-primary !important;
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px $--color-primary, 0 0 5px $--color-primary !important;
+  box-shadow: 0 0 10px $color-primary, 0 0 5px $color-primary !important;
 }
 
 #nprogress .spinner-icon {
-  border-top-color: $--color-primary;
-  border-left-color: $--color-primary;
+  border-top-color: $color-primary;
+  border-left-color: $color-primary;
 }
