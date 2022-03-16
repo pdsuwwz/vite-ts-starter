@@ -4,7 +4,7 @@ specifiers:
   '@babel/core': ^7.17.5
   '@babel/preset-env': ^7.16.11
   '@element-plus/icons-vue': 1.1.3
-  '@fortawesome/fontawesome-svg-core': ^1.3.0
+  '@fortawesome/fontawesome-svg-core': 6.1.0
   '@fortawesome/free-brands-svg-icons': 6.1.0
   '@fortawesome/free-regular-svg-icons': 6.1.0
   '@fortawesome/free-solid-svg-icons': 6.1.0
@@ -49,11 +49,11 @@ specifiers:
 
 dependencies:
   '@element-plus/icons-vue': 1.1.3_vue@3.2.31
-  '@fortawesome/fontawesome-svg-core': 1.3.0
+  '@fortawesome/fontawesome-svg-core': 6.1.0
   '@fortawesome/free-brands-svg-icons': 6.1.0
   '@fortawesome/free-regular-svg-icons': 6.1.0
   '@fortawesome/free-solid-svg-icons': 6.1.0
-  '@fortawesome/vue-fontawesome': 3.0.0-5_57300062c04de25e6ec7d83402663243
+  '@fortawesome/vue-fontawesome': 3.0.0-5_a9df5bd57d3f0af376fd93d9091f5574
   axios: 0.26.1
   echarts: 5.3.1
   element-plus: 2.1.3_vue@3.2.31
@@ -1291,24 +1291,18 @@ packages:
       - supports-color
     dev: true
 
-  /@fortawesome/fontawesome-common-types/0.3.0:
-    resolution: {integrity: sha512-CA3MAZBTxVsF6SkfkHXDerkhcQs0QPofy43eFdbWJJkZiq3SfiaH1msOkac59rQaqto5EqWnASboY1dBuKen5w==}
-    engines: {node: '>=6'}
-    requiresBuild: true
-    dev: false
-
   /@fortawesome/fontawesome-common-types/6.1.0:
     resolution: {integrity: sha512-lFIJ5opxOKG9q88xOsuJJAdRZ+2WRldsZwUR/7MJoOMUMhF/LkHUjwWACIEPTa5Wo6uTDHvGRIX+XutdN7zYxA==}
     engines: {node: '>=6'}
     requiresBuild: true
     dev: false
 
-  /@fortawesome/fontawesome-svg-core/1.3.0:
-    resolution: {integrity: sha512-UIL6crBWhjTNQcONt96ExjUnKt1D68foe3xjEensLDclqQ6YagwCRYVQdrp/hW0ALRp/5Fv/VKw+MqTUWYYvPg==}
+  /@fortawesome/fontawesome-svg-core/6.1.0:
+    resolution: {integrity: sha512-racj+/EDnMZN0jcuHePOa+9kdHHOCpCAbBvVRnEi4G4DA5SWQiT/uXJ8WcfVEbLN51vPJjhukP4o+zH0cfYplg==}
     engines: {node: '>=6'}
     requiresBuild: true
     dependencies:
-      '@fortawesome/fontawesome-common-types': 0.3.0
+      '@fortawesome/fontawesome-common-types': 6.1.0
     dev: false
 
   /@fortawesome/free-brands-svg-icons/6.1.0:
@@ -1335,13 +1329,13 @@ packages:
       '@fortawesome/fontawesome-common-types': 6.1.0
     dev: false
 
-  /@fortawesome/vue-fontawesome/3.0.0-5_57300062c04de25e6ec7d83402663243:
+  /@fortawesome/vue-fontawesome/3.0.0-5_a9df5bd57d3f0af376fd93d9091f5574:
     resolution: {integrity: sha512-aNmBT4bOecrFsZTog1l6AJDQHPP3ocXV+WQ3Ogy8WZCqstB/ahfhH4CPu5i4N9Hw0MBKXqE+LX+NbUxcj8cVTw==}
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ~1 || >=1.3.0-beta1
       vue: '>= 3.0.0 < 4'
     dependencies:
-      '@fortawesome/fontawesome-svg-core': 1.3.0
+      '@fortawesome/fontawesome-svg-core': 6.1.0
       vue: 3.2.31
     dev: false
 
