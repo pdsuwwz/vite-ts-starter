@@ -81,6 +81,10 @@ module.exports = {
     'vue/no-unused-components': 1,
     'vue/no-mutating-props': 0,
     'vue/script-setup-uses-vars': 'error',
+    // https://eslint.vuejs.org/rules/v-on-event-hyphenation.html
+    'vue/v-on-event-hyphenation': ['warn', 'always', {
+      autofix: true
+    }],
     'vue/html-self-closing': ['error', {
       html: {
         void: 'never',
