@@ -1,0 +1,1 @@
+import{r as e,o as r,k as a,l as n,V as s}from"./vendor.c79747a1.js";import{_ as m}from"./index.fc3388e3.js";var _=m({name:"AppMain"},[["render",function(p,u,f,i,l,d){const o=e("router-view");return r(),a(o,null,{default:n(({Component:t})=>[(r(),a(s(t)))]),_:1})}]]);export{_ as default};
