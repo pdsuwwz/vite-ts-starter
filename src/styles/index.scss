@@ -118,3 +118,10 @@ body .el-table colgroup.gutter {
 table {
   width: 100% !important;
 }
+
+// https://stackoverflow.com/questions/43778196/input-background-removed-by-chrome-autofill
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -moz-box-shadow: 0 0 0 100px #fff inset;
+  box-shadow: 0 0 0 100px #fff inset;
+}
