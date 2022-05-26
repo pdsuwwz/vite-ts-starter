@@ -1,5 +1,12 @@
 module.exports = {
   testEnvironment: 'node',
+  testEnvironmentOptions: {
+    customExportConditions: [
+      'node',
+      'node-addons'
+    ]
+  },
+
   preset: 'ts-jest',
   moduleFileExtensions: ['js', 'ts', 'vue'],
   moduleNameMapper: {
