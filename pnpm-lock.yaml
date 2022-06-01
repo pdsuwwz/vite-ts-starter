@@ -30,7 +30,7 @@ specifiers:
   eslint: ^8.16.0
   eslint-plugin-html: ^6.2.0
   eslint-plugin-import: ^2.26.0
-  eslint-plugin-vue: 9.0.1
+  eslint-plugin-vue: 9.1.0
   identity-obj-proxy: ^3.0.0
   jest: ^28.1.0
   jest-environment-jsdom: ^28.1.0
@@ -86,7 +86,7 @@ devDependencies:
   eslint: 8.16.0
   eslint-plugin-html: 6.2.0
   eslint-plugin-import: 2.26.0_fpv4l7j2iomztwskn7bai2v6a4
-  eslint-plugin-vue: 9.0.1_eslint@8.16.0
+  eslint-plugin-vue: 9.1.0_eslint@8.16.0
   identity-obj-proxy: 3.0.0
   jest: 28.1.0_@types+node@17.0.35
   jest-environment-jsdom: 28.1.0
@@ -3205,8 +3205,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-vue/9.0.1_eslint@8.16.0:
-    resolution: {integrity: sha512-/w/9/vzz+4bSYtp5UqXgJ0CfycXTMtpp6lkz7/fMp0CcJxPWyRP6Pr88ihhrsNEcVt2ZweMupWRNYa+5Md41LQ==}
+  /eslint-plugin-vue/9.1.0_eslint@8.16.0:
+    resolution: {integrity: sha512-EPCeInPicQ/YyfOWJDr1yfEeSNoFCMzUus107lZyYi37xejdOolNzS5MXGXp8+9bkoKZMdv/1AcZzQebME6r+g==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
@@ -4687,7 +4687,7 @@ packages:
     hasBin: true
 
   /natural-compare/1.4.0:
-    resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
+    resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
   /node-int64/0.4.0:
