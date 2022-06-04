@@ -43,7 +43,7 @@
     "url": "https://github.com/pdsuwwz/vite-ts-starter/issues"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "2.0.1",
+    "@element-plus/icons-vue": "2.0.4",
     "@fortawesome/fontawesome-svg-core": "6.1.1",
     "@fortawesome/free-brands-svg-icons": "6.1.1",
     "@fortawesome/free-regular-svg-icons": "6.1.1",
