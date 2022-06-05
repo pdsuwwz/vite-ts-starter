@@ -9,7 +9,7 @@
     @closed="handleRealClosed"
   >
     <template
-      #title
+      #header
     >
       <IconFont
         v-if="headerIcon"
