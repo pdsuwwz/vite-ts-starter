@@ -26,7 +26,7 @@ specifiers:
   babel-plugin-transform-vite-meta-env: ^1.0.3
   cross-env: ^7.0.3
   echarts: ^5.3.2
-  element-plus: 2.2.2
+  element-plus: 2.2.4
   eslint: ^8.16.0
   eslint-plugin-html: ^6.2.0
   eslint-plugin-import: ^2.26.0
@@ -57,7 +57,7 @@ dependencies:
   '@fortawesome/vue-fontawesome': 3.0.0-5_euhiedduaga66e2n3bw7oqpkli
   axios: 0.27.2
   echarts: 5.3.2
-  element-plus: 2.2.2_vue@3.2.35
+  element-plus: 2.2.4_vue@3.2.35
   js-cookie: 3.0.1
   lodash: 4.17.21
   nprogress: 0.2.0
@@ -1274,16 +1274,16 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /@element-plus/icons-vue/1.1.4_vue@3.2.35:
-    resolution: {integrity: sha512-Iz/nHqdp1sFPmdzRwHkEQQA3lKvoObk8azgABZ81QUOpW9s/lUyQVUSh0tNtEPZXQlKwlSh7SPgoVxzrE0uuVQ==}
+  /@element-plus/icons-vue/2.0.1_vue@3.2.35:
+    resolution: {integrity: sha512-a1N6IXw5AZx6JZQDoMBG9E1Pes1BogGTpL192SeI/piMdpEEcm4cn+MkDxhAvA9SuF1dFbdAU54EoS0xKQhjwg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       vue: 3.2.35
     dev: false
 
-  /@element-plus/icons-vue/2.0.1_vue@3.2.35:
-    resolution: {integrity: sha512-a1N6IXw5AZx6JZQDoMBG9E1Pes1BogGTpL192SeI/piMdpEEcm4cn+MkDxhAvA9SuF1dFbdAU54EoS0xKQhjwg==}
+  /@element-plus/icons-vue/2.0.5_vue@3.2.35:
+    resolution: {integrity: sha512-jvNWyKcdvPvMDLTWjghrPY+bYHKqh7hbAFIPe+HWR073zilzt33csREzmKx3VwhdlJUW5u0nCqN+0rwI8jlH+w==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -2795,13 +2795,13 @@ packages:
     resolution: {integrity: sha512-0Rcpald12O11BUogJagX3HsCN3FE83DSqWjgXoHo5a72KUKMSfI39XBgJpgNNxS9fuGzytaFjE06kZkiVFy2qA==}
     dev: true
 
-  /element-plus/2.2.2_vue@3.2.35:
-    resolution: {integrity: sha512-yGcj2Ayb0jZO1WbI51tHJ4efhlfWKlBqqGtWbzhq+tcpfaKzJZN+IHRouuFasqn0ZV3tWCDu1jggDR1+9y7XfQ==}
+  /element-plus/2.2.4_vue@3.2.35:
+    resolution: {integrity: sha512-jktZr0o3ARDxWNWPEaJZQm2BN7thTpQl0aIfCUo5eB5m+zEap2DEcojyGKMHSQsCULcPM32NFfu2sHlhbhOiGA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@ctrl/tinycolor': 3.4.1
-      '@element-plus/icons-vue': 1.1.4_vue@3.2.35
+      '@element-plus/icons-vue': 2.0.5_vue@3.2.35
       '@floating-ui/dom': 0.5.1
       '@popperjs/core': /@sxzz/popperjs-es/2.11.7
       '@types/lodash': 4.14.182
@@ -3102,7 +3102,7 @@ packages:
     dev: true
 
   /escape-html/1.0.3:
-    resolution: {integrity: sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=}
+    resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==}
     dev: false
 
   /escape-string-regexp/1.0.5:
