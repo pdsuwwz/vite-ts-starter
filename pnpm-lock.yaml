@@ -26,7 +26,7 @@ specifiers:
   babel-plugin-transform-vite-meta-env: ^1.0.3
   cross-env: ^7.0.3
   echarts: ^5.3.2
-  element-plus: 2.2.4
+  element-plus: 2.2.5
   eslint: ^8.17.0
   eslint-plugin-html: ^6.2.0
   eslint-plugin-import: ^2.26.0
@@ -57,7 +57,7 @@ dependencies:
   '@fortawesome/vue-fontawesome': 3.0.0-5_ra36apx7k7u2r4lnz24hnvxtpe
   axios: 0.27.2
   echarts: 5.3.2
-  element-plus: 2.2.4_vue@3.2.36
+  element-plus: 2.2.5_vue@3.2.36
   js-cookie: 3.0.1
   lodash: 4.17.21
   nprogress: 0.2.0
@@ -2021,14 +2021,12 @@ packages:
     resolution: {integrity: sha512-c2qvopo0crh9A4GXi2/2kfGYMxsJW4tVILrqRPydVGZHhq0fnzy6qmclWOhBFckEhmyxmpHpdJtIRYGeKcuhnA==}
     dependencies:
       '@vue/shared': 3.2.36
-    dev: false
 
   /@vue/runtime-core/3.2.36:
     resolution: {integrity: sha512-PTWBD+Lub+1U3/KhbCExrfxyS14hstLX+cBboxVHaz+kXoiDLNDEYAovPtxeTutbqtClIXtft+wcGdC+FUQ9qQ==}
     dependencies:
       '@vue/reactivity': 3.2.36
       '@vue/shared': 3.2.36
-    dev: false
 
   /@vue/runtime-dom/3.2.36:
     resolution: {integrity: sha512-gYPYblm7QXHVuBohqNRRT7Wez0f2Mx2D40rb4fleehrJU9CnkjG0phhcGEZFfGwCmHZRqBCRgbFWE98bPULqkg==}
@@ -2036,7 +2034,6 @@ packages:
       '@vue/runtime-core': 3.2.36
       '@vue/shared': 3.2.36
       csstype: 2.6.20
-    dev: false
 
   /@vue/server-renderer/3.2.36_vue@3.2.36:
     resolution: {integrity: sha512-uZE0+jfye6yYXWvAQYeHZv+f50sRryvy16uiqzk3jn8hEY8zTjI+rzlmZSGoE915k+W/Ol9XSw6vxOUD8dGkUg==}
@@ -2046,7 +2043,6 @@ packages:
       '@vue/compiler-ssr': 3.2.36
       '@vue/shared': 3.2.36
       vue: 3.2.36
-    dev: false
 
   /@vue/shared/3.2.36:
     resolution: {integrity: sha512-JtB41wXl7Au3+Nl3gD16Cfpj7k/6aCroZ6BbOiCMFCMvrOpkg/qQUXTso2XowaNqBbnkuGHurLAqkLBxNGc1hQ==}
@@ -2646,7 +2642,6 @@ packages:
 
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
-    dev: false
 
   /data-urls/3.0.2:
     resolution: {integrity: sha512-Jy/tj3ldjZJo63sVAvg6LHt2mHvl4V6AgRAmNDtLdm7faqtsx+aJG42rsyCo9JCoRVKwPFzKlIPx3DIibwSIaQ==}
@@ -2657,8 +2652,8 @@ packages:
       whatwg-url: 11.0.0
     dev: true
 
-  /dayjs/1.11.2:
-    resolution: {integrity: sha512-F4LXf1OeU9hrSYRPTTj/6FbO4HTjPKXvEIC1P2kcnFurViINCVk3ZV0xAS3XVx9MkMsXbbqlK6hjseaYbgKEHw==}
+  /dayjs/1.11.3:
+    resolution: {integrity: sha512-xxwlswWOlGhzgQ4TKzASQkUhqERI3egRNqgV4ScR8wlANA/A9tZ7miXa44vTTKEq5l7vWoL5G57bG3zA+Kow0A==}
     dev: false
 
   /debug/2.6.9:
@@ -2805,8 +2800,8 @@ packages:
     resolution: {integrity: sha512-4eWebzDLd+hYLm4csbyMU2EbBnqhwl8Oe9eF/7CBDPWcRxFmqzx4izxvHH+lofQxzieg8UbB8ZuzNTxeukzfTg==}
     dev: true
 
-  /element-plus/2.2.4_vue@3.2.36:
-    resolution: {integrity: sha512-jktZr0o3ARDxWNWPEaJZQm2BN7thTpQl0aIfCUo5eB5m+zEap2DEcojyGKMHSQsCULcPM32NFfu2sHlhbhOiGA==}
+  /element-plus/2.2.5_vue@3.2.36:
+    resolution: {integrity: sha512-Kl0yn/PQca5YQo3M3NPBP4Xl71NQuMtDx5zNXZGVyl5FjdMujXiFB9SXKYGDUCgFU3d/Rl14vB4Fpmcl2Iz+Hw==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -2818,7 +2813,7 @@ packages:
       '@types/lodash-es': 4.17.6
       '@vueuse/core': 8.6.0_vue@3.2.36
       async-validator: 4.1.1
-      dayjs: 1.11.2
+      dayjs: 1.11.3
       escape-html: 1.0.3
       lodash: 4.17.21
       lodash-es: 4.17.21
@@ -5696,7 +5691,6 @@ packages:
       '@vue/runtime-dom': 3.2.36
       '@vue/server-renderer': 3.2.36_vue@3.2.36
       '@vue/shared': 3.2.36
-    dev: false
 
   /vuex/4.0.2_vue@3.2.36:
     resolution: {integrity: sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==}
