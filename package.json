@@ -72,7 +72,7 @@
     "@typescript-eslint/parser": "^5.27.0",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/compiler-sfc": "^3.2.36",
-    "@vue/test-utils": "2.0.0",
+    "@vue/test-utils": "2.0.2",
     "@vue/vue3-jest": "^28.0.0",
     "babel-jest": "^28.1.0",
     "babel-plugin-transform-vite-meta-env": "^1.0.3",
