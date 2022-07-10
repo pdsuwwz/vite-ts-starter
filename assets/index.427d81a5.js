@@ -1,0 +1,1 @@
+import{_ as e,e as s,o as t,b as r}from"./index.46ee3ed3.js";const a=s({name:"XxBox"}),o={class:"xxx-container"};var v=e(a,[["render",function(n,i,d,c,u,x){return t(),r("div",o)}],["__scopeId","data-v-2e535f5a"],["__file","/home/runner/work/vite-ts-starter/vite-ts-starter/src/modules/Result/components/index.vue"]]);export{v as default};
