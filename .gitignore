@@ -16,7 +16,6 @@
 # misc
 .DS_Store
 *.local
-.vscode/
 
 npm-debug.log*
 yarn-debug.log*
