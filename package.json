@@ -12,7 +12,9 @@
     "lint": "eslint ./src --ext .js,.ts,.jsx,.tsx,.vue",
     "lint:fix": "eslint --fix --cache --ext .js,.ts,.jsx,.tsx,.vue ./src",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "stylelint": "stylelint .scss, .vue ./src",
+    "stylelint:fix": "stylelint --fix .scss, .vue ./src"
   },
   "engines": {
     "node": ">=14.19.0"
@@ -85,9 +87,17 @@
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
     "jest-transform-stub": "^2.0.0",
+    "postcss": "^8.4.14",
+    "postcss-html": "^1.5.0",
+    "postcss-scss": "^4.0.4",
     "rollup": "^2.76.0",
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.53.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-recommended-scss": "^7.0.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^4.0.0",
     "ts-jest": "^28.0.5",
     "typescript": "^4.7.4",
     "vite": "^3.0.0"

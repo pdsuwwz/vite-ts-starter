@@ -1,0 +1,16 @@
+{
+  "stylelint.validate": [
+    "vue",
+		"scss"
+  ],
+  "css.validate": false,
+	"less.validate": false,
+
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+    "eslint.autoFixOnSave": true,
+		"source.fixAll.stylelint": true
+	},
+	"files.autoSaveDelay": 500
+}
