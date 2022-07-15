@@ -48,7 +48,7 @@ specifiers:
   stylelint-config-recommended-scss: ^7.0.0
   stylelint-config-recommended-vue: ^1.4.0
   stylelint-config-standard: ^26.0.0
-  stylelint-config-standard-scss: ^4.0.0
+  stylelint-config-standard-scss: 5.0.0
   ts-jest: ^28.0.5
   typescript: ^4.7.4
   vite: ^3.0.0
@@ -109,7 +109,7 @@ devDependencies:
   stylelint-config-recommended-scss: 7.0.0_uyk3cwxn3favstz4untq233szu
   stylelint-config-recommended-vue: 1.4.0_5rxrxgs7sjazj2ve56ds3kmipi
   stylelint-config-standard: 26.0.0_stylelint@14.9.1
-  stylelint-config-standard-scss: 4.0.0_uyk3cwxn3favstz4untq233szu
+  stylelint-config-standard-scss: 5.0.0_uyk3cwxn3favstz4untq233szu
   ts-jest: 28.0.5_k2q2diev337shdfc35phozchiq
   typescript: 4.7.4
   vite: 3.0.0_sass@1.53.0
@@ -2062,14 +2062,12 @@ packages:
     resolution: {integrity: sha512-/7WRafBOshOc6m3F7plwzPeCu/RCVv9uMpOwa/5PiY1Zz+WLVRWiy0MYKwmg19KBdGtFWsmZ4cD+LOdVPcs52A==}
     dependencies:
       '@vue/shared': 3.2.37
-    dev: false
 
   /@vue/runtime-core/3.2.37:
     resolution: {integrity: sha512-JPcd9kFyEdXLl/i0ClS7lwgcs0QpUAWj+SKX2ZC3ANKi1U4DOtiEr6cRqFXsPwY5u1L9fAjkinIdB8Rz3FoYNQ==}
     dependencies:
       '@vue/reactivity': 3.2.37
       '@vue/shared': 3.2.37
-    dev: false
 
   /@vue/runtime-dom/3.2.37:
     resolution: {integrity: sha512-HimKdh9BepShW6YozwRKAYjYQWg9mQn63RGEiSswMbW+ssIht1MILYlVGkAGGQbkhSh31PCdoUcfiu4apXJoPw==}
@@ -2077,7 +2075,6 @@ packages:
       '@vue/runtime-core': 3.2.37
       '@vue/shared': 3.2.37
       csstype: 2.6.20
-    dev: false
 
   /@vue/server-renderer/3.2.37_vue@3.2.37:
     resolution: {integrity: sha512-kLITEJvaYgZQ2h47hIzPh2K3jG8c1zCVbp/o/bzQOyvzaKiCquKS7AaioPI28GNxIsE/zSx+EwWYsNxDCX95MA==}
@@ -2087,7 +2084,6 @@ packages:
       '@vue/compiler-ssr': 3.2.37
       '@vue/shared': 3.2.37
       vue: 3.2.37
-    dev: false
 
   /@vue/shared/3.2.37:
     resolution: {integrity: sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==}
@@ -2746,7 +2742,6 @@ packages:
 
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
-    dev: false
 
   /data-urls/3.0.2:
     resolution: {integrity: sha512-Jy/tj3ldjZJo63sVAvg6LHt2mHvl4V6AgRAmNDtLdm7faqtsx+aJG42rsyCo9JCoRVKwPFzKlIPx3DIibwSIaQ==}
@@ -5745,19 +5740,6 @@ packages:
       stylelint: 14.9.1
     dev: true
 
-  /stylelint-config-recommended-scss/6.0.0_uyk3cwxn3favstz4untq233szu:
-    resolution: {integrity: sha512-6QOe2/OzXV2AP5FE12A7+qtKdZik7Saf42SMMl84ksVBBPpTdrV+9HaCbPYiRMiwELY9hXCVdH4wlJ+YJb5eig==}
-    peerDependencies:
-      stylelint: ^14.4.0
-    dependencies:
-      postcss-scss: 4.0.4_postcss@8.4.14
-      stylelint: 14.9.1
-      stylelint-config-recommended: 7.0.0_stylelint@14.9.1
-      stylelint-scss: 4.3.0_stylelint@14.9.1
-    transitivePeerDependencies:
-      - postcss
-    dev: true
-
   /stylelint-config-recommended-scss/7.0.0_uyk3cwxn3favstz4untq233szu:
     resolution: {integrity: sha512-rGz1J4rMAyJkvoJW4hZasuQBB7y9KIrShb20l9DVEKKZSEi1HAy0vuNlR8HyCKy/jveb/BdaQFcoiYnmx4HoiA==}
     peerDependencies:
@@ -5785,14 +5767,6 @@ packages:
       stylelint-config-recommended: 8.0.0_stylelint@14.9.1
     dev: true
 
-  /stylelint-config-recommended/7.0.0_stylelint@14.9.1:
-    resolution: {integrity: sha512-yGn84Bf/q41J4luis1AZ95gj0EQwRX8lWmGmBwkwBNSkpGSpl66XcPTulxGa/Z91aPoNGuIGBmFkcM1MejMo9Q==}
-    peerDependencies:
-      stylelint: ^14.4.0
-    dependencies:
-      stylelint: 14.9.1
-    dev: true
-
   /stylelint-config-recommended/8.0.0_stylelint@14.9.1:
     resolution: {integrity: sha512-IK6dWvE000+xBv9jbnHOnBq01gt6HGVB2ZTsot+QsMpe82doDQ9hvplxfv4YnpEuUwVGGd9y6nbaAnhrjcxhZQ==}
     peerDependencies:
@@ -5801,25 +5775,16 @@ packages:
       stylelint: 14.9.1
     dev: true
 
-  /stylelint-config-standard-scss/4.0.0_uyk3cwxn3favstz4untq233szu:
-    resolution: {integrity: sha512-xizu8PTEyB6zYXBiVg6VtvUYn9m57x+6ZtaOdaxsfpbe5eagLPGNlbYnKfm/CfN69ArUpnwR6LjgsTHzlGbtXQ==}
+  /stylelint-config-standard-scss/5.0.0_uyk3cwxn3favstz4untq233szu:
+    resolution: {integrity: sha512-zoXLibojHZYPFjtkc4STZtAJ2yGTq3Bb4MYO0oiyO6f/vNxDKRcSDZYoqN260Gv2eD5niQIr1/kr5SXlFj9kcQ==}
     peerDependencies:
-      stylelint: ^14.4.0
+      stylelint: ^14.9.0
     dependencies:
       stylelint: 14.9.1
-      stylelint-config-recommended-scss: 6.0.0_uyk3cwxn3favstz4untq233szu
-      stylelint-config-standard: 25.0.0_stylelint@14.9.1
+      stylelint-config-recommended-scss: 7.0.0_uyk3cwxn3favstz4untq233szu
+      stylelint-config-standard: 26.0.0_stylelint@14.9.1
     transitivePeerDependencies:
       - postcss
-    dev: true
-
-  /stylelint-config-standard/25.0.0_stylelint@14.9.1:
-    resolution: {integrity: sha512-21HnP3VSpaT1wFjFvv9VjvOGDtAviv47uTp3uFmzcN+3Lt+RYRv6oAplLaV51Kf792JSxJ6svCJh/G18E9VnCA==}
-    peerDependencies:
-      stylelint: ^14.4.0
-    dependencies:
-      stylelint: 14.9.1
-      stylelint-config-recommended: 7.0.0_stylelint@14.9.1
     dev: true
 
   /stylelint-config-standard/26.0.0_stylelint@14.9.1:
@@ -6318,7 +6283,6 @@ packages:
       '@vue/runtime-dom': 3.2.37
       '@vue/server-renderer': 3.2.37_vue@3.2.37
       '@vue/shared': 3.2.37
-    dev: false
 
   /vuex/4.0.2_vue@3.2.37:
     resolution: {integrity: sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==}
