@@ -8,7 +8,7 @@
 
 🐬  A Starter template built on Vite 2.x + Vue 3.x + Typescript.
 
-**Live demo:** [Vite TS Starter](https://pdsuwwz.github.io/vite-ts-starter)
+[🚀在线演示](https://pdsuwwz.github.io/vite-ts-starter)
 
 
 ## 🎉 Features
