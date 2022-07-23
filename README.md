@@ -6,7 +6,7 @@
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/vite-ts-starter?color=blue)](https://github.com/pdsuwwz/vite-ts-starter/blob/main/LICENSE)
 
-🐬  A Starter template built on Vite 2.x + Vue 3.x + Typescript.
+🐬  A Starter template built on Vite 3.x + Vue 3.x + Typescript.
 
 [🚀在线演示](https://pdsuwwz.github.io/vite-ts-starter)
 
