@@ -1,4 +1,4 @@
-@use '@/styles/element-variables.scss' as *;
+@use "@/styles/element-variables.scss" as *;
 
 .el-form-item__label {
   color: #606266;
@@ -12,13 +12,15 @@
 // }
 
 // el-message 样式覆盖
+
 .el-message {
+  width: initial;
   min-width: 0 !important;
   height: 40px;
   padding-right: 20px;
   background-color: #fff !important;
   border: none !important;
-  box-shadow: 0px -4px 14px 3px rgba(#000, 0.06), 0px 12px 28px 0px rgba(#000, 0.06) !important;
+  box-shadow: 0 -4px 14px 3px rgba(#000, 0.06), 0 12px 28px 0 rgba(#000, 0.06) !important;
 }
 
 .el-message .el-message__content {
@@ -28,12 +30,15 @@
 .el-message .el-message-icon--success {
   color: $color-success;
 }
+
 .el-message .el-message-icon--warning {
   color: $color-warning;
 }
+
 .el-message .el-message-icon--info {
   color: $color-primary;
 }
+
 .el-message .el-message-icon--error {
   color: $color-danger;
 }
@@ -43,11 +48,14 @@
 }
 
 // UserAccount
+
 .wrap-user {
+
   h1 {
     font-size: 14px;
     color: #303133;
   }
+
   p {
     font-size: 12px;
     color: #909399;
@@ -62,36 +70,43 @@
   word-break: break-word;
 }
 
-.setting__word-break > div{
+.setting__word-break > div {
   word-break: break-word !important;
 }
 
-.add-member-dialog .el-dialog__body{
-  --el-body-border: 1px solid #DCDFE6;
+.add-member-dialog .el-dialog__body {
+  --el-body-border: 1px solid #dcdfe6;
+
   border-top: var(--el-body-border);
   border-bottom: var(--el-body-border);
   padding: 20px 12px 6px;
   margin-bottom: 5px;
 }
+
 .add-member-dialog .dialog-footer .el-button {
   padding: 0 20px;
 }
-.add-member-dialog .dialog-footer .el-button--primary{
+
+.add-member-dialog .dialog-footer .el-button--primary {
   background: #203062;
   border: none;
 }
+
 textarea {
   font-family: Arial;
 }
 
 .transform-rotate360 {
   animation: rotate-360 3s linear infinite;
+
   @keyframes rotate-360 {
-    from{
-      transform: rotate(0deg)
+
+    from {
+      transform: rotate(0deg);
     }
-    to{
-      transform: rotate(360deg)
+
+    to {
+      transform: rotate(360deg);
     }
   }
 }
