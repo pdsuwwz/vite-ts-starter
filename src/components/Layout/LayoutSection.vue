@@ -62,13 +62,16 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   height: 100%;
+
   .layout-section-container__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 40px;
+
     .layout-section-container__header-head {
       color: #303133;
+
       .layout-section-container__header-title {
         height: 18px;
         font-size: 18px;
@@ -76,22 +79,27 @@ export default defineComponent({
         font-weight: 500;
       }
     }
+
     .layout-section-container__header-action {
 
     }
   }
+
   .layout-section-container__content {
     display: flex;
     flex-direction: column;
     position: relative;
     margin-top: 16px;
     flex: auto;
+
     .content-divider {
       height: 1px;
       background: #dcdfe6;
       margin-bottom: 6px;
     }
+
     .layout-section-container__content-inner {
+
       &.is-flex {
         flex: 1;
         display: flex;

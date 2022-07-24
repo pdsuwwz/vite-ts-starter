@@ -196,19 +196,22 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 :deep() {
+
   .modal-container__component {
     padding: 24px;
+
     .el-textarea__inner,
-    .el-input__inner  {
+    .el-input__inner {
       padding: 8px;
     }
   }
+
   .modal-container__footer {
-      height: 54px;
-      line-height: 54px;
-      text-align: right;
-      padding-right: 24px;
-      border-top: 1px solid #DCDFE6FF;
+    height: 54px;
+    line-height: 54px;
+    text-align: right;
+    padding-right: 24px;
+    border-top: 1px solid #dcdfe6ff;
   }
 }
 </style>
@@ -216,29 +219,35 @@ export default defineComponent({
 .modal-wrapper-containers-dialog {
   width: 500px;
   border-radius: 8px;
+
   .el-dialog__header {
     display: flex;
     align-items: center;
     height: 54px;
-    border-bottom: 1px solid #DCDFE6FF;
+    border-bottom: 1px solid #dcdfe6ff;
+
     .modal-header__icon {
       width: 20px;
       height: 20px;
     }
+
     .modal-header__title {
       margin-left: 8px;
       font-size: 18px;
       font-weight: 500;
       color: #303133;
     }
+
     .header-desc {
       display: flex;
       align-items: center;
+
       svg {
         height: 17px;
       }
     }
   }
+
   .el-dialog__body {
     padding: 0;
   }

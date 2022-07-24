@@ -39,14 +39,17 @@ export default defineComponent({
   position: relative;
   height: 100%;
   white-space: nowrap;
+
   & > a {
     display: flex;
     align-items: center;
     height: 100%;
     color: #303133;
+
     .side-logo-img {
       width: 40px;
     }
+
     .side-logo-title {
       height: 32px;
       line-height: 32px;

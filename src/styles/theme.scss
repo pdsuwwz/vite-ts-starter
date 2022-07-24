@@ -1,8 +1,5 @@
-
-@use '@/styles/element-variables.scss' as *;
+@use "@/styles/element-variables.scss" as *;
 @use "element-plus/theme-chalk/src/index" as *;
-
-
 
 #nprogress .bar {
   background: $color-primary !important;

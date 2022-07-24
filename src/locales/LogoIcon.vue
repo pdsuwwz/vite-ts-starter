@@ -35,6 +35,7 @@ export default defineComponent({
   width: 20px;
   color: #fff;
   cursor: pointer;
+
   &.is-dark {
     color: #56575a;
   }

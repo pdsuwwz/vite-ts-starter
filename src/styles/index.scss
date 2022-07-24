@@ -1,15 +1,14 @@
-
-@use '@/styles/global-class.scss';
-@use '@/styles/theme.scss';
-@use '@/styles/element-status.scss';
-@use 'nprogress/nprogress.css';
+@use "@/styles/global-class.scss";
+@use "@/styles/theme.scss";
+@use "@/styles/element-status.scss";
+@use "nprogress/nprogress.css";
 
 body {
   width: 100vw;
   color: #495164;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   background-color: #f5f7fa;
 }
@@ -28,13 +27,16 @@ html {
 
 :root body {
   position: absolute;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-#app, body, html {
+#app,
+html {
   height: 100%;
 }
 
-body,
 dl,
 dt,
 dd,
@@ -80,7 +82,8 @@ a {
   outline: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -88,25 +91,31 @@ svg {
   box-sizing: content-box;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 // 滚动条样式
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgba(#000, 0.2);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-track {
   background: rgba(#000, 0.06);
   border-radius: 3px;
 }
 
 // el-table 表格与表头错位 bug
+
 body .el-table th.gutter {
   display: table-cell !important;
 }
@@ -120,8 +129,9 @@ table {
 }
 
 // https://stackoverflow.com/questions/43778196/input-background-removed-by-chrome-autofill
+
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-  -moz-box-shadow: 0 0 0 100px #fff inset;
+  box-shadow: 0 0 0 1000px #fff inset;
+  box-shadow: 0 0 0 100px #fff inset;
   box-shadow: 0 0 0 100px #fff inset;
 }

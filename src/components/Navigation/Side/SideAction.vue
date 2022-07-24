@@ -43,15 +43,18 @@ export default defineComponent({
 <style lang="scss" scoped>
 .side-action-container {
   position: relative;
+
   .action-list {
     display: flex;
     white-space: nowrap;
+
     .action-item {
       height: 100%;
       line-height: inherit;
       background-color: #eee;
       padding: 0 12px;
       margin-right: 5px;
+
       &:last-child {
         // margin-right: 0;
       }

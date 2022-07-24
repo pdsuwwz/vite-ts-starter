@@ -34,19 +34,23 @@ export default defineComponent({
   position: relative;
   height: 100%;
   white-space: nowrap;
+
   & > a {
     display: flex;
     align-items: center;
     height: 100%;
     color: #303133;
+
     .go-back-img {
       height: 32px;
     }
+
     .go-back-icon {
       color: #606266;
       font-size: 24px;
       padding-left: 8px;
     }
+
     .go-back-title {
       height: 22px;
       line-height: 22px;

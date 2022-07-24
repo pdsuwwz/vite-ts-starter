@@ -59,6 +59,7 @@ export default defineComponent({
   font-weight: 400;
   line-height: 20px;
   color: #909399;
+
   .project-table-header-container__head-item {
   }
 }

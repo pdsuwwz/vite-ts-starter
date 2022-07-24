@@ -28,7 +28,7 @@ import { defineComponent, ref } from 'vue'
 import Octocat from './octocat.vue'
 
 export default defineComponent({
-  name: 'Footer',
+  name: 'MyFooter',
   components: {
     Octocat
   },
@@ -50,11 +50,14 @@ export default defineComponent({
 .footer {
   margin: 0 auto;
   width: 100%;
+
   &.border {
-    border-top: 1px solid rgba(#3c3c43, .12);
+    border-top: 1px solid rgba(#3c3c43, 0.12);
   }
+
   .container {
-    padding: 14px 0 14px;
+    padding: 14px 0;
+
     .text {
       display: flex;
       justify-content: center;
@@ -63,16 +66,17 @@ export default defineComponent({
       margin: 0;
       text-align: center;
       line-height: 1;
-      font-size: 1rem;
       color: #929292;
     }
   }
 }
+
 .github-link {
   color: #555;
-  border-bottom: 1px solid rgba(#7d7d7d, .3);
-  transition: border .3s ease-in-out;
+  border-bottom: 1px solid rgba(#7d7d7d, 0.3);
+  transition: border 0.3s ease-in-out;
   margin-left: 6px;
+
   &:hover {
     border-color: #7d7d7d;
   }

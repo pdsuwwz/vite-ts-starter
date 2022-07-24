@@ -5,7 +5,7 @@
     :class="{
       'is-dark': dark
     }"
-    trigger="click"
+    trigger="hover"
     @command="handleChange"
   >
     <span class="icon-outer">
@@ -89,16 +89,20 @@ export default defineComponent({
   color: #fff;
   cursor: initial;
   user-select: none;
+
   &.is-dark {
     color: #495164;
   }
+
   .icon-outer {
     display: flex;
     align-items: center;
+
     &:hover > * {
       color: $color-primary;
     }
   }
+
   .custom-dropdown-item {
     white-space: nowrap;
   }

@@ -117,24 +117,29 @@ export default defineComponent({
 
 <style lang="scss">
 .dialog-modal {
-  background: #FFFFFF;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 8%);
   border-radius: 8px;
   border: 1px solid #fff;
-  font-family: PingFangSC-Medium, PingFang SC;
+  font-family: PingFangSC-Medium, "PingFang SC";
   overflow: hidden;
+
   & > .el-dialog__header {
     display: none;
   }
+
   & > .el-dialog__body {
     padding: 0;
   }
+
   & > .el-dialog__footer {
     display: none;
   }
+
   .dialog-modal__box {
     display: flex;
     height: 627px;
+
     .dialog-modal__box-left {
       min-width: 118px;
       background-color: #1e3264;
@@ -142,11 +147,13 @@ export default defineComponent({
       background-size: cover;
       background-repeat: no-repeat;
     }
+
     .dialog-modal__box-right {
       flex: 1;
       display: flex;
       min-width: 0;
       flex-direction: column;
+
       .dialog-modal__box-right__header {
         display: flex;
         justify-content: space-between;
@@ -154,24 +161,29 @@ export default defineComponent({
         min-height: 50px;
         border-bottom: 1px solid #dcdfe6;
         padding: 0 16px 0 24px;
+
         .left-title {
           display: flex;
           align-items: center;
+
           .header-title {
             font-size: 18px;
             font-weight: 500;
             color: #303133;
           }
         }
+
         .right-close {
           cursor: pointer;
         }
       }
+
       .dialog-modal__box-right__body {
         flex: 1;
         min-height: 0;
         overflow-y: auto;
       }
+
       .dialog-modal__box-right__footer {
         display: flex;
         justify-content: flex-end;

@@ -1,4 +1,3 @@
-
 // Only variables can be placed here,
 // and other files such as themes cannot be introduced,
 // otherwise it will affect the packaging speed.
@@ -6,11 +5,10 @@
 /* theme color */
 // $color-primary: #4686FF;
 $color-primary: #3c40c6;
-$color-success: #52C41A;
-$color-warning: #FAAD14;
-$color-danger: #FA5555;
+$color-success: #52c41a;
+$color-warning: #faad14;
+$color-danger: #fa5555;
 $color-info: #909399;
-
 $--colors: (
   "primary": (
     "base": $color-primary,
@@ -29,24 +27,23 @@ $--colors: (
   ),
 );
 
-
 // 按需导入，重写覆盖自己所需样式
+
 @forward "element-plus/theme-chalk/src/common/var.scss" with (
   $colors: $--colors,
   $text-color: (
-    'primary': initial,
-    'regular': #606266,
-    'secondary': #909399,
-    'placeholder': #c0c4cc,
+    "primary": initial,
+    "regular": #606266,
+    "secondary": #909399,
+    "placeholder": #c0c4cc,
   ),
   $border-radius: (
-    'base': 4px,
-    'small': 2px,
-    'round': 20px,
-    'circle': 100%,
+    "base": 4px,
+    "small": 2px,
+    "round": 20px,
+    "circle": 100%,
   ),
 );
-
 
 // :export {
 //   colorPrimary: $color-primary;

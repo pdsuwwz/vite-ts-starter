@@ -51,9 +51,11 @@ export default defineComponent({
   grid-template-rows: repeat(2, 360px) 528px;
   grid-gap: 16px;
   padding-bottom: 16px;
+
   .grid-last {
     grid-column-start: span 2;
   }
+
   .fitting-operate {
     color: $color-primary;
     cursor: pointer;

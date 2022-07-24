@@ -103,16 +103,20 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .icon-font {
-  width: 1em; height: 1em;
+  width: 1em;
+  height: 1em;
   vertical-align: -0.15em;
-  fill: currentColor;
+  fill: currentcolor;
   overflow: hidden;
+
   &.middle {
     vertical-align: middle;
   }
+
   &.cursor {
     cursor: pointer;
   }
+
   &.disabled {
     color: #c0c4cc;
     cursor: not-allowed;

@@ -40,9 +40,11 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 $headerHeight: 48px;
+
 .navigation-navbar-header-container {
   height: $headerHeight;
   line-height: $headerHeight;
+
   &.fixed-header {
     position: fixed;
     width: 100%;
@@ -51,7 +53,9 @@ $headerHeight: 48px;
     right: 0;
     z-index: 3;
   }
-  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+
+  box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
+
   .navbar-header-box {
     display: flex;
     height: 100%;

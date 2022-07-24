@@ -145,22 +145,25 @@ export default defineComponent({
   align-items: center;
   height: 64px;
   padding: 0 24px;
-  box-shadow: 0px 1px 4px 0px rgba(#000, 0.08);
+  box-shadow: 0 1px 4px 0 rgba(#000, 0.08);
   border-radius: 8px;
   background: #fff;
   margin-bottom: 16px;
-  transition: background .3s, border .3s, box-shadow .3s;
+  transition: background 0.3s, border 0.3s, box-shadow 0.3s;
   color: #303133;
   user-select: none;
   border: 1px solid transparent;
+
   &:hover {
     box-shadow: 0 10px 30px -20px rgba(#000, 0.24);
     border: 1px solid #dcdfe6;
   }
+
   .project-item__name {
     display: flex;
     align-items: center;
     min-width: 0;
+
     .project-item__name-left {
       display: flex;
       align-items: center;
@@ -170,36 +173,43 @@ export default defineComponent({
       border-radius: 5px;
       background-color: #ecf3ff;
       margin-right: 16px;
+
       & > svg {
         width: 20px;
         font-size: 20px;
-        color: $color-primary
+        color: $color-primary;
       }
     }
+
     .project-item__name-desc {
       flex: 1;
       overflow: hidden;
+
       .project-item__name-desc__corpname {
         display: flex;
         align-items: center;
         font-size: 14px;
         color: #303133;
+
         .project-item__name-desc__corpname-maintext {
           max-width: 80%;
           margin-right: 10px;
         }
+
         .corpname-notes {
           font-size: 15px;
           color: $color-info;
           cursor: pointer;
         }
       }
+
       .project-item__name-desc__fullname {
         font-size: 12px;
         color: $color-info;
       }
     }
   }
+
   .project-item-action {
     flex: initial;
     display: flex;
@@ -207,16 +217,18 @@ export default defineComponent({
     width: 19%;
     height: 100%;
     font-size: 14px;
-    transition: .3s;
+    transition: 0.3s;
     cursor: pointer;
 
     .project-item-action__icon {
       width: 20px;
+
       & > svg {
         width: 100%;
         font-size: 20px;
       }
     }
+
     .project-item-action__status {
       padding-left: 6px;
     }
@@ -224,9 +236,11 @@ export default defineComponent({
     &.active {
       color: $color-primary;
     }
+
     &.loading {
       color: $color-primary;
     }
+
     &:hover {
       color: #6b9eff;
     }

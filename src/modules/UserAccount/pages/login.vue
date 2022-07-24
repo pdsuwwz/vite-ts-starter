@@ -31,7 +31,7 @@
         </template>
       </UserAccountContainerLayout>
     </div>
-    <Footer />
+    <MyFooter />
   </div>
 </template>
 
@@ -211,32 +211,38 @@ export default defineComponent({
   flex-direction: column;
   min-height: 100vh;
   background-color: #f0f2f5;
-  background-image: url('@/assets/images/logo-background.jpg');
+  background-image: url("@/assets/images/logo-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
   .user-account-nav {
     display: flex;
     justify-content: space-between;
     color: #484848;
-    padding: 0px 16px;
-    box-shadow: 0px -3px 8px 3px #c6c6c6;
+    padding: 0 16px;
+    box-shadow: 0 -3px 8px 3px #c6c6c6;
+
     // box-shadow: 0 1px 4px 3px rgb(0 21 41 / 8%);
+
     background-color: rgba(#fff, 10%);
+
     .nav-left,
     .nav-right {
       display: flex;
       height: 48px;
       align-items: center;
     }
+
     .nav-logo {
       width: 56px;
       height: 32px;
-      background-image: url('@/assets/images/vue.svg');
+      background-image: url("@/assets/images/vue.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
     }
+
     .nav-circle {
       width: 6px;
       height: 6px;
@@ -244,12 +250,14 @@ export default defineComponent({
       border-radius: 50%;
       background: #484848;
     }
+
     .nav-title {
       font-size: 18px;
       font-weight: 500;
       line-height: 25px;
     }
   }
+
   .user-account-body {
     flex: 1;
     display: flex;
@@ -259,8 +267,10 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 600px) {
+
   .user-account-container-layout {
     justify-content: center;
+
     .user-account-nav {
       left: 0;
       right: 0;

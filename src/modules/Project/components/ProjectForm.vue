@@ -96,6 +96,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .project-form-container {
+
   .footer-button-list {
     display: flex;
     justify-content: flex-end;

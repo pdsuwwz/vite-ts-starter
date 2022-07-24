@@ -163,6 +163,7 @@ export default defineComponent({
 <style lang="scss">
 .search-input-container {
   width: 240px;
+
   .search-loading-icon {
     color: #606266;
     font-size: 16px;
@@ -170,10 +171,12 @@ export default defineComponent({
     display: flex;
     align-items: center;
     margin-right: 4px;
+
     svg {
       animation: rotate-360 3s linear infinite;
     }
   }
+
   .search-icon {
     color: #606266;
     height: 100%;
@@ -181,20 +184,26 @@ export default defineComponent({
     font-size: 16px;
     padding-right: 4px;
   }
+
   .el-input__inner {
     height: 40px;
     line-height: 40px;
   }
 }
+
 .search-select-container {
+
   .el-autocomplete-suggestion__list {
+
     li {
+
       &:active {
         background-color: #ecf3ff;
       }
     }
   }
 }
+
 .search-select-highlight {
   color: $color-primary;
 }

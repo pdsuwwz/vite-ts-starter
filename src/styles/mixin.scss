@@ -1,5 +1,5 @@
 @mixin multiple_ellipsis($line_number: 3) {
-  display: -webkit-box;
+  display: box;
   word-break: break-word;
   overflow: hidden;
   text-overflow: ellipsis;

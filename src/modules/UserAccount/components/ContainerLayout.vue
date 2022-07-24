@@ -204,14 +204,16 @@ export default defineComponent({
 .user-account-container-layout {
   width: 438px;
   margin-right: 80px;
-  padding: 50px 34px 60px 34px;
+  padding: 50px 34px 60px;
   background: #fff;
-  box-shadow: 3px 6px 12px 0px rgba(0, 0, 0, 0.15), 1px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 6px 12px 0 rgb(0 0 0 / 15%), 1px 4px 8px 0 rgb(0 0 0 / 15%);
   border-radius: 6px;
   user-select: none;
+
   :deep() .el-input .el-input__inner {
     letter-spacing: 1px;
   }
+
   .form-custom-label {
     flex: 1;
     display: flex;
@@ -219,52 +221,67 @@ export default defineComponent({
     font-size: 14px;
     font-weight: 600;
   }
-  &:deep(){
+
+  &:deep() {
+
     .el-input__prefix-inner {
       margin-left: -4px;
       align-items: center;
     }
+
     .el-input__suffix-inner {
       align-items: center;
     }
   }
+
   .input-icon-prefix {
     padding-left: 6px;
+
     // height: 100%;
   }
+
   .input-icon-lock {
     cursor: pointer;
+
     // height: 100%;
   }
+
   .form-title {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding-bottom: 30px;
+
     .form-title-icon {
       width: 32px;
       font-size: 0;
       margin-right: 10px;
+
       &:deep() {
+
         & > * {
           font-size: 32px;
         }
       }
     }
+
     .form-title-text {
       font-size: 26px;
       font-weight: 600;
     }
+
     .form-desc-text {
       font-size: 16px;
       font-weight: 400;
       line-height: 26px;
-      padding: 44px 0 0px;
+      padding: 44px 0 0;
     }
   }
+
   .submit-form-action-list {
     display: flex;
     margin-top: 40px;
+
     .submit-form-action-button {
       flex: 1;
     }
@@ -272,6 +289,7 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 600px) {
+
   .user-account-container-layout {
     width: 95%;
     margin: auto;

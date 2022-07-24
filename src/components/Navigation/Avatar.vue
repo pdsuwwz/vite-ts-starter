@@ -1,7 +1,7 @@
 <template>
   <el-dropdown
     class="navigation-avatar"
-    trigger="click"
+    trigger="hover"
   >
     <div style="padding: 0 12px;">
       <img
@@ -74,12 +74,14 @@ export default defineComponent({
   align-items: center;
   cursor: pointer;
   user-select: none;
+
   img {
     width: 24px;
     border: 1px solid $color-primary;
     border-radius: 50%;
   }
 }
+
 .navigation-avatar__dropdown-command {
   display: flex;
   align-items: center;

@@ -144,13 +144,15 @@ export default {
   color: rgba(#495164, 0.7);
   border-radius: 2px;
   border: 1px solid transparent;
-  transition: border .3s;
+  transition: border 0.3s;
   outline: none;
   cursor: pointer;
+
   &:hover {
     border: 1px solid rgba(#495164, 0.3);
   }
-  &:after {
+
+  &::after {
     content: "";
     position: absolute;
     top: -6px;
@@ -158,18 +160,23 @@ export default {
     right: -6px;
     bottom: -6px;
   }
+
   &.hide-border {
+
     &:hover {
       border: 1px solid transparent;
     }
   }
 }
+
 .options-menu-list {
+
   :deep() .el-dropdown-menu__item {
     line-height: 34px;
     font-size: 14px;
     white-space: nowrap;
   }
+
   .option-text {
     padding-left: 8px;
     padding-right: 15px;
@@ -184,6 +191,7 @@ export default {
   left: 0;
   right: 0;
   z-index: 1;
+
   &.hide {
     display: none;
   }
