@@ -6,9 +6,23 @@
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/vite-ts-starter?color=blue)](https://github.com/pdsuwwz/vite-ts-starter/blob/main/LICENSE)
 
-🐬  A Starter template built on Vite 3.x + Vue 3.x + Typescript.
+🐬 A Starter template built on Vite 3.x + Vue 3.x + Element Plus 2.x + TypeScript.
+
+一个开箱即用，适合快速开发 Vue3 + Vite3 + TS 中小型后台管理系统的原型模板项目框架，持续更新最新技术栈 💪
 
 [🚀 Live Demo 在线体验](https://pdsuwwz.github.io/vite-ts-starter)
+
+
+## 🌱 不同版本
+目前一共有以下五个不同技术栈的仓库模板在持续维护，请尝试后选择适合自己的模板使用
+
+- 💥 (推荐) [TS + Pinia + 🌐 低耦合(i18n)多语言 Vite3 + Vue3 + TS + Pinia + Element-Plus2 + vue-i18n@next](https://github.com/pdsuwwz/vue-boilerplate-i18n)
+
+- ⚡️ TS + Pinia 版 [Vite3 + Vue3 + TS + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/pinia-starter-ts)
+- ⚡️ JS + Pinia 版 [Vite3 + Vue3 + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-pinia-starter)
+
+- ⚡️ TS + Vuex4 版 [Vite3 + Vue3 + TS + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-ts-starter)
+- ⚡️ JS + Vuex4 版 [Vite3 + Vue3 + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-starter)
 
 
 ## 🎉 Features
