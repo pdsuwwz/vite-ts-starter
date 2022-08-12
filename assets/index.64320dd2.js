@@ -1,1 +1,0 @@
-import{_ as o,r as s,o as e,c as t,w as a,a as u}from"./index.68401cdb.js";const v=o({name:"AppMain"},[["render",function(i,c,m,p,d,f){const r=s("router-view");return e(),t(r,null,{default:a(({Component:n})=>[(e(),t(u(n)))]),_:1})}],["__file","/home/runner/work/vite-ts-starter/vite-ts-starter/src/components/Layout/index.vue"]]);export{v as default};
