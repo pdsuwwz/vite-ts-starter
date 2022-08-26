@@ -1,1 +1,0 @@
-import{_ as t,o as r,b as e,d as n}from"./index.c4c53ca2.js";const s={name:"NotFound"},o=[n("h1",null,"NOT-FOUND 404",-1)],f=t(s,[["render",function(a,u,c,i,l,d){return r(),e("div",null,o)}],["__file","/home/runner/work/vite-ts-starter/vite-ts-starter/src/components/404.vue"]]);export{f as default};
