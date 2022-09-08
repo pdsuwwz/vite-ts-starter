@@ -1,7 +1,6 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { terser } from 'rollup-plugin-terser'
 
 const htmlPlugin = () => {
   return {
@@ -21,15 +20,21 @@ export default defineConfig({
     : '/',
   plugins: [
     vue(),
-    htmlPlugin(),
-    terser(
-      {
-        compress: {
-          drop_console: true
-        }
-      }
-    )
+    htmlPlugin()
   ],
+  // https://esbuild.github.io/api/#drop
+  // https://github.com/vitejs/vite/discussions/7920#discussioncomment-2709119
+  // https://www.google.com/search?q=vite+drop+console&sxsrf=ALiCzsa6WkY53gPLDvBTLVTfM7zaLJ1tjw%3A1662651252168&source=hp&ei=dAsaY9qpB4b70ATE85j4DQ&iflsig=AJiK0e8AAAAAYxoZhMtc6cBdw95TnMDcXKsgc3Hi7NqR&ved=0ahUKEwjas5LKwoX6AhWGPZQKHcQ5Bt8Q4dUDCAc&uact=5&oq=vite+drop+console&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEMsBOgUIABCABDoFCC4QgAQ6CwguEIAEEMcBENEDOgQIIxAnUABYkBVg0RZoAHAAeACAAYgDiAGXCpIBBTItMi4ymAEAoAEBoAEC&sclient=gws-wiz
+  /**
+   * Replace rollup-plugin-terser with drop of esbuild
+   * 用 esbuild.drop 替换 rollup-plugin-terser
+   */
+  esbuild: {
+    drop: [
+      'console',
+      'debugger'
+    ]
+  },
   // According to the need to open proxy
   // server: {
   //   proxy: {
