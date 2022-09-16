@@ -10,7 +10,7 @@ specifiers:
   '@fortawesome/free-solid-svg-icons': 6.2.0
   '@fortawesome/vue-fontawesome': 3.0.1
   '@sucrase/jest-plugin': ^2.2.1
-  '@types/jest': 29.0.2
+  '@types/jest': 29.0.3
   '@types/js-cookie': ^3.0.2
   '@types/lodash': ^4.14.184
   '@types/node': ^18.7.14
@@ -76,7 +76,7 @@ devDependencies:
   '@babel/core': 7.18.13
   '@babel/preset-env': 7.18.10_@babel+core@7.18.13
   '@sucrase/jest-plugin': 2.2.1
-  '@types/jest': 29.0.2
+  '@types/jest': 29.0.3
   '@types/js-cookie': 3.0.2
   '@types/lodash': 4.14.184
   '@types/node': 18.7.14
@@ -1802,8 +1802,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/29.0.2:
-    resolution: {integrity: sha512-TaklkwSEtvwJpleiKBHgEBySIQlcZ08gYP/s5wdtdLnjz9uxjnDd7U+Y0JWACebkqBc+jtbol2PEtEW0wQV2zQ==}
+  /@types/jest/29.0.3:
+    resolution: {integrity: sha512-F6ukyCTwbfsEX5F2YmVYmM5TcTHy1q9P5rWlRbrk56KyMh3v9xRGUO3aa8+SkvMi0SHXtASJv1283enXimC0Og==}
     dependencies:
       expect: 29.0.1
       pretty-format: 29.0.1
