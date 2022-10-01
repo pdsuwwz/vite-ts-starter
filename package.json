@@ -65,7 +65,7 @@
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
     "@sucrase/jest-plugin": "^2.2.1",
-    "@types/jest": "29.0.3",
+    "@types/jest": "29.1.1",
     "@types/js-cookie": "^3.0.2",
     "@types/lodash": "^4.14.184",
     "@types/node": "^18.7.14",
