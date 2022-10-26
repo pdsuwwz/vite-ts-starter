@@ -44,7 +44,7 @@ specifiers:
   rollup: 3.2.3
   sass: ^1.55.0
   stylelint: ^14.14.0
-  stylelint-config-recommended-scss: ^7.0.0
+  stylelint-config-recommended-scss: ^8.0.0
   stylelint-config-recommended-vue: ^1.4.0
   stylelint-config-standard: ^29.0.0
   stylelint-config-standard-scss: 5.0.0
@@ -105,7 +105,7 @@ devDependencies:
   rollup: 3.2.3
   sass: 1.55.0
   stylelint: 14.14.0
-  stylelint-config-recommended-scss: 7.0.0_mnalcscwzozovshmobozjae4pq
+  stylelint-config-recommended-scss: 8.0.0_mnalcscwzozovshmobozjae4pq
   stylelint-config-recommended-vue: 1.4.0_2wb2ag3ubchp7fdo72hd6rkeve
   stylelint-config-standard: 29.0.0_stylelint@14.14.0
   stylelint-config-standard-scss: 5.0.0_mnalcscwzozovshmobozjae4pq
@@ -5669,6 +5669,22 @@ packages:
       stylelint-scss: 4.3.0_stylelint@14.14.0
     transitivePeerDependencies:
       - postcss
+    dev: true
+
+  /stylelint-config-recommended-scss/8.0.0_mnalcscwzozovshmobozjae4pq:
+    resolution: {integrity: sha512-BxjxEzRaZoQb7Iinc3p92GS6zRdRAkIuEu2ZFLTxJK2e1AIcCb5B5MXY9KOXdGTnYFZ+KKx6R4Fv9zU6CtMYPQ==}
+    peerDependencies:
+      postcss: ^8.3.3
+      stylelint: ^14.10.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+    dependencies:
+      postcss: 8.4.18
+      postcss-scss: 4.0.5_postcss@8.4.18
+      stylelint: 14.14.0
+      stylelint-config-recommended: 9.0.0_stylelint@14.14.0
+      stylelint-scss: 4.3.0_stylelint@14.14.0
     dev: true
 
   /stylelint-config-recommended-vue/1.4.0_2wb2ag3ubchp7fdo72hd6rkeve:
