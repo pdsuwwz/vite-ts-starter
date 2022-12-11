@@ -21,8 +21,9 @@
 - ⚡️ TS + Pinia 版 [Vite4 + Vue3 + TS + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/pinia-starter-ts)
 - ⚡️ JS + Pinia 版 [Vite4 + Vue3 + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-pinia-starter)
 
-- ⚡️ TS + Vuex4 版 [Vite4 + Vue3 + TS + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-ts-starter)
+- ⚡️ TS + Vuex4 版 (当前仓库)[Vite4 + Vue3 + TS + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-ts-starter)
 - ⚡️ JS + Vuex4 版 [Vite4 + Vue3 + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-starter)
+
 
 
 ## 🎉 Features
