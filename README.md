@@ -1,7 +1,7 @@
 # vite-ts-starter
 
 [![Deploy](https://github.com/pdsuwwz/vite-ts-starter/workflows/gh-pages/badge.svg)](https://github.com/pdsuwwz/vite-ts-starter/actions/workflows/deploy.yml)
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/pdsuwwz/vite-ts-starter/gh-pages/main)](https://github.com/pdsuwwz/vite-ts-starter/deployments/activity_log?environment=github-pages)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/pdsuwwz/vite-ts-starter/deploy.yml?branch=main)](https://github.com/pdsuwwz/vite-ts-starter/deployments/activity_log?environment=github-pages)
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/vite-ts-starter?color=blue)](https://github.com/pdsuwwz/vite-ts-starter/blob/main/LICENSE)
