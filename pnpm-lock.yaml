@@ -19,7 +19,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.41.0
   '@vitejs/plugin-vue': ^4.0.0
   '@vue/compiler-sfc': ^3.2.41
-  '@vue/test-utils': 2.2.8
+  '@vue/test-utils': 2.2.10
   '@vue/vue3-jest': ^29.1.1
   axios: 1.2.6
   babel-jest: ^29.2.2
@@ -86,7 +86,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.41.0_wyqvi574yv7oiwfeinomdzmc3m
   '@vitejs/plugin-vue': 4.0.0_vite@4.0.0+vue@3.2.41
   '@vue/compiler-sfc': 3.2.41
-  '@vue/test-utils': 2.2.8_vue@3.2.41
+  '@vue/test-utils': 2.2.10_vue@3.2.41
   '@vue/vue3-jest': 29.1.1_naqbduu36aefyly3c64v43e53m
   babel-jest: 29.2.2_@babel+core@7.19.6
   babel-plugin-transform-vite-meta-env: 1.0.3
@@ -2300,14 +2300,15 @@ packages:
   /@vue/shared/3.2.41:
     resolution: {integrity: sha512-W9mfWLHmJhkfAmV+7gDjcHeAWALQtgGT3JErxULl0oz6R6+3ug91I7IErs93eCFhPCZPHBs4QJS7YWEV7A3sxw==}
 
-  /@vue/test-utils/2.2.8_vue@3.2.41:
-    resolution: {integrity: sha512-/R8DKzp41Ip/RqTt1jvOVi5gxby3EwNWiYHNYsG9FAjEvt0gzDvYN55lCKzX7IdnI5zVIOo5tHtts0SLT+JrWw==}
+  /@vue/test-utils/2.2.10_vue@3.2.41:
+    resolution: {integrity: sha512-UPY+VdWST5vYZ/Qhl+sLuJAv596e6kTbrOPgdGY82qd9kGN/MfjzLT5KXlmpChkiCbPP3abZ8XT25u1n5h+mRg==}
     peerDependencies:
-      '@vue/compiler-dom': ^3.0.1
       vue: ^3.0.1
     dependencies:
       js-beautify: 1.14.6
       vue: 3.2.41
+    optionalDependencies:
+      '@vue/compiler-dom': 3.2.41
     dev: true
 
   /@vue/vue3-jest/29.1.1_naqbduu36aefyly3c64v43e53m:
