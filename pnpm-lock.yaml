@@ -26,7 +26,7 @@ specifiers:
   babel-plugin-transform-vite-meta-env: ^1.0.3
   cross-env: ^7.0.3
   echarts: ^5.4.0
-  element-plus: 2.2.29
+  element-plus: 2.2.30
   eslint: ^8.26.0
   eslint-plugin-html: 7.1.0
   eslint-plugin-import: ^2.26.0
@@ -65,7 +65,7 @@ dependencies:
   '@fortawesome/vue-fontawesome': 3.0.1_l4bbykyqzjcxmv433qou22pqrm
   axios: 1.3.2
   echarts: 5.4.0
-  element-plus: 2.2.29_vue@3.2.41
+  element-plus: 2.2.30_vue@3.2.41
   js-cookie: 3.0.1
   lodash: 4.17.21
   nprogress: 0.2.0
@@ -3138,8 +3138,8 @@ packages:
     resolution: {integrity: sha512-M8WEXFuKXMYMVr45fo8mq0wUrrJHheiKZf6BArTKk9ZBYCKJEOU5H8cdWgDT+qCVZf7Na4lVUaZsA+h6uA9+PA==}
     dev: true
 
-  /element-plus/2.2.29_vue@3.2.41:
-    resolution: {integrity: sha512-g4dcrURrKkR5uUX8n5RVnnqGnimoki9HfqS4yHHG6XwCHBkZGozdq4x+478BzeWUe31h++BO+7dakSx4VnM8RQ==}
+  /element-plus/2.2.30_vue@3.2.41:
+    resolution: {integrity: sha512-HYSnmf2VMGa0gmw03evxevodPy3WimbAd4sfenOAhNs7Wl8IdT+YJjQyGAQjgEjRvhmujN4O/CZqhuEffRyOZg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
