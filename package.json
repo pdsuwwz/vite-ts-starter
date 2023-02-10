@@ -92,7 +92,7 @@
     "postcss-scss": "^4.0.5",
     "rollup": "3.14.0",
     "sass": "^1.55.0",
-    "stylelint": "^14.14.0",
+    "stylelint": "^15.0.0",
     "stylelint-config-recommended-scss": "^8.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^29.0.0",
