@@ -95,7 +95,7 @@
     "stylelint": "^15.0.0",
     "stylelint-config-recommended-scss": "^8.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard": "^30.0.0",
     "stylelint-config-standard-scss": "6.1.0",
     "sucrase": "^3.28.0",
     "ts-jest": "29.0.5",
