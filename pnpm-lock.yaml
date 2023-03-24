@@ -41,7 +41,7 @@ specifiers:
   postcss: ^8.4.18
   postcss-html: ^1.5.0
   postcss-scss: ^4.0.5
-  rollup: 3.19.1
+  rollup: 3.20.2
   sass: ^1.55.0
   stylelint: ^15.0.0
   stylelint-config-recommended-scss: ^9.0.1
@@ -102,7 +102,7 @@ devDependencies:
   postcss: 8.4.21
   postcss-html: 1.5.0
   postcss-scss: 4.0.6_postcss@8.4.21
-  rollup: 3.19.1
+  rollup: 3.20.2
   sass: 1.58.3
   stylelint: 15.2.0
   stylelint-config-recommended-scss: 9.0.1_xczz5gvex7qa2pnzrs7ducdpai
@@ -5594,8 +5594,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup/3.19.1:
-    resolution: {integrity: sha512-lAbrdN7neYCg/8WaoWn/ckzCtz+jr70GFfYdlf50OF7387HTg+wiuiqJRFYawwSPpqfqDNYqK7smY/ks2iAudg==}
+  /rollup/3.20.2:
+    resolution: {integrity: sha512-3zwkBQl7Ai7MFYQE0y1MeQ15+9jsi7XxfrqwTb/9EK8D9C9+//EBR4M+CuA1KODRaNbFez/lWxA5vhEGZp4MUg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -6364,7 +6364,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.19.1
+      rollup: 3.20.2
       sass: 1.58.3
     optionalDependencies:
       fsevents: 2.3.2
