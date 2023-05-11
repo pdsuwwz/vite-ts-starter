@@ -19,6 +19,7 @@ import selfEn from '@/locales/lang/en'
 import selfZhHans from '@/locales/lang/zh-hans'
 import useBaseStore from './hooks/useBaseStore'
 import { IGlobalState } from '@/store'
+import { defineComponent } from 'vue'
 
 const useLanguage = (store: Store<IGlobalState>) => {
   const currentLocale = computed(() => {
@@ -46,7 +47,7 @@ const useLanguage = (store: Store<IGlobalState>) => {
   }
 }
 
-export default {
+export default defineComponent({
   name: 'App',
   components: {
     ElConfigProvider
@@ -71,7 +72,7 @@ export default {
       ...useLanguage(store)
     }
   }
-}
+})
 </script>
 
 <style lang="scss">
