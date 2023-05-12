@@ -12,5 +12,6 @@
     "eslint.autoFixOnSave": true,
 		"source.fixAll.stylelint": true
 	},
-	"files.autoSaveDelay": 500
+	"files.autoSaveDelay": 500,
+	"vue.codeActions.enabled": false
 }

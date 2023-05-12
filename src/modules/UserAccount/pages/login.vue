@@ -175,7 +175,7 @@ export default defineComponent({
           .replace(`/${route.params.locale || ''}`)
           .then(() => {
             ElMessage.success({
-              message: '登录成功'
+              message: localeInject.t('login.loginSuccess')
             })
           })
           .catch(() => {})
@@ -266,7 +266,7 @@ export default defineComponent({
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (width <= 600px) {
 
   .user-account-container-layout {
     justify-content: center;

@@ -42,6 +42,7 @@
           </div>
           <el-input
             v-model="formData[formItem.attrs.prop]"
+            autofocus
             v-bind="getInputItemAttrs(formItem)"
           >
             <template

@@ -49,12 +49,12 @@ const ProjectModule: Module<IProjectModule, IGlobalState> = {
   },
   actions: {
     async getSearchProjectByQuery ({ commit }, query) {
-      await sleep(2000)
+      await sleep(1000)
       const res = await getProjectList(query)
       return this.filterResponse(res, null, () => {})
     },
     async getProjectList ({ commit }, params) {
-      await sleep(2000)
+      await sleep(1000)
       // const res = await getProjectList(params)
       const res = {
         msg: 'ok',
@@ -74,7 +74,7 @@ const ProjectModule: Module<IProjectModule, IGlobalState> = {
         error: 0,
         data: {}
       }
-      await sleep(1000)
+      await sleep(600)
       return this.filterResponse(res, () => {
         state.projectList.push(JSON.parse(JSON.stringify(projectDetail)))
       })

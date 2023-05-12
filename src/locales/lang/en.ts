@@ -17,7 +17,8 @@ export default {
     plsemail: 'Please enter a email',
     plscurrentemail: 'Please enter the correct email',
     plspwd: 'Please enter a password',
-    signout: 'Sign out'
+    signout: 'Sign out',
+    loginSuccess: 'Login successfully'
   },
   project: {
     manageTitle: 'Project management',

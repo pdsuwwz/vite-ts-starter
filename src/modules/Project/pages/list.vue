@@ -27,6 +27,7 @@
       <LayoutSection
         has-divider
         flex-content
+        :loading="loadingContent"
       >
         <template #head>
           <SearchCorporation
@@ -44,6 +45,7 @@
 <script lang="ts">
 import { useStore } from 'vuex'
 import {
+  ref,
   computed,
   defineComponent,
   getCurrentInstance,
@@ -118,16 +120,21 @@ export default defineComponent({
         }
       })
     }
-    function handleSelectSearch (name?: string) {
+
+    const loadingContent = ref(true)
+    const handleSelectSearch = async (name?: string) => {
       console.log('搜索项目名: ', name)
-      store.dispatch(ProjectModule.getAction('getProjectList'), {
+      loadingContent.value = true
+      await store.dispatch(ProjectModule.getAction('getProjectList'), {
         kw: name
       })
+      loadingContent.value = false
     }
     handleSelectSearch()
 
     return {
       localeInject,
+      loadingContent,
       handleCreateProject,
       handleSelectSearch
     }

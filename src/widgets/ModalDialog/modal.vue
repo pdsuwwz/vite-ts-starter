@@ -4,7 +4,7 @@
     :title="title"
     :show-close="false"
     :width="dialogWidth"
-    :custom-class="getDialogClassName"
+    :class="getDialogClassName"
     v-bind="getOriginAttrs()"
     @closed="handleRealClosed"
   >
