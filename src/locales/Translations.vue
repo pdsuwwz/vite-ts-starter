@@ -87,6 +87,7 @@ export default defineComponent({
   display: flex;
   align-items: center;
   color: #fff;
+  outline: none;
   cursor: initial;
   user-select: none;
 
@@ -97,6 +98,7 @@ export default defineComponent({
   .icon-outer {
     display: flex;
     align-items: center;
+    outline: none;
 
     &:hover > * {
       color: $color-primary;

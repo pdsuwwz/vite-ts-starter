@@ -15,7 +15,8 @@ export default {
     plsemail: '请填写邮箱',
     plscurrentemail: '请输入正确的邮箱地址',
     plspwd: '请填写密码',
-    signout: '退出登录'
+    signout: '退出登录',
+    loginSuccess: '登录成功'
   },
   project: {
     manageTitle: '项目管理',

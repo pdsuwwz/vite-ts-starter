@@ -55,7 +55,7 @@
 
 <script lang="ts">
 import useCurrentInstance from '@/hooks/useCurrentInstance'
-import { defineComponent, getCurrentInstance, ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useStore } from 'vuex'
 
 export default defineComponent({

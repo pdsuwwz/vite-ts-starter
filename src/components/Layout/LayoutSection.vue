@@ -1,5 +1,8 @@
 <template>
-  <div class="layout-section-container">
+  <div
+    v-loading="loading"
+    class="layout-section-container"
+  >
     <div class="layout-section-container__header">
       <div class="layout-section-container__header-head text_nowrap">
         <h1
@@ -52,6 +55,10 @@ export default defineComponent({
     title: {
       type: String,
       default: ''
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   }
 })

@@ -7,7 +7,7 @@
     :close-on-press-escape="false"
     width="1020px"
     top="12vh"
-    custom-class="dialog-modal"
+    class="dialog-modal"
     v-bind="$attrs"
     @closed="handleDestroy()"
   >

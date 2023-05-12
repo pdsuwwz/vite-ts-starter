@@ -3,7 +3,7 @@
     class="navigation-avatar"
     trigger="hover"
   >
-    <div style="padding: 0 12px;">
+    <div style="outline: none; padding: 0 12px;">
       <img
         src="@/assets/images/navigation-avatar.webp"
       >
@@ -74,8 +74,10 @@ export default defineComponent({
   align-items: center;
   cursor: pointer;
   user-select: none;
+  outline: none;
 
   img {
+    outline: none;
     width: 24px;
     border: 1px solid $color-primary;
     border-radius: 50%;

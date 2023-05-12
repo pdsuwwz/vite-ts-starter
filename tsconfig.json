@@ -23,7 +23,9 @@
     "types": [
       "vite/client",
       "jest",
-      "node"
+      "node",
+      "element-plus/global",
+      "@/types/index.d.ts"
     ],
     "baseUrl": "./",
     "paths": {

@@ -1,6 +1,6 @@
 <template>
   <el-config-provider
-    :locale="currentLocale"
+    :locale="currentLocaleLang"
   >
     <router-view />
   </el-config-provider>
@@ -9,43 +9,10 @@
 <script lang="ts">
 import { ElConfigProvider } from 'element-plus'
 import { useRoute, useRouter } from 'vue-router'
-import { computed, watch } from 'vue'
-import { Store } from 'vuex'
+import { defineComponent, watch } from 'vue'
 
-import zhCn from 'element-plus/lib/locale/lang/zh-cn'
-import en from 'element-plus/lib/locale/lang/en'
-
-import selfEn from '@/locales/lang/en'
-import selfZhHans from '@/locales/lang/zh-hans'
-import useBaseStore from './hooks/useBaseStore'
-import { IGlobalState } from '@/store'
-import { defineComponent } from 'vue'
-
-const useLanguage = (store: Store<IGlobalState>) => {
-  const currentLocale = computed(() => {
-    let locale: any = null
-
-    switch (store.state.UserAccount.locale) {
-      case 'zh-hans':
-        locale = {
-          ...zhCn,
-          ...selfZhHans
-        }
-        break
-      case 'en':
-        locale = {
-          ...en,
-          ...selfEn
-        }
-        break
-    }
-    return locale
-  })
-
-  return {
-    currentLocale
-  }
-}
+import useBaseStore from '@/hooks/useBaseStore'
+import { useLanguage } from '@/hooks/useLanguage'
 
 export default defineComponent({
   name: 'App',
@@ -69,7 +36,7 @@ export default defineComponent({
     )
 
     return {
-      ...useLanguage(store)
+      ...useLanguage()
     }
   }
 })
