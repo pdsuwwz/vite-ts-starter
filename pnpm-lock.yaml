@@ -26,8 +26,8 @@ dependencies:
     specifier: ^5.4.2
     version: 5.4.2
   element-plus:
-    specifier: 2.3.4
-    version: 2.3.4(vue@3.3.1)
+    specifier: 2.3.5
+    version: 2.3.5(vue@3.3.1)
   js-cookie:
     specifier: ^3.0.5
     version: 3.0.5
@@ -3218,8 +3218,8 @@ packages:
     resolution: {integrity: sha512-TXQOMW9tnhIms3jGy/lJctLjICOgyueZFJ1KUtm6DTQ+QpxX3p7ZBwB6syuZ9KBuT5S4XX7bgY1ECPgfxKUdOg==}
     dev: true
 
-  /element-plus@2.3.4(vue@3.3.1):
-    resolution: {integrity: sha512-SQr0J9z7N4z48WYk/l9NE2tizl8Q7j2OhqlpTc42k4pGncry3+rVX6dsmcsglFynn6vt3NzYxWJqmLFyDKQq+g==}
+  /element-plus@2.3.5(vue@3.3.1):
+    resolution: {integrity: sha512-g27DHm2C5/tPwte9H6Juu+JOdzT9z1ALHTIvia6MwnBdCrI4kd77o6KcYdodU15/tYiPBoCEmobhl/7GUDb+1Q==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
