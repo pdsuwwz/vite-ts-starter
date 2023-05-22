@@ -12,9 +12,3 @@ export default [
   mixinPlugins
 ]
 
-declare module 'vuex' {
-  export interface Store<S> {
-    filterResponse: typeof getFilterResponse
-    readonly state: S
-  }
-}

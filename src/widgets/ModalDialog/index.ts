@@ -1,12 +1,6 @@
 import { App, createVNode, render, nextTick, AppContext, RendererElement, RendererNode, VNode, ComponentPublicInstance, VNodeProps } from 'vue'
 import Modal from '@/widgets/ModalDialog/modal.vue'
 
-declare module 'vue' {
-  export interface VNode {
-    destroy?: any
-  }
-}
-
 const extractData = (options: { renderComponent: any; }) => {
   const extractSlotComponents = (renderComponent: { component?: any; data?: any; }) => {
     const component: any = {}

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
 
-    "declaration": true,
+    "declaration": false,
     "noImplicitAny": false,
     "removeComments": true,
     "noLib": false,
@@ -24,8 +24,7 @@
       "vite/client",
       "jest",
       "node",
-      "element-plus/global",
-      "@/types/index.d.ts"
+      "element-plus/global"
     ],
     "baseUrl": "./",
     "paths": {
