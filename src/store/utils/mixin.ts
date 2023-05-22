@@ -1,4 +1,3 @@
-import { ActionTree } from 'vuex'
 import { ElMessage } from 'element-plus'
 import { RespData } from '@/utils/request'
 
@@ -33,14 +32,5 @@ export default {
   getMutation (name: string) {
     const _self = this as any
     return `${_self._name}/${Object.keys(_self.mutations)[Object.keys(_self.mutations).indexOf(name)]}`
-  }
-}
-
-declare module 'vuex' {
-  export interface Module<S, R> {
-    actions?: ActionTree<S, R>
-    _name: string
-    getAction: (name: string) => typeof name
-    getMutation: (name: string) => typeof name
   }
 }

@@ -93,9 +93,9 @@ export default defineComponent({
         title: localeInject.t('project.create'),
         top: '10vh',
         width: '50vw',
-        'show-close': true,
-        'close-on-click-modal': false,
-        'close-on-press-escape': false,
+        showClose: true,
+        closeOnClickModal: false,
+        closeOnPressEscape: false,
         renderComponent: {
           data: formData,
           component: ProjectForm

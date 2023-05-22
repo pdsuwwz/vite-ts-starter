@@ -14,7 +14,7 @@ function getLocaleRegex () {
   return `(${reg})`
 }
 
-const routes = [
+const routes: Array<CustomRouteItem> = [
   {
     path: '/',
     name: 'Root',

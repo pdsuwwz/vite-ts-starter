@@ -4,7 +4,7 @@ const Layout = () => import('@/components/Layout/index.vue')
 const LayoutView = () => import('@/components/Layout/LayoutView.vue')
 const LayoutArea = () => import('@/components/Layout/LayoutArea.vue')
 
-const childrenRoutes = [
+const childrenRoutes: Array<CustomRouteItem> = [
   {
     path: 'test-layout',
     title: 'TestLayout',
