@@ -1,6 +1,7 @@
 import childrenRoutes from '@/router/child-routes'
 import { localesMapping, isHasLocale } from '@/locales'
 import { isUndefined } from '@/utils/type'
+import type { RouteRecordRaw } from 'vue-router'
 
 const Layout = () => import('@/components/Layout/index.vue')
 
@@ -14,7 +15,7 @@ function getLocaleRegex () {
   return `(${reg})`
 }
 
-const routes: Array<CustomRouteItem> = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Root',
