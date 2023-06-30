@@ -19,7 +19,7 @@ export interface ProjectDetailProps {
   corpName: string | null
   createTime: string | null
   id: string | null
-  isPublished: true
+  isPublished: boolean
   name: string | null
   notes: string | null
 }

@@ -9,12 +9,12 @@ function errorRedirect (url: string) {
   Router.push(`/${url}`)
 }
 
-export interface RespData {
+export interface RespData<T> {
   success?: boolean
   errorCode?: number
   error?: number | string | null
   msg?: string
-  data?: any
+  data?: T
   [key: string]: any
 }
 
