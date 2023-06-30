@@ -71,12 +71,14 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
+import { PropType, computed, defineComponent, getCurrentInstance, ref } from 'vue'
 import { Loading } from '@element-plus/icons-vue'
 
 import { sleep } from '@/utils/request'
 import useCurrentInstance from '@/hooks/useCurrentInstance'
 import { ElMessage } from 'element-plus'
+
+import type { ProjectDetailProps } from '../store'
 
 // TODO: Hide it temporarily
 // import ProjectModule from '@/modules/Project/store'
@@ -88,12 +90,12 @@ export default defineComponent({
   },
   props: {
     dataset: {
-      type: Object,
+      type: Object as PropType<ProjectDetailProps>,
       default () {
         return {}
       }
     }
-  } as const,
+  },
   setup (props) {
     const { proxy } = useCurrentInstance()
     const isLoading = ref(false)
