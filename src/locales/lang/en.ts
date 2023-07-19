@@ -5,7 +5,8 @@ export default {
   base: {
     systemTitle: systemTitle,
     goback: 'Back to the previous page',
-    empty: 'No data available'
+    empty: 'No data available',
+    i18nTest: 'Test internationalization'
   },
   login: {
     hydl: 'Hi, Welcome',
