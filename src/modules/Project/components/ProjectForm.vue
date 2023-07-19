@@ -4,46 +4,46 @@
       ref="refForm"
       :model="modelValue"
       label-position="right"
-      label-width="120px"
+      label-width="145px"
     >
       <el-form-item
         prop="name"
         :label="_t('project.name')"
         :rules="getRequiredRules({
           trigger: 'change',
-          message: '请输入项目名称'
+          message: _t('base.pleaseInput')
         })"
       >
         <el-input
           v-model="modelValue.name"
           maxlength="30"
           show-word-limit
-          placeholder="请输入项目名称"
+          :placeholder="_t('project.name')"
         />
       </el-form-item>
       <el-form-item
         prop="corpName"
-        label="公司名称"
+        :label="_t('project.corpName')"
         :rules="getRequiredRules({
           trigger: 'change',
-          message: '请输入公司名称'
+          message: _t('base.pleaseInput')
         })"
       >
         <el-input
           v-model="modelValue.corpName"
           maxlength="30"
           show-word-limit
-          placeholder="请输入公司名称"
+          :placeholder="_t('project.corpName')"
         />
       </el-form-item>
       <el-form-item
         prop="notes"
-        label="备注"
+        :label="_t('project.notes')"
       >
         <el-input
           v-model="modelValue.notes"
           type="textarea"
-          placeholder="请输入备注"
+          :placeholder="_t('project.notes')"
           maxlength="200"
           :autosize="{ minRows: 2 }"
           show-word-limit
@@ -70,6 +70,9 @@ export default defineComponent({
   },
   setup (props) {
     const { proxy } = useCurrentInstance()
+
+    console.log(props.modelValue)
+
     const store = useStore()
 
     const refForm = ref()

@@ -217,7 +217,7 @@ export default defineComponent({
 </style>
 <style lang="scss">
 .modal-wrapper-containers-dialog {
-  width: 500px;
+  min-width: 500px;
   border-radius: 8px;
 
   .el-dialog__header {
