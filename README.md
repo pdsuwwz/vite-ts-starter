@@ -31,7 +31,7 @@
 * 支持 __Vite 4 + Vue 3 + TypeScript__
 * UI 框架: __Element Plus 2.x__
 * 状态管理: __Vuex 4__
-* 单元测试框架: __Jest__
+* 单元测试框架: ~~__Jest__~~ 升级为 __Vitest__
 * 内置 __ESlint__ 和 __Stylelint__, 可在此基础上扩展你想要的 Lint 配置规范
 * 内置封装了一个**可能比较好用的** Axios , 需要时配合 Vuex Actions 一起食用
 * 封装了 \<IconFont \/> 组件, 可直接使用 IconFont 图标
