@@ -22,7 +22,6 @@
     "lib": ["esnext", "dom"],
     "types": [
       "vite/client",
-      "jest",
       "node",
       "element-plus/global"
     ],
