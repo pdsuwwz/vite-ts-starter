@@ -52,7 +52,7 @@
     "@fortawesome/free-regular-svg-icons": "6.4.2",
     "@fortawesome/free-solid-svg-icons": "6.4.2",
     "@fortawesome/vue-fontawesome": "~3.0.3",
-    "axios": "1.4.0",
+    "axios": "1.5.0",
     "echarts": "^5.4.3",
     "element-plus": "2.3.12",
     "js-cookie": "^3.0.5",
