@@ -119,8 +119,8 @@ devDependencies:
     specifier: ^4.0.6
     version: 4.0.6(postcss@8.4.27)
   rollup:
-    specifier: 3.28.1
-    version: 3.28.1
+    specifier: 3.29.1
+    version: 3.29.1
   sass:
     specifier: ^1.64.2
     version: 1.64.2
@@ -4549,8 +4549,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup@3.28.1:
-    resolution: {integrity: sha512-R9OMQmIHJm9znrU3m3cpE8uhN0fGdXiawME7aZIpQqvpS/85+Vt1Hq1/yVIcYfOmaQiHjvXkQAoJukvLpau6Yw==}
+  /rollup@3.29.1:
+    resolution: {integrity: sha512-c+ebvQz0VIH4KhhCpDsI+Bik0eT8ZFEVZEYw0cGMVqIP8zc+gnwl7iXCamTw7vzv2MeuZFZfdx5JJIq+ehzDlg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -5254,7 +5254,7 @@ packages:
       '@types/node': 20.4.8
       esbuild: 0.18.18
       postcss: 8.4.27
-      rollup: 3.28.1
+      rollup: 3.29.1
       sass: 1.64.2
     optionalDependencies:
       fsevents: 2.3.2
