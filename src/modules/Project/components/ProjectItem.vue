@@ -76,7 +76,7 @@ import { Loading } from '@element-plus/icons-vue'
 
 import { sleep } from '@/utils/request'
 import useCurrentInstance from '@/hooks/useCurrentInstance'
-import { ElMessage } from 'element-plus'
+import { useLocale, ElMessage } from 'element-plus'
 
 import type { ProjectDetailProps } from '../store'
 
@@ -97,6 +97,7 @@ export default defineComponent({
     }
   },
   setup (props) {
+    const localeInject = useLocale()
     const { proxy } = useCurrentInstance()
     const isLoading = ref(false)
     const getActionIcon = computed(() => {
@@ -125,9 +126,15 @@ export default defineComponent({
       // TODO: Hide it temporarily
       // if (error) return
 
-      ElMessage.success({
-        message: 'Successful!'
-      })
+      if (props.dataset.isPublished) {
+        ElMessage.info(
+          localeInject.t('project.publishingStop')
+        )
+      } else {
+        ElMessage.success(
+          localeInject.t('project.publishedSuccessfully')
+        )
+      }
 
       props.dataset.isPublished = !props.dataset.isPublished
     }
