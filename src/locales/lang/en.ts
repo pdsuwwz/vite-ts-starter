@@ -31,7 +31,9 @@ export default {
     createDate: 'Create date',
     state: 'State',
     publish: 'Publish',
-    stop: 'Stop'
+    stop: 'Stop',
+    publishedSuccessfully: 'Published Successfully',
+    publishingStop: 'Stop Publishing'
   },
   result: {
     title: 'Project details'

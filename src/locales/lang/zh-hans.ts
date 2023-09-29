@@ -29,7 +29,9 @@ export default {
     createDate: '创建日期',
     state: '状态',
     publish: '发布',
-    stop: '停止'
+    stop: '停止',
+    publishedSuccessfully: '发布成功',
+    publishingStop: '停止发布'
   },
   result: {
     title: '项目详情'
