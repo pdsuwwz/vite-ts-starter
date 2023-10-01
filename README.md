@@ -23,6 +23,11 @@
 - ⚡️ TS + Vuex4 版 (当前仓库)[Vite4 + Vue3 + TS + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-ts-starter)
 - ⚡️ JS + Vuex4 版 [Vite4 + Vue3 + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-starter)
 
+## 🪄 使用不同的 UI 库
+
+如果更喜欢使用 [Naive UI](https://www.naiveui.com/) 作为 UI 库, 这里也为你提供了一个相应的模板项目：
+
+- 🔥 [Naive UI 版本](https://github.com/pdsuwwz/vite-naive-template)
 
 
 ## 🎉 Features
