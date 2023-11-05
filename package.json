@@ -54,7 +54,7 @@
     "@fortawesome/vue-fontawesome": "~3.0.3",
     "axios": "1.5.1",
     "echarts": "^5.4.3",
-    "element-plus": "2.4.1",
+    "element-plus": "2.4.2",
     "js-cookie": "^3.0.5",
     "lodash": "^4.17.21",
     "nprogress": "^0.2.0",
