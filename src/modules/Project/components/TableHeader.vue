@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { useLocale } from 'element-plus'
-import { computed, defineComponent, reactive } from 'vue'
+import { computed, defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'ProjectTableHeader',

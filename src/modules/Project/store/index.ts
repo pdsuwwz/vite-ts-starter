@@ -76,7 +76,16 @@ const ProjectModule: Module<IProjectModule, IGlobalState> = {
       }
       await sleep(600)
       return this.filterResponse(res, () => {
-        state.projectList.push(JSON.parse(JSON.stringify(projectDetail)))
+        const date = new Date()
+        const [, id] = String(Math.random()).split('.')
+        state.projectList.push({
+          id,
+          name: params.name,
+          corpName: params.corpName,
+          notes: params.notes,
+          isPublished: false,
+          createTime: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+        })
       })
     },
     async updateTogglePublishStatus ({ commit }, params) {

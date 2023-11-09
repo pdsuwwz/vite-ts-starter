@@ -52,8 +52,7 @@ export default defineComponent({
   .project-table-body-container__inner {
     position: absolute;
     inset: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden scroll;
     padding: 10px 6px 0;
     scroll-behavior: smooth;
 

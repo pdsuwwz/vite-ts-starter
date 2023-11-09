@@ -66,7 +66,6 @@ import ProjectForm from '@/modules/Project/components/ProjectForm.vue'
 import ProjectTableHeader from '@/modules/Project/components/TableHeader.vue'
 import ProjectTableBody from '@/modules/Project/components/TableBody.vue'
 
-import SearchCorporation from '@/components/SearchSelect/SearchCorporation.vue'
 import { sleep } from '@/utils/request'
 import useCurrentInstance from '@/hooks/useCurrentInstance'
 
@@ -76,8 +75,7 @@ export default defineComponent({
     NavigationNavBar,
     NavigationSideLogo,
     ProjectTableHeader,
-    ProjectTableBody,
-    SearchCorporation
+    ProjectTableBody
   },
   // https://github.com/vuejs/vue-next/issues/3649
   setup () {
