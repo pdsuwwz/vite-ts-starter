@@ -1,1 +1,0 @@
-import{d as e,_ as t,o as s,b as n}from"./index-iSLhlCDz.js";const o=e({name:"UserAccountSetting"}),a={class:"wrap-user-setting"};function c(r,_,d,p,i,u){return s(),n("div",a," 账号设置 ")}const m=t(o,[["render",c],["__scopeId","data-v-202ad5a2"]]);export{m as default};
