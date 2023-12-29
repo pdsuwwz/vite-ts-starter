@@ -3,7 +3,5 @@ dist
 tmp
 node_modules
 coverage
-public/stat_log.js
+public
 src/assets/fonts/iconfont.js
-src/utils/wysihtml5.js
-src/utils/bus.js
