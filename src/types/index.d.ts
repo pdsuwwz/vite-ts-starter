@@ -8,7 +8,6 @@ import {
   imageListRules,
   requiredRadioRules
 } from '@/utils/formRules'
-import { RouteRecordRaw } from 'vue-router'
 
 // $ModalDialog
 declare module 'vue' {

@@ -54,9 +54,6 @@
 </template>
 
 <script lang="ts">
-import useCurrentInstance from '@/hooks/useCurrentInstance'
-import { defineComponent, ref } from 'vue'
-import { useStore } from 'vuex'
 
 export default defineComponent({
   name: 'ProjectForm',
@@ -73,7 +70,7 @@ export default defineComponent({
 
     console.log(props.modelValue)
 
-    const store = useStore()
+    const store = useBaseStore()
 
     const refForm = ref()
 

@@ -8,11 +8,6 @@
 
 <script lang="ts">
 import { ElConfigProvider } from 'element-plus'
-import { useRoute, useRouter } from 'vue-router'
-import { defineComponent, watch } from 'vue'
-
-import useBaseStore from '@/hooks/useBaseStore'
-import { useLanguage } from '@/hooks/useLanguage'
 
 export default defineComponent({
   name: 'App',

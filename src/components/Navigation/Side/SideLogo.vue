@@ -18,7 +18,6 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue'
 import { useLocale } from 'element-plus'
 
 export default defineComponent({

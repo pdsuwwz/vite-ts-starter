@@ -1,6 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
 
 const htmlPlugin = () => {
   return {
@@ -20,6 +21,53 @@ export default defineConfig({
     : '/',
   plugins: [
     vue(),
+    AutoImport({
+      include: [/\.[tj]sx?$/, /\.vue\??/],
+      imports: [
+        'vue',
+        'vue-router',
+        'vuex',
+        {
+          vue: ['createVNode', 'render'],
+          'vue-router': [
+            'createRouter',
+            'createWebHistory',
+            'createWebHashHistory',
+            'useRouter',
+            'useRoute'
+          ],
+          uuid: [['v4', 'uuidv4']],
+          // 全局使用 _.xxxx()
+          'lodash-es': [
+            // default imports
+            ['*', '_'] // import { * as _ } from 'lodash-es',
+          ]
+        },
+        // type import
+        {
+          from: 'vue',
+          imports: [
+            'App',
+            'ComponentPublicInstance',
+            'ComponentInternalInstance'
+          ],
+          type: true
+        },
+        {
+          from: 'vue-router',
+          imports: [
+            'RouteRecordRaw'
+          ],
+          type: true
+        }
+      ],
+      dirs: ['./src/hooks'],
+      dts: './auto-imports.d.ts',
+      eslintrc: {
+        enabled: true
+      },
+      vueTemplate: true
+    }),
     htmlPlugin()
   ],
   // https://esbuild.github.io/api/#drop

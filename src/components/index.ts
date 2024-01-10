@@ -1,6 +1,5 @@
 // Vue Component Install
 
-import { App } from 'vue'
 import IconFont from '@/components/IconFont/index.vue'
 import OptionsMenu from '@/components/OptionsMenu/index.vue'
 import Tooltip from '@/components/Tooltip.vue'

@@ -37,15 +37,6 @@
 
 <script lang="ts">
 
-import {
-  computed,
-  defineComponent,
-  getCurrentInstance,
-  nextTick,
-  onMounted,
-  reactive,
-  ref
-} from 'vue'
 import { ElMessage, useLocale } from 'element-plus'
 import { Promotion } from '@element-plus/icons-vue'
 
@@ -55,9 +46,6 @@ import UserAccountModule from '@/modules/UserAccount/store'
 import Translations from '@/locales/Translations.vue'
 
 import Cookie from 'js-cookie'
-import { useStore } from 'vuex'
-import { useRoute, useRouter } from 'vue-router'
-import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({
   name: 'UserAccountLogin',
@@ -69,7 +57,7 @@ export default defineComponent({
   setup () {
     const { proxy } = useCurrentInstance()
 
-    const store = useStore()
+    const store = useBaseStore()
     const route = useRoute()
     const router = useRouter()
 
@@ -96,7 +84,7 @@ export default defineComponent({
             text: localeInject.t('login.signin'),
             on: {
               click (refForm: any) {
-                proxy.onSubmit(refForm)
+                onSubmit(refForm)
               }
             }
           }
@@ -170,7 +158,6 @@ export default defineComponent({
         }
 
         Cookie.set('token', data.user.token)
-        Cookie.set('name', data.user.username)
         router
           .replace(`/${route.params.locale || ''}`)
           .then(() => {

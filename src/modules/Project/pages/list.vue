@@ -45,16 +45,6 @@
 </template>
 
 <script lang="ts">
-import { useStore } from 'vuex'
-import {
-  ref,
-  computed,
-  defineComponent,
-  getCurrentInstance,
-  onBeforeMount,
-  onMounted,
-  reactive
-} from 'vue'
 import { useLocale } from 'element-plus'
 
 import ProjectModule from '@/modules/Project/store'
@@ -67,7 +57,6 @@ import ProjectTableHeader from '@/modules/Project/components/TableHeader.vue'
 import ProjectTableBody from '@/modules/Project/components/TableBody.vue'
 
 import { sleep } from '@/utils/request'
-import useCurrentInstance from '@/hooks/useCurrentInstance'
 
 export default defineComponent({
   name: 'ProjectList',
@@ -80,7 +69,7 @@ export default defineComponent({
   // https://github.com/vuejs/vue-next/issues/3649
   setup () {
     const { proxy } = useCurrentInstance()
-    const store = useStore()
+    const store = useBaseStore()
     const localeInject = useLocale()
 
     function handleCreateProject () {

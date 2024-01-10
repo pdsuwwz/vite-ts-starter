@@ -28,6 +28,11 @@ router.beforeEach(async (to, from, next) => {
     return
   }
 
+  if (!Cookie.get('token')) {
+    next(`/${currentRouteLocale || store.state.UserAccount.locale}/user/login`)
+    return
+  }
+
   // 获取用户信息
   const { data, error } = await store.dispatch('UserAccount/getUserInfo')
 
@@ -36,7 +41,6 @@ router.beforeEach(async (to, from, next) => {
       locale: currentRouteLocale || data.language
     })
     Cookie.remove('token')
-    Cookie.remove('name')
     next('/en/user/login')
     return
   }
@@ -52,7 +56,6 @@ router.beforeEach(async (to, from, next) => {
 
   // ElMessage.error('登录失败，请重新登录')
   Cookie.remove('token')
-  Cookie.remove('name')
   store.dispatch('UserAccount/setLanguage', {
     locale: currentRouteLocale || store.state.UserAccount.locale
   })
