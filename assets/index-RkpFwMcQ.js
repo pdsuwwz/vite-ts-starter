@@ -1,0 +1,1 @@
+import{d as a,_ as r,r as s,o as e,c as o,w as c,a as p}from"./index-3KtYbqpX.js";const _=a({name:"AppMain"});function i(m,d,f,l,u,x){const n=s("router-view");return e(),o(n,null,{default:c(({Component:t})=>[(e(),o(p(t)))]),_:1})}const w=r(_,[["render",i]]);export{w as default};
