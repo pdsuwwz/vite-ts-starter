@@ -11,6 +11,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
+    './.eslintrc-auto-import.json',
     './.eslintrc-auto-import-costom.json'
   ],
   plugins: [

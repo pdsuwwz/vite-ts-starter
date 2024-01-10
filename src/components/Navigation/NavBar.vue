@@ -18,7 +18,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
 import Translations from '@/locales/Translations.vue'
 import NavigationSideAction from '@/components/Navigation/Side/SideAction.vue'
 import NavigationAvatar from '@/components/Navigation/Avatar.vue'

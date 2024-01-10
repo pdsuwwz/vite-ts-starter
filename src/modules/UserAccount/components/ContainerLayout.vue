@@ -86,13 +86,7 @@
 
 <script lang="ts">
 
-import { defineComponent, getCurrentInstance, ref } from 'vue'
-
-import { omit } from 'lodash'
-
 import { isFunction } from '@/utils/type'
-import useCurrentInstance from '@/hooks/useCurrentInstance'
-import { PropType } from 'vue'
 
 export default defineComponent({
   name: 'UserAccountContainerLayout',
@@ -166,7 +160,7 @@ export default defineComponent({
 
       return {
         rules,
-        ...omit(attrs, ['rules'])
+        ..._.omit(attrs, ['rules'])
       }
     }
 

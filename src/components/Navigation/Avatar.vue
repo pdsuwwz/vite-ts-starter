@@ -30,10 +30,8 @@
 <script lang="ts">
 import Cookie from 'js-cookie'
 import { useLocale } from 'element-plus'
-import { computed, defineComponent } from 'vue'
 
 import { SwitchButton } from '@element-plus/icons-vue'
-import { useRoute, useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'NavigationAvatar',
@@ -50,7 +48,6 @@ export default defineComponent({
         icon: 'switch-button',
         click: () => {
           Cookie.remove('token')
-          Cookie.remove('name')
           window.location.reload()
         }
       }

@@ -71,11 +71,9 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType, computed, ref } from 'vue'
 import { Loading } from '@element-plus/icons-vue'
 
 import { sleep } from '@/utils/request'
-import useCurrentInstance from '@/hooks/useCurrentInstance'
 import { useLocale, ElMessage } from 'element-plus'
 
 import type { ProjectDetailProps } from '../store'

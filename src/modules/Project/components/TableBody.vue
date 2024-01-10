@@ -23,10 +23,6 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
-
-import useBaseStore from '@/hooks/useBaseStore'
-
 import ProjectItem from '@/modules/Project/components/ProjectItem.vue'
 
 export default defineComponent({

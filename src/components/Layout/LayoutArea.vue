@@ -29,9 +29,6 @@
 </template>
 
 <script lang="ts">
-
-import { defineComponent } from 'vue'
-
 /**
  * 上下左右布局，顶部导航 + (底部左侧侧边栏 + 底部右侧内容区域)
  */
@@ -64,10 +61,7 @@ $headerHeight: 48px;
 
     .layout-area-container__bottom__inner {
       position: absolute;
-      top: 1px;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 1px 0 0;
       display: flex;
 
       .side-layout-area-menu-bar {
@@ -79,12 +73,8 @@ $headerHeight: 48px;
 
         .layout-area-menu-bar__inner {
           position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          overflow-x: hidden;
-          overflow-y: auto;
+          inset: 0;
+          overflow: hidden auto;
           padding: 24px;
           scroll-behavior: smooth;
         }
@@ -104,10 +94,7 @@ $headerHeight: 48px;
           .inner-content {
             padding: 24px;
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             overflow: auto;
             scroll-behavior: smooth;
           }

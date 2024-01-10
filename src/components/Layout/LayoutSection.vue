@@ -36,8 +36,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-
 /**
  * 上下布局，顶部 header 大标题 + 底部内容区域
  */

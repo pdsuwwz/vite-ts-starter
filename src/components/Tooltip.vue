@@ -22,8 +22,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-
 export default defineComponent({
   name: 'TooltipCustom',
   props: {
@@ -44,8 +42,7 @@ export default defineComponent({
   max-width: 400px;
   max-height: 50px;
   line-height: 18px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
   font-size: 14px;
 
   &::-webkit-scrollbar-thumb {

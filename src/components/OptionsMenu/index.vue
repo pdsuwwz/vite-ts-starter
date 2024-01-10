@@ -40,11 +40,9 @@
 </template>
 
 <script lang="ts">
-
 // import { isString } from '@/utils/type'
 import { isString } from '@/utils/type'
-import { PropType } from 'vue'
-import { defineComponent } from 'vue'
+import { Placement } from 'element-plus'
 
 export default defineComponent({
   name: 'OptionsMenu',
@@ -54,7 +52,7 @@ export default defineComponent({
       default: false
     },
     placement: {
-      type: String,
+      type: String as PropType<Placement>,
       default: 'bottom-end'
     },
     icon: {
