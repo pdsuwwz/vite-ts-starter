@@ -156,7 +156,7 @@ export default defineComponent({
           setLoading(false)
           return
         }
-
+        console.log('🚀', data)
         Cookie.set('token', data.user.token)
         router
           .replace(`/${route.params.locale || ''}`)

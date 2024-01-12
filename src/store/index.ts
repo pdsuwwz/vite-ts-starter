@@ -21,4 +21,8 @@ const store = createStore<IGlobalState>({
   plugins
 })
 
-export default store
+export function setupStore(app: App<Element>) {
+  app.use(store)
+}
+
+export { store }
