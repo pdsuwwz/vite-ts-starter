@@ -22,6 +22,7 @@
     "lib": ["esnext", "dom"],
     "types": [
       "vite/client",
+      "vitest/globals",
       "node",
       "element-plus/global"
     ],
@@ -37,8 +38,9 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "**/*.ts",
-    "__tests__/**/*.ts"
+    "__tests__/**/*.ts",
+    "./auto-imports.d.ts",
+    "./components.d.ts"
   ],
   "exclude": ["node_modules"]
 }

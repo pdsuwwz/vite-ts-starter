@@ -4,14 +4,21 @@
     "Component": true,
     "ComponentInternalInstance": true,
     "ComponentPublicInstance": true,
+    "ComponentPublicInstanceCostom": true,
     "ComputedRef": true,
     "EffectScope": true,
     "ExtractDefaultPropTypes": true,
     "ExtractPropTypes": true,
     "ExtractPublicPropTypes": true,
     "InjectionKey": true,
+    "LocationQuery": true,
+    "NavigationGuard": true,
     "PropType": true,
     "Ref": true,
+    "RouteLocationNormalizedLoaded": true,
+    "RouteLocationRaw": true,
+    "RouteParams": true,
+    "RouteRecordName": true,
     "RouteRecordRaw": true,
     "VNode": true,
     "WritableComputedRef": true,
@@ -37,6 +44,7 @@
     "isReactive": true,
     "isReadonly": true,
     "isRef": true,
+    "key": true,
     "mapActions": true,
     "mapGetters": true,
     "mapMutations": true,
@@ -88,7 +96,6 @@
     "watch": true,
     "watchEffect": true,
     "watchPostEffect": true,
-    "watchSyncEffect": true,
-    "key": true
+    "watchSyncEffect": true
   }
 }

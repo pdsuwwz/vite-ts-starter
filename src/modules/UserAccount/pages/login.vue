@@ -107,7 +107,7 @@ export default defineComponent({
               }
             },
             label: localeInject.t('login.email'),
-            prefixIcon: 'user-tie',
+            prefixIcon: h('span', { class: 'text-16px i-ic:baseline-mail-lock' }),
             placeholder: localeInject.t('login.plsemail')
           },
           {
@@ -129,7 +129,7 @@ export default defineComponent({
             },
             type: 'password',
             label: localeInject.t('login.pwd'),
-            prefixIcon: 'lock',
+            prefixIcon: h('span', { class: 'text-16px i-ri:lock-password-fill' }),
             placeholder: localeInject.t('login.plspwd')
           }
         ]
