@@ -28,6 +28,7 @@ declare global {
   const isReactive: typeof import('vue')['isReactive']
   const isReadonly: typeof import('vue')['isReadonly']
   const isRef: typeof import('vue')['isRef']
+  const key: typeof import('./src/hooks/useBaseStore')['key']
   const mapActions: typeof import('vuex')['mapActions']
   const mapGetters: typeof import('vuex')['mapGetters']
   const mapMutations: typeof import('vuex')['mapMutations']
@@ -117,6 +118,7 @@ declare module 'vue' {
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
     readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
     readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
+    readonly key: UnwrapRef<typeof import('./src/hooks/useBaseStore')['key']>
     readonly mapActions: UnwrapRef<typeof import('vuex')['mapActions']>
     readonly mapGetters: UnwrapRef<typeof import('vuex')['mapGetters']>
     readonly mapMutations: UnwrapRef<typeof import('vuex')['mapMutations']>
@@ -196,6 +198,7 @@ declare module '@vue/runtime-core' {
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
     readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
     readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
+    readonly key: UnwrapRef<typeof import('./src/hooks/useBaseStore')['key']>
     readonly mapActions: UnwrapRef<typeof import('vuex')['mapActions']>
     readonly mapGetters: UnwrapRef<typeof import('vuex')['mapGetters']>
     readonly mapMutations: UnwrapRef<typeof import('vuex')['mapMutations']>

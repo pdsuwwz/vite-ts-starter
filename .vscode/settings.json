@@ -8,9 +8,9 @@
 
 	"editor.formatOnSave": false,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true,
-    "eslint.autoFixOnSave": true,
-		"source.fixAll.stylelint": true
+		"source.fixAll.eslint": "explicit",
+		"eslint.autoFixOnSave": "explicit",
+		"source.fixAll.stylelint": "explicit"
 	},
 	"files.autoSaveDelay": 500,
 	"vue.codeActions.enabled": false
