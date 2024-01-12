@@ -42,27 +42,31 @@
           </div>
           <el-input
             v-model="formData[formItem.attrs.prop]"
-            autofocus
             v-bind="getInputItemAttrs(formItem)"
           >
             <template
               v-if="formItem.prefixIcon"
               #prefix
             >
-              <FontAwesomeIcon
+              <component
+                :is="formItem.prefixIcon"
                 class="input-icon-prefix"
-                :icon="formItem.prefixIcon"
               />
             </template>
             <template
               v-if="formItem.type === 'password'"
               #suffix
             >
-              <FontAwesomeIcon
-                class="input-icon-lock"
-                :icon="showPassword ? 'eye' : 'eye-slash'"
-                @click="tooglePassword()"
-              />
+              <div class="flex items-center cursor-pointer">
+                <AutoIconPheyeBold
+                  v-if="showPassword"
+                  @click="tooglePassword()"
+                />
+                <AutoIconPheyeSlashBold
+                  v-else
+                  @click="tooglePassword()"
+                />
+              </div>
             </template>
           </el-input>
         </el-form-item>
@@ -87,6 +91,7 @@
 <script lang="ts">
 
 import { isFunction } from '@/utils/type'
+import { PropType } from 'vue'
 
 export default defineComponent({
   name: 'UserAccountContainerLayout',
@@ -256,6 +261,7 @@ export default defineComponent({
       &:deep() {
 
         & > * {
+          width: inherit;
           font-size: 32px;
         }
       }

@@ -39,28 +39,18 @@ export function createRouterGuards(router: Router) {
 
     if (error) {
       store.dispatch('UserAccount/setLanguage', {
-        locale: currentRouteLocale || data.language
+        locale: currentRouteLocale || data.language || store.state.UserAccount.locale
       })
       Cookie.remove('token')
-      next('/en/user/login')
+      next(`/${currentRouteLocale || store.state.UserAccount.locale}/user/login`)
       return
     }
 
-    if (data.user.username) {
-      // TODO: It must be used together with the backend
-      store.dispatch('UserAccount/setLanguage', {
-        locale: currentRouteLocale || data.language
-      })
-      next()
-      return
-    }
-
-    // ElMessage.error('登录失败，请重新登录')
-    Cookie.remove('token')
+    // TODO: It must be used together with the backend
     store.dispatch('UserAccount/setLanguage', {
-      locale: currentRouteLocale || store.state.UserAccount.locale
+      locale: currentRouteLocale || data.language
     })
-    next(`/${currentRouteLocale || store.state.UserAccount.locale}/user/login`)
+    next()
   })
 
   router.afterEach((to) => {

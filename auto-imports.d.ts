@@ -85,10 +85,10 @@ declare global {
 // for type re-export
 declare global {
   // @ts-ignore
-  export type { Component, ComponentPublicInstance, ComputedRef, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, VNode, WritableComputedRef, App, ComponentInternalInstance } from 'vue'
+  export type { Component, ComponentPublicInstance, ComputedRef, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, VNode, WritableComputedRef, App, ComponentPublicInstanceCostom, ComponentInternalInstance } from 'vue'
   import('vue')
   // @ts-ignore
-  export type { RouteRecordRaw } from 'vue-router'
+  export type { RouteRecordRaw, RouteLocationRaw, LocationQuery, RouteParams, RouteLocationNormalizedLoaded, RouteRecordName, NavigationGuard } from 'vue-router'
   import('vue-router')
 }
 // for vue template auto import
