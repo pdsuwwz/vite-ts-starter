@@ -77,8 +77,8 @@ devDependencies:
     specifier: ^3.4.10
     version: 3.4.10
   '@vue/test-utils':
-    specifier: 2.4.3
-    version: 2.4.3(vue@3.4.10)
+    specifier: 2.4.4
+    version: 2.4.4(vue@3.4.10)
   babel-plugin-transform-vite-meta-env:
     specifier: ^1.0.3
     version: 1.0.3
@@ -2547,8 +2547,8 @@ packages:
   /@vue/shared@3.4.10:
     resolution: {integrity: sha512-C0mIVhwW1xQLMFyqMJxnhq6fWyE02lCgcE+TDdtGpg6B3H6kh/0YcqS54qYc76UJNlWegf3VgsLqgk6D9hBmzQ==}
 
-  /@vue/test-utils@2.4.3(vue@3.4.10):
-    resolution: {integrity: sha512-F4K7mF+ad++VlTrxMJVRnenKSJmO6fkQt2wpRDiKDesQMkfpniGWsqEi/JevxGBo2qEkwwjvTUAoiGJLNx++CA==}
+  /@vue/test-utils@2.4.4(vue@3.4.10):
+    resolution: {integrity: sha512-8jkRxz8pNhClAf4Co4ZrpAoFISdvT3nuSkUlY6Ys6rmTpw3DMWG/X3mw3gQ7QJzgCZO9f+zuE2kW57fi09MW7Q==}
     peerDependencies:
       '@vue/server-renderer': ^3.0.1
       vue: ^3.0.1
