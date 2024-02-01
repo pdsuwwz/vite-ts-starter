@@ -78,7 +78,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-html": "7.1.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-vue": "9.20.0",
+    "eslint-plugin-vue": "9.21.1",
     "jsdom": "^23.2.0",
     "postcss": "^8.4.33",
     "postcss-html": "^1.6.0",
