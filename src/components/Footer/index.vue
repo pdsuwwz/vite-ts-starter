@@ -6,7 +6,7 @@
     }"
   >
     <div
-      class="container"
+      class="footer-container"
     >
       <p
         class="text"
@@ -54,7 +54,7 @@ export default defineComponent({
     border-top: 1px solid rgba(#3c3c43, 0.12);
   }
 
-  .container {
+  .footer-container {
     padding: 14px 0;
 
     .text {
