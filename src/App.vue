@@ -1,19 +1,15 @@
 <template>
-  <el-config-provider
+  <ElConfigProvider
     :locale="currentLocaleLang"
   >
     <router-view />
-  </el-config-provider>
+  </ElConfigProvider>
 </template>
 
 <script lang="ts">
-import { ElConfigProvider } from 'element-plus'
 
 export default defineComponent({
   name: 'App',
-  components: {
-    ElConfigProvider
-  },
   setup () {
     const store = useBaseStore()
     const route = useRoute()
