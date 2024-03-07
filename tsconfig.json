@@ -33,14 +33,5 @@
       ]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "__tests__/**/*.ts",
-    "./auto-imports.d.ts",
-    "./components.d.ts"
-  ],
   "exclude": ["node_modules"]
 }
