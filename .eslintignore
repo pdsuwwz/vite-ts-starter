@@ -1,7 +1,0 @@
-build
-dist
-tmp
-node_modules
-coverage
-public
-src/assets/fonts/iconfont.js

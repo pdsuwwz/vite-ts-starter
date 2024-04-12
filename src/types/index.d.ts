@@ -3,10 +3,10 @@ import { getFilterResponse } from '@/store/utils/mixin'
 import { DialogProps } from 'element-plus'
 
 import {
-  requiredRules,
-  validatorRules,
   imageListRules,
-  requiredRadioRules
+  requiredRadioRules,
+  requiredRules,
+  validatorRules
 } from '@/utils/formRules'
 
 // $ModalDialog
