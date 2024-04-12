@@ -47,16 +47,17 @@
 * 节省你配置的时间，因此该项目的**轻量化**致使你只需要专心编写自己的业务代码即可
 
 
-## Screenshot
-
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/19891724/154829635-46de24db-e4c5-409f-9fa5-6a9770ace166.png">
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/19891724/154829667-a84787b0-0104-4466-bb9e-9f586be66778.png">
-
-
 ## Environment Support
 
 * Vue 3.x
 * Node >= 16.15.x
+* **VS Code 插件 `dbaeumer.vscode-eslint` >= v3.0.5 (pre-release)**
+
+
+## Screenshot
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/19891724/154829635-46de24db-e4c5-409f-9fa5-6a9770ace166.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/19891724/154829667-a84787b0-0104-4466-bb9e-9f586be66778.png">
 
 
 ## Installation
