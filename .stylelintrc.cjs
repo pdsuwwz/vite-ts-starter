@@ -1,63 +1,63 @@
 module.exports = {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-standard-scss",
-    "stylelint-config-recommended-vue",
-    "stylelint-config-recommended-vue/scss"
+  'extends': [
+    'stylelint-config-standard',
+    'stylelint-config-standard-scss',
+    'stylelint-config-recommended-vue',
+    'stylelint-config-recommended-vue/scss'
   ],
-  "ignoreFiles": ["**/*.js", "**/*.ts"],
-  "defaultSeverity": "error",
-  "rules": {
-    "unit-disallowed-list": [
-      "rem",
-      "pt"
+  'ignoreFiles': ['**/*.js', '**/*.ts'],
+  'defaultSeverity': 'error',
+  'rules': {
+    'unit-disallowed-list': [
+      'rem',
+      'pt'
     ],
-    "no-empty-source": null,
-    "block-no-empty": null,
+    'no-empty-source': null,
+    'block-no-empty': null,
     'declaration-block-no-duplicate-custom-properties': null,
-    "font-family-no-missing-generic-family-keyword": null,
+    'font-family-no-missing-generic-family-keyword': null,
 
-    "selector-class-pattern": "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$|^Mui.*$|^([a-z][a-z0-9]*)(_[a-z0-9]+)*$",
+    'selector-class-pattern': '^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$|^Mui.*$|^([a-z][a-z0-9]*)(_[a-z0-9]+)*$',
 
-    "scss/at-mixin-pattern": "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$|^Mui.*$|^([a-z][a-z0-9]*)(_[a-z0-9]+)*$",
-    "scss/double-slash-comment-whitespace-inside": "always",
-    "scss/dollar-variable-pattern": null,
+    'scss/at-mixin-pattern': '^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$|^Mui.*$|^([a-z][a-z0-9]*)(_[a-z0-9]+)*$',
+    'scss/double-slash-comment-whitespace-inside': 'always',
+    'scss/dollar-variable-pattern': null,
 
-    "selector-pseudo-class-no-unknown": [
+    'selector-pseudo-class-no-unknown': [
       true,
       {
-        "ignorePseudoClasses": [
-          "export",
-          "deep"
+        'ignorePseudoClasses': [
+          'export',
+          'deep'
         ]
       }
     ],
-    "property-no-unknown": null,
-    "at-rule-empty-line-before": [
-      "always",
+    'property-no-unknown': null,
+    'at-rule-empty-line-before': [
+      'always',
       {
-        "except": ["first-nested", "blockless-after-same-name-blockless"]
+        'except': ['first-nested', 'blockless-after-same-name-blockless']
       }
     ],
-    "custom-property-empty-line-before": [
-      "always",
+    'custom-property-empty-line-before': [
+      'always',
       {
-        "except": ["after-custom-property", "first-nested"]
+        'except': ['after-custom-property', 'first-nested']
       }
     ],
-    "declaration-empty-line-before": [
-      "always",
+    'declaration-empty-line-before': [
+      'always',
       {
-        "except": ["after-declaration", "first-nested"]
+        'except': ['after-declaration', 'first-nested']
       }
     ],
-    "rule-empty-line-before": ["always-multi-line"],
+    'rule-empty-line-before': ['always-multi-line'],
 
     // 忽视 -webkit-xxxx 等兼容写法
-    "property-no-vendor-prefix": [
+    'property-no-vendor-prefix': [
       true,
       {
-        ignoreProperties: ["box-shadow"]
+        ignoreProperties: ['box-shadow']
       }
     ]
   }

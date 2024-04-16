@@ -1,6 +1,7 @@
 // import antfu from '@antfu/eslint-config'
 // export default antfu()
 
+import globals from 'globals'
 import { defineFlatConfig } from 'eslint-define-config';
 
 import * as parserTypeScript from '@typescript-eslint/parser';
@@ -31,7 +32,10 @@ export default defineFlatConfig([
       globals: {
         document: 'readonly',
         navigator: 'readonly',
-        window: 'readonly'
+        window: 'readonly',
+        ...globals.node,
+        ...globals.es2021,
+        ...globals.browser
       },
       parserOptions: {
         ecmaFeatures: {
