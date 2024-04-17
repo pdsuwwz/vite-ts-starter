@@ -5,12 +5,19 @@ module.exports = {
     'stylelint-config-recommended-vue',
     'stylelint-config-recommended-vue/scss'
   ],
+  'plugins': ['@stylistic/stylelint-plugin'],
   'ignoreFiles': ['**/*.js', '**/*.ts'],
   'defaultSeverity': 'error',
   'rules': {
     'unit-disallowed-list': [
       'rem',
       'pt'
+    ],
+    '@stylistic/indentation': [
+      2,
+      {
+        'baseIndentLevel': 0
+      }
     ],
     'no-empty-source': null,
     'block-no-empty': null,

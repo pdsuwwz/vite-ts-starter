@@ -21,8 +21,7 @@ html {
 }
 
 :root {
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden auto;
 }
 
 :root body {
@@ -131,7 +130,5 @@ table {
 // https://stackoverflow.com/questions/43778196/input-background-removed-by-chrome-autofill
 
 input:-webkit-autofill {
-  box-shadow: 0 0 0 1000px #fff inset;
-  box-shadow: 0 0 0 100px #fff inset;
   box-shadow: 0 0 0 100px #fff inset;
 }
