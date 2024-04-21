@@ -1,0 +1,1 @@
+import{k as h,l}from"./input-CfoUMuzZ.js";import{S as s,h as m}from"./index-CfkSAQsI.js";var a=s?s.isConcatSpreadable:void 0;function b(n){return m(n)||h(n)||!!(a&&n&&n[a])}function g(n,o,e,S,t){var r=-1,f=n.length;for(e||(e=b),t=[];++r<f;){var i=n[r];e(i)?l(t,i):t[t.length]=i}return t}function c(n){var o=n==null?0:n.length;return o?g(n):[]}export{c as f};
