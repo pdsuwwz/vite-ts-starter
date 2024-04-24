@@ -25,9 +25,10 @@
 
 ## 🪄 使用不同的 UI 库
 
-如果更喜欢使用 [Naive UI](https://www.naiveui.com/) 作为 UI 库, 这里也为你提供了一个相应的模板项目：
+如果更偏好使用 [Naive UI](https://www.naiveui.com/) 作为 UI 库, 这里也为你准备了几个相应的模板项目，可在此基础上进行业务二次开发和定制：
 
-- 🔥 [Naive UI 版本](https://github.com/pdsuwwz/vite-naive-template)
+- 🔥 [Naive UI 基础模板，集成常用技术栈](https://github.com/pdsuwwz/vite-naive-template)
+- 🔥 [基于 Naive UI 的 Tab 多页签切换选项卡演示](https://github.com/pdsuwwz/vue3-tab-demo)
 
 
 ## 🎉 Features
