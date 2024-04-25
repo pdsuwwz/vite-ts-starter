@@ -1,0 +1,1 @@
+import{d as e,_ as t,o as s,b as n}from"./index-Bad336g-.js";const o=e({name:"UserAccountSetting"}),c={class:"wrap-user-setting"};function a(r,_,d,p,i,u){return s(),n("div",c," 账号设置 ")}const m=t(o,[["render",a],["__scopeId","data-v-67d4de27"]]);export{m as default};
