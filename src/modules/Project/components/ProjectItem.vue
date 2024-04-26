@@ -74,7 +74,7 @@
 import { Loading } from '@element-plus/icons-vue'
 
 import { sleep } from '@/utils/request'
-import { useLocale, ElMessage } from 'element-plus'
+import { ElMessage, useLocale } from 'element-plus'
 
 import type { ProjectDetailProps } from '../store'
 

@@ -1,5 +1,5 @@
 import childrenRoutes from '@/router/child-routes'
-import { localesMapping, isHasLocale } from '@/locales'
+import { isHasLocale, localesMapping } from '@/locales'
 import { isUndefined } from '@/utils/type'
 
 const Layout = () => import('@/components/Layout/index.vue')

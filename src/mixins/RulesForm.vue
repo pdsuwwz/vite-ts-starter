@@ -1,9 +1,9 @@
 <script lang="ts">
 import {
-  requiredRules,
-  validatorRules,
   imageListRules,
-  requiredRadioRules
+  requiredRadioRules,
+  requiredRules,
+  validatorRules
 } from '@/utils/formRules'
 export default defineComponent({
   // name: 'RulesForm',
