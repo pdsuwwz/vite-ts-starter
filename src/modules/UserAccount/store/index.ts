@@ -1,9 +1,9 @@
 import { Module } from 'vuex'
 import { sleep } from '@/utils/request'
 import {
+  getUserInfoData,
   login,
   logout,
-  getUserInfoData,
   updateChangeLanguage
 } from '@/modules/UserAccount/api'
 import MUTATION from '@/modules/UserAccount/store/mutations-type'

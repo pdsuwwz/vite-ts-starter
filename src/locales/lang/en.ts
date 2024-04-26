@@ -3,7 +3,7 @@ import { systemTitle } from '@/locales/data'
 /* English namespaced */
 export default {
   base: {
-    systemTitle: systemTitle,
+    systemTitle,
     goback: 'Back to the previous page',
     empty: 'No data available',
     i18nTest: 'Test internationalization',

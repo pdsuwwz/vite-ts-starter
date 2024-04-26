@@ -14,8 +14,8 @@ export interface IGlobalState {
 
 const store = createStore<IGlobalState>({
   modules: {
-    UserAccount: UserAccount,
-    Project: Project,
+    UserAccount,
+    Project,
     Result: ResultModule
   },
   plugins

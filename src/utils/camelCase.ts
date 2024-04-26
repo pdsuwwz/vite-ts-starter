@@ -1,12 +1,12 @@
-/* eslint-disable no-unused-vars */
+
 import {
-  isFunction,
-  isObject,
   isArray,
-  isDate,
-  isRegExp,
   isBoolean,
-  isNumberical
+  isDate,
+  isFunction,
+  isNumberical,
+  isObject,
+  isRegExp
 } from '@/utils/type'
 
 // camelize('hello_world') -> 'helloWorld'
@@ -15,7 +15,7 @@ export function camelize (string: string) {
     return string
   }
 
-  string = string.replace(/[-_\s]+(.)?/g, function (match: any, chr: string) {
+  string = string.replace(/[-_\s]+(.)?/g, (match: any, chr: string) => {
     return chr ? chr.toUpperCase() : ''
   })
 
