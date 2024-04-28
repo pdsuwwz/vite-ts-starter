@@ -163,6 +163,9 @@ devDependencies:
   vitest:
     specifier: ^1.5.0
     version: 1.5.0(@types/node@20.12.7)(jsdom@24.0.0)(sass@1.75.0)
+  vue-eslint-parser:
+    specifier: ^9.4.2
+    version: 9.4.2(eslint@9.1.1)
 
 packages:
 
