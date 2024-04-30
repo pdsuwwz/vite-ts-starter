@@ -90,7 +90,7 @@
     "postcss": "^8.4.38",
     "postcss-html": "^1.6.0",
     "postcss-scss": "^4.0.9",
-    "rollup": "4.16.4",
+    "rollup": "4.17.2",
     "sass": "^1.75.0",
     "stylelint": "^16.4.0",
     "stylelint-config-recommended-scss": "^14.0.0",
