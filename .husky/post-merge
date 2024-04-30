@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# 检查 pnpm-lock.yaml 是否发生变化
+if git diff --name-only HEAD@{1} HEAD | grep -E 'pnpm-lock.yaml'; then
+  echo "Detected changes in dependencies, running pnpm install..."
+  pnpm install
+else
+  echo "No dependency changes detected, skipping pnpm install."
+fi

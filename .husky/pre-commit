@@ -1,0 +1,27 @@
+#!/bin/sh
+
+BOLD='\033[1m'
+GREEN='\033[32m'
+RED='\033[31m'
+RESET='\033[0m'
+
+# 运行 lint-staged
+if pnpm lint-staged; then
+  # 检查 Git 暂存区是否有变化
+  if [ -z "$(git diff --cached)" ]; then
+    # 暂存区为空，输出警告信息
+    echo "\n${RED}❌ Commit 失败，请检查以下可能原因：\n"
+    echo "\t1. lint-staged 修复后代码与上次提交一致，无新变更"
+    echo "\t2. 代码未添加到暂存区"
+    echo "\t3. ESLint 插件未生效，请检查插件状态"
+    echo "\n请检查代码，并重新 add 后再尝试提交。 ${RESET}\n"
+    exit 1
+  else
+    # 暂存区有变化，可继续提交
+    echo "\n${GREEN}✅ ESLint 校验成功，可以继续提交${RESET}\n"
+  fi
+else
+  # lint-staged 失败
+  echo "${BOLD}${RED}🥴 ESLint 校验失败，请尝试修复错误后再重新执行 add、commit。${RESET}\n"
+  exit 1
+fi

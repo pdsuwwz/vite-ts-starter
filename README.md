@@ -5,7 +5,7 @@
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/vite-ts-starter?color=blue)](https://github.com/pdsuwwz/vite-ts-starter/blob/main/LICENSE)
 
-🐬 A Starter template built on Vite 5.x + Vue 3.x + Element Plus 2.x + TypeScript.
+🐬 A Starter template built on Vite 5.x + Vue 3.x + Element Plus 2.x + TypeScript + Husky + lint-staged.
 
 一个开箱即用，适合快速开发 Vue3 + Vite5 + TS 中小型 B 端后台管理系统的原型模板项目框架，持续更新最新技术栈 💪
 
@@ -36,6 +36,7 @@
 * 支持 __Vite 5 + Vue 3 + TypeScript__
 * UI 框架: __Element Plus 2.x__
 * 状态管理: __Vuex 4__
+* 代码规范化检测: __Husky + lint-staged__
 * 单元测试框架: ~~__Jest__~~ 升级为 __Vitest__
 * 内置 __ESlint__ 和 __Stylelint__, 可在此基础上扩展你想要的 Lint 配置规范
 * 内置封装了一个**可能比较好用的** Axios , 需要时配合 Vuex Actions 一起食用
