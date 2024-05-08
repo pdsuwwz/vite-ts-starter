@@ -15,20 +15,20 @@
 ## 🌱 不同版本
 目前一共有以下五个不同技术栈的仓库模板在持续维护，请尝试后选择适合自己的模板使用
 
-- 💥 (推荐) [TS + Pinia + 🌐 低耦合(i18n)多语言 Vite4 + Vue3 + TS + Pinia + Element-Plus2 + vue-i18n@next](https://github.com/pdsuwwz/vue-boilerplate-i18n)
+- 💥 (推荐) [TS + Pinia + 🌐 低耦合(i18n)多语言 Vite5 + Vue3 + TS + Element-Plus2 + vue-i18n@next](https://github.com/pdsuwwz/vue-boilerplate-i18n)
 
-- ⚡️ TS + Pinia 版 [Vite4 + Vue3 + TS + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/pinia-starter-ts)
-- ⚡️ JS + Pinia 版 [Vite4 + Vue3 + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-pinia-starter)
+- ⚡️ TS + Pinia 版 [Vite5 + Vue3 + TS + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/pinia-starter-ts)
+- ⚡️ JS + Pinia 版 [Vite5 + Vue3 + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-pinia-starter)
 
 - ⚡️ TS + Vuex4 版 (当前仓库)[Vite5 + Vue3 + TS + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-ts-starter)
-- ⚡️ JS + Vuex4 版 [Vite4 + Vue3 + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-starter)
+- ⚡️ JS + Vuex4 版 [Vite5 + Vue3 + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-starter)
 
 ## 🪄 使用不同的 UI 库
 
 如果更偏好使用 [Naive UI](https://www.naiveui.com/) 作为 UI 库, 这里也为你准备了几个相应的模板项目，可在此基础上进行业务二次开发和定制：
 
-- 🔥 [Naive UI 基础模板，集成常用技术栈](https://github.com/pdsuwwz/vite-naive-template)
-- 🔥 [基于 Naive UI 的 Tab 多页签切换选项卡演示](https://github.com/pdsuwwz/vue3-tab-demo)
+- 🏄‍♂️ [Naive UI 基础模板，集成常用技术栈](https://github.com/pdsuwwz/vite-naive-template)
+- 🗂️ [基于 Naive UI 的 Tab 多页签切换选项卡演示](https://github.com/pdsuwwz/vue3-tab-demo)
 
 
 ## 🎉 Features
@@ -49,48 +49,56 @@
 * 节省你配置的时间，因此该项目的**轻量化**致使你只需要专心编写自己的业务代码即可
 
 
-## Environment Support
+## 前置条件
 
 * Vue 3.x
 * Node >= 16.15.x
+* Pnpm 8.x
 * **VS Code 插件 `dbaeumer.vscode-eslint` >= v3.0.5 (pre-release)**
 
 
-## Screenshot
+## 运行效果截图
 
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/19891724/154829635-46de24db-e4c5-409f-9fa5-6a9770ace166.png">
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/19891724/154829667-a84787b0-0104-4466-bb9e-9f586be66778.png">
 
 
-## Installation
+## 安装和运行
 
-Install node dependencies in all packages
+* 安装依赖
 
 ```bash
-pnpm install
+pnpm i
 ```
 
-## Run
-
-Local Development
+* 本地开发
 
 ```bash
 pnpm dev
 ```
 
-## Test
+## 单元测试
 
-Unit Testing
+* 执行单测
 
 ```bash
 pnpm test
 ```
 
-Test code coverage
+* 执行覆盖率测试
 
 ```bash
 pnpm test:coverage
 ```
+
+## 💡 提示
+
+* 若 Husky 未生效，可能是由于未完成初始化，尝试执行以下命令进行初始化:
+
+```bash
+pnpm run prepare
+```
+
 
 ## 😎 Awesome
 
