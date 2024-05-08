@@ -1,17 +1,38 @@
 {
-  "stylelint.validate": [
+  "editor.formatOnSave": false,
+
+  // Auto fix
+  
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never",
+		"source.fixAll.stylelint": "explicit"
+  },
+  "eslint.run": "onType",
+  "eslint.format.enable": true,
+	"stylelint.validate": [
     "vue",
 		"scss"
   ],
   "css.validate": false,
 	"less.validate": false,
 
-	"editor.formatOnSave": false,
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit",
-		"eslint.autoFixOnSave": "explicit",
-		"source.fixAll.stylelint": "explicit"
-	},
 	"files.autoSaveDelay": 500,
-	"vue.codeActions.enabled": false
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml",
+    "gql",
+    "graphql"
+  ]
 }
