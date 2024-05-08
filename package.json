@@ -65,7 +65,7 @@
     "@eslint/js": "^9.2.0",
     "@iconify/json": "^2.2.207",
     "@iconify/vue": "^4.1.2",
-    "@stylistic/eslint-plugin": "^1.8.1",
+    "@stylistic/eslint-plugin": "^2.0.0",
     "@stylistic/stylelint-plugin": "^2.1.2",
     "@types/js-cookie": "^3.0.6",
     "@types/lodash-es": "^4.17.12",
