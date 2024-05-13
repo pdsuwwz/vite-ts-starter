@@ -5,16 +5,64 @@ GREEN='\033[32m'
 RED='\033[31m'
 RESET='\033[0m'
 
+# 检查是否在 Git 仓库目录下
+git rev-parse --git-dir >/dev/null 2>&1 || {
+    echo >&2 "${RED}❌ 当前目录非 Git 仓库。${RESET}"
+    exit 1
+}
+
+
+# 受保护的分支列表
+PROTECTED_BRANCHES=(
+  "main"
+  "master"
+  "dev"
+  "release"
+)
+
+# 获取当前分支名
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+# 如果当前分支是受保护分支
+for branch in "${PROTECTED_BRANCHES[@]}"; do
+  if [ "$CURRENT_BRANCH" == "$branch" ]; then
+    # 检查暂存区是否有文件
+    if [ -n "$(git diff --cached)" ]; then
+      echo "\n${RED}❌ Commit 失败："
+      echo "\n不能在当前受保护的分支 '$CURRENT_BRANCH' 上暂存文件，请在其他分支上进行更改。${RESET}\n"
+      exit 1
+    fi
+  fi
+done
+
+
+# 检查是否可能为 --amend
+IS_AMEND=$(git rev-parse --verify --quiet HEAD >/dev/null 2>&1; echo $?)
+
+# 检查暂存区与 HEAD 之间是否有变化
+HAS_DIFF=$(git diff --cached HEAD)
+
+
+if [ "$IS_AMEND" -eq 0 ] && [ -z "$HAS_DIFF" ]; then
+  if ! git diff-index --quiet HEAD --; then
+    echo "\n${RED}❗ 代码未添加到暂存区，需先执行 ${BOLD}git add .${RESET}${RED} 添加变更。${RESET}\n"
+    exit 1
+  else
+    echo "\n${RED}暂存区无任何变更，或执行了 --amend 操作。${RESET}\n"
+    exit 0
+  fi
+fi
+
+
 # 运行 lint-staged
-if pnpm lint-staged; then
+if pnpm lint-staged  --allow-empty; then
   # 检查 Git 暂存区是否有变化
   if [ -z "$(git diff --cached)" ]; then
     # 暂存区为空，输出警告信息
     echo "\n${RED}❌ Commit 失败，请检查以下可能原因：\n"
     echo "\t1. lint-staged 修复后代码与上次提交一致，无新变更"
-    echo "\t2. 代码未添加到暂存区"
-    echo "\t3. ESLint 插件未生效，请检查插件状态"
-    echo "\n请检查代码，并重新 add 后再尝试提交。 ${RESET}\n"
+    echo "\t2. ESLint 插件未生效，请检查插件状态"
+    echo "\n请检查代码，并重新执行 ${BOLD}git add .${RESET} ${RED}后再尝试提交。${RESET}\n"
     exit 1
   else
     # 暂存区有变化，可继续提交
