@@ -1,5 +1,5 @@
 import { ElMessage } from 'element-plus'
-import { RespData } from '@/utils/request'
+import type { RespData } from '@/utils/request'
 
 type ResponseCallback<T> = (res: RespData<T>) => (typeof res) | any
 
@@ -27,10 +27,10 @@ export function getFilterResponse<T>(
 export default {
   getAction (name: string) {
     const _self = this as any
-    return `${_self._name}/${Object.keys(_self.actions)[Object.keys(_self.actions).indexOf(name)]}`
+    return `${ _self._name }/${ Object.keys(_self.actions)[Object.keys(_self.actions).indexOf(name)] }`
   },
   getMutation (name: string) {
     const _self = this as any
-    return `${_self._name}/${Object.keys(_self.mutations)[Object.keys(_self.mutations).indexOf(name)]}`
+    return `${ _self._name }/${ Object.keys(_self.mutations)[Object.keys(_self.mutations).indexOf(name)] }`
   }
 }

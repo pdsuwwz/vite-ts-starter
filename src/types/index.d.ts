@@ -1,8 +1,8 @@
-import { ActionTree } from 'vuex'
-import { getFilterResponse } from '@/store/utils/mixin'
-import { DialogProps } from 'element-plus'
+import type { ActionTree } from 'vuex'
+import type { getFilterResponse } from '@/store/utils/mixin'
+import type { DialogProps } from 'element-plus'
 
-import {
+import type {
   imageListRules,
   requiredRadioRules,
   requiredRules,

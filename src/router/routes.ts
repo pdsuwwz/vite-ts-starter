@@ -9,9 +9,9 @@ function getLocaleRegex () {
   let reg = ''
   localesMapping.forEach((localeItem, index) => {
     const line = index !== localesMapping.length - 1 ? '|' : ''
-    reg = `${reg}${localeItem.localeCode}${line}`
+    reg = `${ reg }${ localeItem.localeCode }${ line }`
   })
-  return `(${reg})`
+  return `(${ reg })`
 }
 
 const routes: Array<RouteRecordRaw> = [
@@ -21,12 +21,12 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/project'
   },
   {
-    path: `/:locale${getLocaleRegex()}?`,
+    path: `/:locale${ getLocaleRegex() }?`,
     component: Layout,
     beforeEnter (to, from, next) {
       console.log('beforeEnter: to ', to)
       if (isHasLocale(to.params.locale) && !isUndefined(to.params.pathMatch)) {
-        next(`/${to.params.locale}/project`)
+        next(`/${ to.params.locale }/project`)
         return
       }
       next()

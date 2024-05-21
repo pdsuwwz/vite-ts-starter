@@ -124,7 +124,7 @@ export default defineFlatConfig([
       'no-compare-neg-zero': 'error',
       'no-cond-assign': ['error', 'always'],
       'no-console': ['error', {
-        allow: ['log', 'warn', 'error']
+        allow: ['log', 'dir', 'warn', 'error']
       }],
       'no-const-assign': 'error',
       'no-control-regex': 'error',

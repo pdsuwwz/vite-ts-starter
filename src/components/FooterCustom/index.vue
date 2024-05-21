@@ -23,27 +23,21 @@
     </div>
   </footer>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 import Octocat from './octocat.vue'
 
-export default defineComponent({
-  name: 'MyFooter',
-  components: {
-    Octocat
-  },
-  props: {
-    showBorder: {
-      type: Boolean,
-      default: false
-    }
-  },
-  setup() {
-    const link = ref('https://github.com/pdsuwwz')
-    return {
-      link
-    }
+
+withDefaults(
+  defineProps<{
+    showBorder?: boolean
+  }>(),
+  {
+    showBorder: false
   }
-})
+)
+
+const link = ref('https://github.com/pdsuwwz')
+
 </script>
 <style lang="scss" scoped>
 .footer {

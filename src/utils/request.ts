@@ -1,4 +1,5 @@
-import axios, { AxiosInstance } from 'axios'
+import type { AxiosInstance } from 'axios'
+import axios from 'axios'
 import Cookie from 'js-cookie'
 
 import { camelizeKeys, decamelizeKeys } from '@/utils/camelCase'
@@ -201,7 +202,9 @@ export function downloadFile (boldData: any, filename = 'test-filename', type: s
   // TODO: https://blog.csdn.net/weixin_42142057/article/details/97655591
   const blob = boldData instanceof Blob
     ? boldData
-    : new Blob([boldData], { type })
+    : new Blob([boldData], {
+      type
+    })
   const url = window.URL.createObjectURL(blob)
 
   const link = document.createElement('a')

@@ -21,20 +21,21 @@
   </el-tooltip>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  name: 'TooltipCustom',
-  props: {
-    content: {
-      type: String,
-      default: ''
-    },
-    placement: {
-      type: String,
-      default: 'top'
-    }
+<script lang="ts" setup>
+import type { Placement } from 'element-plus'
+
+interface Props {
+  content: string
+  placement?: Placement
+}
+
+withDefaults(
+  defineProps<Props>(),
+  {
+    content: '',
+    placement: 'top'
   }
-})
+)
 </script>
 
 <style lang="scss" scoped>

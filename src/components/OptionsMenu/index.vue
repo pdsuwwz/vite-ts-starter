@@ -42,7 +42,7 @@
 <script lang="ts">
 // import { isString } from '@/utils/type'
 import { isString } from '@/utils/type'
-import { Placement } from 'element-plus'
+import type { Placement } from 'element-plus'
 
 export default defineComponent({
   name: 'OptionsMenu',
