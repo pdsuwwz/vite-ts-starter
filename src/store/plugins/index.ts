@@ -1,6 +1,6 @@
 import { getFilterResponse } from '@/store/utils/mixin'
-import { Store } from 'vuex'
-import { IGlobalState } from '@/store'
+import type { Store } from 'vuex'
+import type { IGlobalState } from '@/store'
 
 const mixinPlugins = (store: Store<IGlobalState>) => {
   (store as any).filterResponse = getFilterResponse

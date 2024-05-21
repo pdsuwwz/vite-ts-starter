@@ -1,8 +1,20 @@
 <template>
-  <div class="user-account-login">
+  <div
+    class="user-account-login"
+    :class="[
+      'bgimage-images-logo-background-jpg',
+      'bg-cover bg-no-repeat bg-center'
+    ]"
+  >
     <div class="user-account-nav">
       <div class="nav-left">
-        <div class="nav-logo"></div>
+        <div
+          class="nav-logo"
+          :class="[
+            'bgimage-images-vue-svg',
+            'bg-contain bg-no-repeat bg-center'
+          ]"
+        ></div>
         <div class="nav-circle"></div>
         <div class="nav-title">
           {{ _t('base.systemTitle') }}
@@ -31,7 +43,7 @@
         </template>
       </UserAccountContainerLayout>
     </div>
-    <MyFooter />
+    <FooterCustom />
   </div>
 </template>
 
@@ -107,7 +119,9 @@ export default defineComponent({
               }
             },
             label: localeInject.t('login.email'),
-            prefixIcon: h('span', { class: 'text-16px i-ic:baseline-mail-lock' }),
+            prefixIcon: h('span', {
+              class: 'text-16px i-ic:baseline-mail-lock'
+            }),
             placeholder: localeInject.t('login.plsemail')
           },
           {
@@ -129,7 +143,9 @@ export default defineComponent({
             },
             type: 'password',
             label: localeInject.t('login.pwd'),
-            prefixIcon: h('span', { class: 'text-16px i-ri:lock-password-fill' }),
+            prefixIcon: h('span', {
+              class: 'text-16px i-ri:lock-password-fill'
+            }),
             placeholder: localeInject.t('login.plspwd')
           }
         ]
@@ -159,7 +175,7 @@ export default defineComponent({
         console.log('🚀', data)
         Cookie.set('token', data.user.token)
         router
-          .replace(`/${route.params.locale || ''}`)
+          .replace(`/${ route.params.locale || '' }`)
           .then(() => {
             ElMessage.success({
               message: localeInject.t('login.loginSuccess')
@@ -197,11 +213,6 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f0f2f5;
-  background-image: url("@/assets/images/logo-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 
   .user-account-nav {
     display: flex;
@@ -224,10 +235,6 @@ export default defineComponent({
     .nav-logo {
       width: 56px;
       height: 32px;
-      background-image: url("@/assets/images/vue.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
     }
 
     .nav-circle {

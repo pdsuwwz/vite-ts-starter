@@ -1,4 +1,4 @@
-import { Module } from 'vuex'
+import type { Module } from 'vuex'
 
 import { sleep } from '@/utils/request'
 import { getDemoTestList } from '@/modules/Result/api'
@@ -6,7 +6,7 @@ import MUTATION from '@/modules/Result/store/mutations-type'
 import mixin from '@/store/utils/mixin'
 
 import { overviewMock } from '@/modules/Result/data'
-import { IGlobalState } from '@/store'
+import type { IGlobalState } from '@/store'
 
 interface OverviewOptions {
   title: string | any

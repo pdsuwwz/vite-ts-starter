@@ -91,7 +91,7 @@
 <script lang="ts">
 
 import { isFunction } from '@/utils/type'
-import { PropType } from 'vue'
+import type { PropType } from 'vue'
 
 export default defineComponent({
   name: 'UserAccountContainerLayout',

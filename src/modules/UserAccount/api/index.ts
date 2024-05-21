@@ -78,7 +78,7 @@ export function createDemoTest (data) {
 
 export function updateDemoTest (data) {
   return request({
-    url: `/api/demo_test/${data.demoId}`,
+    url: `/api/demo_test/${ data.demoId }`,
     method: 'put',
     data
   })
@@ -86,7 +86,7 @@ export function updateDemoTest (data) {
 
 export function deleteDemoTest (demoId) {
   return request({
-    url: `/api/demo_test/${demoId}`,
+    url: `/api/demo_test/${ demoId }`,
     method: 'delete'
   })
 }

@@ -1,4 +1,4 @@
-import { Module } from 'vuex'
+import type { Module } from 'vuex'
 import { sleep } from '@/utils/request'
 import {
   getUserInfoData,
@@ -9,7 +9,7 @@ import {
 import MUTATION from '@/modules/UserAccount/store/mutations-type'
 import mixin from '@/store/utils/mixin'
 
-import { IGlobalState } from '@/store'
+import type { IGlobalState } from '@/store'
 
 export interface IUserAccountState {
   locale: string
@@ -59,7 +59,7 @@ const UserAccountModule: Module<IUserAccountState, IGlobalState> = {
       commit(MUTATION.SET_LANGUAGE, data.locale)
     },
     async login ({ state, commit }, data) {
-      await sleep(1000)
+      await sleep(300)
       const res = await login(data)
       return this.filterResponse(res, null, () => {})
     },

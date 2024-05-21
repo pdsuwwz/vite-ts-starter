@@ -1,8 +1,11 @@
 import { createStore } from 'vuex'
 
-import UserAccount, { IUserAccountState } from '@/modules/UserAccount/store'
-import Project, { IProjectModule } from '@/modules/Project/store'
-import ResultModule, { IResultModule } from '@/modules/Result/store'
+import type { IUserAccountState } from '@/modules/UserAccount/store'
+import UserAccount from '@/modules/UserAccount/store'
+import type { IProjectModule } from '@/modules/Project/store'
+import Project from '@/modules/Project/store'
+import type { IResultModule } from '@/modules/Result/store'
+import ResultModule from '@/modules/Result/store'
 
 import plugins from '@/store/plugins'
 

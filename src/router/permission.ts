@@ -4,7 +4,7 @@ import { allowlist } from '@/router/auth-list'
 import { systemTitle } from '@/locales/data'
 
 import NProgress from 'nprogress'
-import { Router } from 'vue-router'
+import type { Router } from 'vue-router'
 
 NProgress.configure({
   showSpinner: false
@@ -14,7 +14,7 @@ export function createRouterGuards(router: Router) {
   router.beforeEach(async (to, from, next) => {
     NProgress.start()
 
-    document.title = `${to.meta.title || ''} - ${systemTitle}`
+    document.title = `${ to.meta.title || '' } - ${ systemTitle }`
 
     globalThis.console.log('😄😄😄 ', to)
 
@@ -30,7 +30,7 @@ export function createRouterGuards(router: Router) {
     }
 
     if (!Cookie.get('token')) {
-      next(`/${currentRouteLocale || store.state.UserAccount.locale}/user/login`)
+      next(`/${ currentRouteLocale || store.state.UserAccount.locale }/user/login`)
       return
     }
 
@@ -42,7 +42,7 @@ export function createRouterGuards(router: Router) {
         locale: currentRouteLocale || data.language || store.state.UserAccount.locale
       })
       Cookie.remove('token')
-      next(`/${currentRouteLocale || store.state.UserAccount.locale}/user/login`)
+      next(`/${ currentRouteLocale || store.state.UserAccount.locale }/user/login`)
       return
     }
 

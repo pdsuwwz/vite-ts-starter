@@ -12,8 +12,8 @@ import {
   projectDetail,
   projectList
 } from '@/modules/Project/data'
-import { Module } from 'vuex'
-import { IGlobalState } from '@/store'
+import type { Module } from 'vuex'
+import type { IGlobalState } from '@/store'
 
 export interface ProjectDetailProps {
   corpName: string | null
@@ -84,7 +84,7 @@ const ProjectModule: Module<IProjectModule, IGlobalState> = {
           corpName: params.corpName,
           notes: params.notes,
           isPublished: false,
-          createTime: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+          createTime: `${ date.getFullYear() }-${ date.getMonth() + 1 }-${ date.getDate() }`
         })
       })
     },
