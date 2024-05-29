@@ -1,3 +1,20 @@
+<script lang="ts" setup>
+import Octocat from './octocat.vue'
+
+
+withDefaults(
+  defineProps<{
+    showBorder?: boolean
+  }>(),
+  {
+    showBorder: false
+  }
+)
+
+const link = ref('https://github.com/pdsuwwz')
+
+</script>
+
 <template>
   <footer
     class="footer"
@@ -23,22 +40,7 @@
     </div>
   </footer>
 </template>
-<script lang="ts" setup>
-import Octocat from './octocat.vue'
 
-
-withDefaults(
-  defineProps<{
-    showBorder?: boolean
-  }>(),
-  {
-    showBorder: false
-  }
-)
-
-const link = ref('https://github.com/pdsuwwz')
-
-</script>
 <style lang="scss" scoped>
 .footer {
   margin: 0 auto;

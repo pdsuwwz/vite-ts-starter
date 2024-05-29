@@ -1,17 +1,3 @@
-<template>
-  <div class="side-action-container">
-    <ul class="action-list">
-      <li
-        v-for="item in 3"
-        :key="item"
-        class="action-item"
-      >
-        Action {{ item }}
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script lang="ts">
 import { useLocale } from 'element-plus'
 
@@ -38,6 +24,21 @@ export default defineComponent({
   }
 })
 </script>
+
+<template>
+  <div class="side-action-container">
+    <ul class="action-list">
+      <li
+        v-for="item in 3"
+        :key="item"
+        class="action-item"
+      >
+        Action {{ item }}
+      </li>
+    </ul>
+  </div>
+</template>
+
 <style lang="scss" scoped>
 .side-action-container {
   position: relative;

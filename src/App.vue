@@ -1,11 +1,3 @@
-<template>
-  <ElConfigProvider
-    :locale="currentLocaleLang"
-  >
-    <router-view />
-  </ElConfigProvider>
-</template>
-
 <script lang="ts">
 
 export default defineComponent({
@@ -32,6 +24,14 @@ export default defineComponent({
   }
 })
 </script>
+
+<template>
+  <ElConfigProvider
+    :locale="currentLocaleLang"
+  >
+    <router-view />
+  </ElConfigProvider>
+</template>
 
 <style lang="scss">
 @use "@/styles/index.scss";

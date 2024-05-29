@@ -1,3 +1,15 @@
+<script lang="ts">
+export default defineComponent({
+  name: 'LogoIcon',
+  props: {
+    dark: {
+      type: Boolean,
+      default: false
+    }
+  }
+})
+</script>
+
 <template>
   <span
     class="locales-logo-icon"
@@ -17,17 +29,6 @@
   </span>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  name: 'LogoIcon',
-  props: {
-    dark: {
-      type: Boolean,
-      default: false
-    }
-  }
-})
-</script>
 <style lang="scss" scoped>
 .locales-logo-icon {
   width: 20px;

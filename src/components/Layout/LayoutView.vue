@@ -1,3 +1,24 @@
+<script lang="ts">
+import NavigationSideGoBack from '@/components/Navigation/Side/SideGoBack.vue'
+import NavigationNavBar from '@/components/Navigation/NavBar.vue'
+
+export default defineComponent({
+  name: 'LayoutView',
+  components: {
+    NavigationNavBar,
+    NavigationSideGoBack
+  },
+  setup () {
+    const router = useRouter()
+    const store = useBaseStore()
+
+    return {
+    }
+  }
+})
+
+</script>
+
 <template>
   <LayoutArea>
     <template #top>
@@ -26,27 +47,6 @@
     </template>
   </LayoutArea>
 </template>
-
-<script lang="ts">
-import NavigationSideGoBack from '@/components/Navigation/Side/SideGoBack.vue'
-import NavigationNavBar from '@/components/Navigation/NavBar.vue'
-
-export default defineComponent({
-  name: 'LayoutView',
-  components: {
-    NavigationNavBar,
-    NavigationSideGoBack
-  },
-  setup () {
-    const router = useRouter()
-    const store = useBaseStore()
-
-    return {
-    }
-  }
-})
-
-</script>
 
 <style lang="scss" scoped>
 </style>

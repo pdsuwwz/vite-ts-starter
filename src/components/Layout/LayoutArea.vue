@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * 上下左右布局，顶部导航 + (底部左侧侧边栏 + 底部右侧内容区域)
+ */
+export default defineComponent({
+  name: 'LayoutArea'
+})
+</script>
+
 <template>
   <div class="layout-area-container">
     <div class="layout-area-container__top">
@@ -27,15 +36,6 @@
     <FooterCustom show-border />
   </div>
 </template>
-
-<script lang="ts">
-/**
- * 上下左右布局，顶部导航 + (底部左侧侧边栏 + 底部右侧内容区域)
- */
-export default defineComponent({
-  name: 'LayoutArea'
-})
-</script>
 
 <style lang="scss" scoped>
 $headerHeight: 48px;

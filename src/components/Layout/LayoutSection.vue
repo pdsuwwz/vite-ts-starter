@@ -1,3 +1,30 @@
+<script lang="ts">
+/**
+ * 上下布局，顶部 header 大标题 + 底部内容区域
+ */
+export default defineComponent({
+  name: 'LayoutSection',
+  props: {
+    hasDivider: {
+      type: Boolean,
+      default: false
+    },
+    flexContent: {
+      type: Boolean,
+      default: false
+    },
+    title: {
+      type: String,
+      default: ''
+    },
+    loading: {
+      type: Boolean,
+      default: false
+    }
+  }
+})
+</script>
+
 <template>
   <div
     v-loading="loading"
@@ -34,33 +61,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-/**
- * 上下布局，顶部 header 大标题 + 底部内容区域
- */
-export default defineComponent({
-  name: 'LayoutSection',
-  props: {
-    hasDivider: {
-      type: Boolean,
-      default: false
-    },
-    flexContent: {
-      type: Boolean,
-      default: false
-    },
-    title: {
-      type: String,
-      default: ''
-    },
-    loading: {
-      type: Boolean,
-      default: false
-    }
-  }
-})
-</script>
 
 <style lang="scss" scoped>
 .layout-section-container {

@@ -1,6 +1,3 @@
-// import antfu from '@antfu/eslint-config'
-// export default antfu()
-
 import globals from 'globals'
 import { defineFlatConfig } from 'eslint-define-config'
 
@@ -250,7 +247,7 @@ export default defineFlatConfig([
       'no-use-before-define': ['error', {
         classes: false,
         functions: false,
-        variables: true
+        variables: false
       }],
       'no-useless-backreference': 'error',
       'no-useless-call': 'error',
@@ -428,6 +425,10 @@ export default defineFlatConfig([
       'vue/v-on-event-hyphenation': ['warn', 'always', {
         autofix: true
       }],
+      'vue/block-order': ['error', {
+        'order': ['script', 'template', 'style']
+      }],
+      'vue/padding-line-between-blocks': ['error', 'always'],
       'vue/script-setup-uses-vars': 'error',
       'vue/html-self-closing': ['error', {
         html: {

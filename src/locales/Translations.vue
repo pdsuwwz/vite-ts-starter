@@ -1,37 +1,3 @@
-<template>
-  <el-dropdown
-    class="translations-box"
-    popper-class="translations-box"
-    :class="{
-      'is-dark': dark
-    }"
-    trigger="hover"
-    @command="handleChange"
-  >
-    <span class="icon-outer">
-      <!-- Translations<el-icon class="el-icon--right">
-        <ArrowDown />
-      </el-icon> -->
-      <LogoIcon
-        :dark="dark"
-      />
-    </span>
-    <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item
-          v-for="(localeItem, index) in localesList"
-          :key="index"
-          :command="localeItem"
-          :disabled="currentLocale === localeItem.localeCode"
-        >
-          <span class="custom-dropdown-item">
-            {{ localeItem.localeName }}
-          </span>
-        </el-dropdown-item>
-      </el-dropdown-menu>
-    </template>
-  </el-dropdown>
-</template>
 <script lang="ts">
 import { localesMapping } from '@/locales'
 
@@ -79,6 +45,42 @@ export default defineComponent({
   }
 })
 </script>
+
+<template>
+  <el-dropdown
+    class="translations-box"
+    popper-class="translations-box"
+    :class="{
+      'is-dark': dark
+    }"
+    trigger="hover"
+    @command="handleChange"
+  >
+    <span class="icon-outer">
+      <!-- Translations<el-icon class="el-icon--right">
+        <ArrowDown />
+      </el-icon> -->
+      <LogoIcon
+        :dark="dark"
+      />
+    </span>
+    <template #dropdown>
+      <el-dropdown-menu>
+        <el-dropdown-item
+          v-for="(localeItem, index) in localesList"
+          :key="index"
+          :command="localeItem"
+          :disabled="currentLocale === localeItem.localeCode"
+        >
+          <span class="custom-dropdown-item">
+            {{ localeItem.localeName }}
+          </span>
+        </el-dropdown-item>
+      </el-dropdown-menu>
+    </template>
+  </el-dropdown>
+</template>
+
 <style lang="scss">
 .translations-box {
   display: flex;

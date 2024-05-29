@@ -1,3 +1,20 @@
+<script lang="ts">
+import { useLocale } from 'element-plus'
+
+export default defineComponent({
+  name: 'NavigationSideLogo',
+  setup () {
+    const localeInject = useLocale()
+
+    const title = computed(() => localeInject.t('base.systemTitle'))
+
+    return {
+      title
+    }
+  }
+})
+</script>
+
 <template>
   <div
     class="side-logo-container"
@@ -17,22 +34,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { useLocale } from 'element-plus'
-
-export default defineComponent({
-  name: 'NavigationSideLogo',
-  setup () {
-    const localeInject = useLocale()
-
-    const title = computed(() => localeInject.t('base.systemTitle'))
-
-    return {
-      title
-    }
-  }
-})
-</script>
 <style lang="scss" scoped>
 .side-logo-container {
   position: relative;

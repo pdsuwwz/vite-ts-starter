@@ -1,22 +1,3 @@
-<template>
-  <div>
-    <header
-      class="navigation-navbar-header-container"
-      :class="{
-        'fixed-header': fixed
-      }"
-    >
-      <div class="navbar-header-box">
-        <slot></slot>
-        <div style="flex: 1;"></div>
-        <NavigationSideAction />
-        <NavigationAvatar />
-        <Translations dark />
-      </div>
-    </header>
-  </div>
-</template>
-
 <script lang="ts">
 import Translations from '@/locales/Translations.vue'
 import NavigationSideAction from '@/components/Navigation/Side/SideAction.vue'
@@ -37,6 +18,26 @@ export default defineComponent({
   }
 })
 </script>
+
+<template>
+  <div>
+    <header
+      class="navigation-navbar-header-container"
+      :class="{
+        'fixed-header': fixed
+      }"
+    >
+      <div class="navbar-header-box">
+        <slot></slot>
+        <div style="flex: 1;"></div>
+        <NavigationSideAction />
+        <NavigationAvatar />
+        <Translations dark />
+      </div>
+    </header>
+  </div>
+</template>
+
 <style lang="scss" scoped>
 $headerHeight: 48px;
 

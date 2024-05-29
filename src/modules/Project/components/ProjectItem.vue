@@ -1,75 +1,3 @@
-<template>
-  <router-link
-    :to="`${$route.params.locale ? '/' + $route.params.locale + '/' : '/'}result/${dataset.id}/overview`"
-  >
-    <ul class="project-item-container">
-      <li
-        style="flex: 1; min-width: 0;"
-      >
-        <div class="project-item__name">
-          <div class="project-item__name-left">
-            <IconFont
-              icon="iconfile"
-            />
-          </div>
-          <div class="project-item__name-desc">
-            <div class="project-item__name-desc__corpname">
-              <span
-                class="project-item__name-desc__corpname-maintext text_nowrap"
-              >{{ dataset.corpName }}</span>
-              <span
-                @click.prevent
-              >
-                <TooltipCustom
-                  v-if="dataset.notes"
-                  :content="dataset.notes"
-                >
-                  <IconFont
-                    icon="iconhelp"
-                    class="corpname-notes"
-                  />
-                </TooltipCustom>
-              </span>
-            </div>
-            <p class="project-item__name-desc__fullname text_nowrap">
-              {{ dataset.name }}
-            </p>
-          </div>
-        </div>
-      </li>
-
-      <li
-        style="width: 18.5%; flex: initial;"
-        class="text_nowrap"
-      >
-        {{ dataset.createTime }}
-      </li>
-      <li
-        class="project-item-action text_nowrap"
-        :class="{
-          active: dataset.isPublished,
-          loading: isLoading
-        }"
-        @click.prevent="handlePublish(dataset.id)"
-      >
-        <span class="project-item-action__icon">
-          <IconFont
-            v-if="!isLoading"
-            :icon="getActionIcon"
-          />
-          <Loading
-            v-else
-            class="transform-rotate360"
-          />
-        </span>
-        <span class="project-item-action__status">
-          {{ dataset.isPublished ? _t('project.stop') : _t('project.publish') }}
-        </span>
-      </li>
-    </ul>
-  </router-link>
-</template>
-
 <script lang="ts" setup>
 import { Loading } from '@element-plus/icons-vue'
 
@@ -144,6 +72,78 @@ async function handlePublish (projectId) {
 }
 
 </script>
+
+<template>
+  <router-link
+    :to="`${$route.params.locale ? '/' + $route.params.locale + '/' : '/'}result/${dataset.id}/overview`"
+  >
+    <ul class="project-item-container">
+      <li
+        style="flex: 1; min-width: 0;"
+      >
+        <div class="project-item__name">
+          <div class="project-item__name-left">
+            <IconFont
+              icon="iconfile"
+            />
+          </div>
+          <div class="project-item__name-desc">
+            <div class="project-item__name-desc__corpname">
+              <span
+                class="project-item__name-desc__corpname-maintext text_nowrap"
+              >{{ dataset.corpName }}</span>
+              <span
+                @click.prevent
+              >
+                <TooltipCustom
+                  v-if="dataset.notes"
+                  :content="dataset.notes"
+                >
+                  <IconFont
+                    icon="iconhelp"
+                    class="corpname-notes"
+                  />
+                </TooltipCustom>
+              </span>
+            </div>
+            <p class="project-item__name-desc__fullname text_nowrap">
+              {{ dataset.name }}
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li
+        style="width: 18.5%; flex: initial;"
+        class="text_nowrap"
+      >
+        {{ dataset.createTime }}
+      </li>
+      <li
+        class="project-item-action text_nowrap"
+        :class="{
+          active: dataset.isPublished,
+          loading: isLoading
+        }"
+        @click.prevent="handlePublish(dataset.id)"
+      >
+        <span class="project-item-action__icon">
+          <IconFont
+            v-if="!isLoading"
+            :icon="getActionIcon"
+          />
+          <Loading
+            v-else
+            class="transform-rotate360"
+          />
+        </span>
+        <span class="project-item-action__status">
+          {{ dataset.isPublished ? _t('project.stop') : _t('project.publish') }}
+        </span>
+      </li>
+    </ul>
+  </router-link>
+</template>
 
 <style lang="scss" scoped>
 .project-item-container {

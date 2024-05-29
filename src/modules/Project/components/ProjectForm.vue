@@ -1,3 +1,44 @@
+<script lang="ts">
+
+export default defineComponent({
+  name: 'ProjectForm',
+  props: {
+    modelValue: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
+  },
+  setup (props) {
+    const { proxy } = useCurrentInstance()
+
+    console.log(props.modelValue)
+
+    const store = useBaseStore()
+
+    const refForm = ref()
+
+    const validateRules = async () => {
+      return new Promise((resolve) => {
+        refForm.value.validate((valid: boolean) => {
+          if (valid) {
+            resolve(true)
+          } else {
+            resolve(false)
+          }
+        })
+      })
+    }
+
+    return {
+      refForm,
+      validateRules
+    }
+  }
+})
+</script>
+
 <template>
   <div class="project-form-container">
     <el-form
@@ -52,47 +93,6 @@
     </el-form>
   </div>
 </template>
-
-<script lang="ts">
-
-export default defineComponent({
-  name: 'ProjectForm',
-  props: {
-    modelValue: {
-      type: Object,
-      default () {
-        return {}
-      }
-    }
-  },
-  setup (props) {
-    const { proxy } = useCurrentInstance()
-
-    console.log(props.modelValue)
-
-    const store = useBaseStore()
-
-    const refForm = ref()
-
-    const validateRules = async () => {
-      return new Promise((resolve) => {
-        refForm.value.validate((valid: boolean) => {
-          if (valid) {
-            resolve(true)
-          } else {
-            resolve(false)
-          }
-        })
-      })
-    }
-
-    return {
-      refForm,
-      validateRules
-    }
-  }
-})
-</script>
 
 <style lang="scss" scoped>
 .project-form-container {
