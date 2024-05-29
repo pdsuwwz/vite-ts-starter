@@ -1,3 +1,21 @@
+<script lang="ts">
+import ProjectItem from '@/modules/Project/components/ProjectItem.vue'
+
+export default defineComponent({
+  name: 'ProjectTableBody',
+  components: {
+    ProjectItem
+  },
+  setup () {
+    const store = useBaseStore()
+    const projectList = computed(() => store.state.Project.projectList)
+    return {
+      projectList
+    }
+  }
+})
+</script>
+
 <template>
   <div
     class="project-table-body-container"
@@ -21,24 +39,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import ProjectItem from '@/modules/Project/components/ProjectItem.vue'
-
-export default defineComponent({
-  name: 'ProjectTableBody',
-  components: {
-    ProjectItem
-  },
-  setup () {
-    const store = useBaseStore()
-    const projectList = computed(() => store.state.Project.projectList)
-    return {
-      projectList
-    }
-  }
-})
-</script>
 
 <style lang="scss" scoped>
 .project-table-body-container {

@@ -1,73 +1,3 @@
-<template>
-  <el-dialog
-    v-model="visible"
-    :title="title"
-    :show-close="false"
-    :width="dialogWidth"
-    :class="getDialogClassName"
-    v-bind="getOriginAttrs()"
-    @closed="handleRealClosed"
-  >
-    <template
-      #header
-    >
-      <IconFont
-        v-if="headerIcon"
-        :icon="headerIcon"
-        class="modal-header__icon"
-      />
-      <span
-        class="modal-header__title"
-      >{{ title }}</span>
-      <span
-        v-if="headerDescText"
-        class="header-desc"
-        :style="{
-          paddingLeft: '16px',
-          color: '#606266'
-        }"
-      >
-        <WarningFilled
-          :style="{
-            paddingRight: '6px',
-          }"
-        />
-        <span>{{ headerDescText }}</span>
-      </span>
-    </template>
-    <div
-      v-loading="fullLoading"
-      class="modal-container__body"
-    >
-      <component
-        :is="getComponent"
-        ref="refComponent"
-        v-model="componantData"
-        class="modal-container__component"
-      />
-      <div
-        v-if="!hideFooter"
-        class="modal-container__footer"
-      >
-        <el-button
-          plain
-          round
-          @click="handleCancel()"
-        >
-          取消
-        </el-button>
-        <el-button
-          type="primary"
-          round
-          @click="handleConfirm()"
-        >
-          {{ confirmText || '确定' }}
-        </el-button>
-      </div>
-    </div>
-  </el-dialog>
-</template>
-
 <script lang="ts">
 
 import { WarningFilled } from '@element-plus/icons-vue'
@@ -186,6 +116,76 @@ export default defineComponent({
 })
 </script>
 
+<template>
+  <el-dialog
+    v-model="visible"
+    :title="title"
+    :show-close="false"
+    :width="dialogWidth"
+    :class="getDialogClassName"
+    v-bind="getOriginAttrs()"
+    @closed="handleRealClosed"
+  >
+    <template
+      #header
+    >
+      <IconFont
+        v-if="headerIcon"
+        :icon="headerIcon"
+        class="modal-header__icon"
+      />
+      <span
+        class="modal-header__title"
+      >{{ title }}</span>
+      <span
+        v-if="headerDescText"
+        class="header-desc"
+        :style="{
+          paddingLeft: '16px',
+          color: '#606266'
+        }"
+      >
+        <WarningFilled
+          :style="{
+            paddingRight: '6px',
+          }"
+        />
+        <span>{{ headerDescText }}</span>
+      </span>
+    </template>
+    <div
+      v-loading="fullLoading"
+      class="modal-container__body"
+    >
+      <component
+        :is="getComponent"
+        ref="refComponent"
+        v-model="componantData"
+        class="modal-container__component"
+      />
+      <div
+        v-if="!hideFooter"
+        class="modal-container__footer"
+      >
+        <el-button
+          plain
+          round
+          @click="handleCancel()"
+        >
+          取消
+        </el-button>
+        <el-button
+          type="primary"
+          round
+          @click="handleConfirm()"
+        >
+          {{ confirmText || '确定' }}
+        </el-button>
+      </div>
+    </div>
+  </el-dialog>
+</template>
+
 <style lang="scss" scoped>
 :deep() {
 
@@ -207,6 +207,7 @@ export default defineComponent({
   }
 }
 </style>
+
 <style lang="scss">
 .modal-wrapper-containers-dialog {
   min-width: 500px;

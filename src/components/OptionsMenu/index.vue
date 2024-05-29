@@ -1,44 +1,3 @@
-<template>
-  <el-dropdown
-    trigger="click"
-    :placement="placement"
-    @click.stop
-    @visible-change="triggerMask"
-    @command="handleCommand"
-  >
-    <span
-      class="options-menu-action"
-      :class="{
-        'hide-border': hideBorder
-      }"
-    >
-      <!-- <i :class="getCurrentIcon"></i> -->
-      <IconFont icon="icon-more" />
-    </span>
-    <template
-      #dropdown
-    >
-      <el-dropdown-menu
-        class="options-menu-list"
-      >
-        <el-dropdown-item
-          v-for="(optionItem, index) in options.filter(item => item)"
-          :key="index"
-          :command="optionItem.command"
-          v-bind="optionItem.attrs"
-        >
-          <IconFont
-            :icon="optionItem.icon"
-          />
-          <span class="option-text">
-            {{ optionItem.title }}
-          </span>
-        </el-dropdown-item>
-      </el-dropdown-menu>
-    </template>
-  </el-dropdown>
-</template>
-
 <script lang="ts">
 // import { isString } from '@/utils/type'
 import { isString } from '@/utils/type'
@@ -132,6 +91,47 @@ export default defineComponent({
 })
 </script>
 
+<template>
+  <el-dropdown
+    trigger="click"
+    :placement="placement"
+    @click.stop
+    @visible-change="triggerMask"
+    @command="handleCommand"
+  >
+    <span
+      class="options-menu-action"
+      :class="{
+        'hide-border': hideBorder
+      }"
+    >
+      <!-- <i :class="getCurrentIcon"></i> -->
+      <IconFont icon="icon-more" />
+    </span>
+    <template
+      #dropdown
+    >
+      <el-dropdown-menu
+        class="options-menu-list"
+      >
+        <el-dropdown-item
+          v-for="(optionItem, index) in options.filter(item => item)"
+          :key="index"
+          :command="optionItem.command"
+          v-bind="optionItem.attrs"
+        >
+          <IconFont
+            :icon="optionItem.icon"
+          />
+          <span class="option-text">
+            {{ optionItem.title }}
+          </span>
+        </el-dropdown-item>
+      </el-dropdown-menu>
+    </template>
+  </el-dropdown>
+</template>
+
 <style lang="scss" scoped>
 .options-menu-action {
   position: relative;
@@ -180,6 +180,7 @@ export default defineComponent({
   }
 }
 </style>
+
 <style lang="scss">
 .global-options-menu-backdrop-mask {
   position: absolute;

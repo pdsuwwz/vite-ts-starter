@@ -1,49 +1,3 @@
-<template>
-  <LayoutArea>
-    <template #top>
-      <NavigationNavBar
-        :fixed="false"
-      >
-        <NavigationSideLogo />
-      </NavigationNavBar>
-    </template>
-
-    <template #side>
-      <LayoutSection :title="localeInject.t('project.manageTitle')">
-        <el-button
-          type="primary"
-          class="create-action"
-          @click="handleCreateProject()"
-        >
-          <IconFont
-            icon="iconestablish"
-          />
-          {{ _t('project.create') }}
-        </el-button>
-      </LayoutSection>
-    </template>
-
-    <template #content>
-      <LayoutSection
-        has-divider
-        flex-content
-        :loading="loadingContent"
-      >
-        <template #head>
-          <el-date-picker
-            :start-placeholder="_t('base.i18nTest')"
-            :end-placeholder="_t('base.i18nTest')"
-            type="datetimerange"
-          />
-        </template>
-
-        <ProjectTableHeader />
-        <ProjectTableBody />
-      </LayoutSection>
-    </template>
-  </LayoutArea>
-</template>
-
 <script lang="ts">
 import { useLocale } from 'element-plus'
 
@@ -131,6 +85,52 @@ export default defineComponent({
 })
 
 </script>
+
+<template>
+  <LayoutArea>
+    <template #top>
+      <NavigationNavBar
+        :fixed="false"
+      >
+        <NavigationSideLogo />
+      </NavigationNavBar>
+    </template>
+
+    <template #side>
+      <LayoutSection :title="localeInject.t('project.manageTitle')">
+        <el-button
+          type="primary"
+          class="create-action"
+          @click="handleCreateProject()"
+        >
+          <IconFont
+            icon="iconestablish"
+          />
+          {{ _t('project.create') }}
+        </el-button>
+      </LayoutSection>
+    </template>
+
+    <template #content>
+      <LayoutSection
+        has-divider
+        flex-content
+        :loading="loadingContent"
+      >
+        <template #head>
+          <el-date-picker
+            :start-placeholder="_t('base.i18nTest')"
+            :end-placeholder="_t('base.i18nTest')"
+            type="datetimerange"
+          />
+        </template>
+
+        <ProjectTableHeader />
+        <ProjectTableBody />
+      </LayoutSection>
+    </template>
+  </LayoutArea>
+</template>
 
 <style lang="scss" scoped>
 .create-action {

@@ -1,3 +1,20 @@
+<script lang="ts" setup>
+import type { Placement } from 'element-plus'
+
+interface Props {
+  content: string
+  placement?: Placement
+}
+
+withDefaults(
+  defineProps<Props>(),
+  {
+    content: '',
+    placement: 'top'
+  }
+)
+</script>
+
 <template>
   <el-tooltip
     effect="dark"
@@ -20,23 +37,6 @@
     </span>
   </el-tooltip>
 </template>
-
-<script lang="ts" setup>
-import type { Placement } from 'element-plus'
-
-interface Props {
-  content: string
-  placement?: Placement
-}
-
-withDefaults(
-  defineProps<Props>(),
-  {
-    content: '',
-    placement: 'top'
-  }
-)
-</script>
 
 <style lang="scss" scoped>
 .tooltip-inner {

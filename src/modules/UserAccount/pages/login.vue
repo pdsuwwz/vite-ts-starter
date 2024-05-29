@@ -1,52 +1,3 @@
-<template>
-  <div
-    class="user-account-login"
-    :class="[
-      'bgimage-images-logo-background-jpg',
-      'bg-cover bg-no-repeat bg-center'
-    ]"
-  >
-    <div class="user-account-nav">
-      <div class="nav-left">
-        <div
-          class="nav-logo"
-          :class="[
-            'bgimage-images-vue-svg',
-            'bg-contain bg-no-repeat bg-center'
-          ]"
-        ></div>
-        <div class="nav-circle"></div>
-        <div class="nav-title">
-          {{ _t('base.systemTitle') }}
-        </div>
-      </div>
-      <div class="nav-right">
-        <Translations dark />
-      </div>
-    </div>
-    <div class="user-account-body">
-      <UserAccountContainerLayout
-        v-bind="configLogin"
-        :form-data="formData"
-        @on-submit="onSubmit"
-      >
-        <template
-          #titleIcon
-        >
-          <!-- <img
-          src="@/assets/images/vue.svg"
-          alt=""
-        > -->
-          <el-icon>
-            <Promotion />
-          </el-icon>
-        </template>
-      </UserAccountContainerLayout>
-    </div>
-    <FooterCustom />
-  </div>
-</template>
-
 <script lang="ts">
 
 import { ElMessage, useLocale } from 'element-plus'
@@ -206,6 +157,55 @@ export default defineComponent({
 })
 
 </script>
+
+<template>
+  <div
+    class="user-account-login"
+    :class="[
+      'bgimage-images-logo-background-jpg',
+      'bg-cover bg-no-repeat bg-center'
+    ]"
+  >
+    <div class="user-account-nav">
+      <div class="nav-left">
+        <div
+          class="nav-logo"
+          :class="[
+            'bgimage-images-vue-svg',
+            'bg-contain bg-no-repeat bg-center'
+          ]"
+        ></div>
+        <div class="nav-circle"></div>
+        <div class="nav-title">
+          {{ _t('base.systemTitle') }}
+        </div>
+      </div>
+      <div class="nav-right">
+        <Translations dark />
+      </div>
+    </div>
+    <div class="user-account-body">
+      <UserAccountContainerLayout
+        v-bind="configLogin"
+        :form-data="formData"
+        @on-submit="onSubmit"
+      >
+        <template
+          #titleIcon
+        >
+          <!-- <img
+          src="@/assets/images/vue.svg"
+          alt=""
+        > -->
+          <el-icon>
+            <Promotion />
+          </el-icon>
+        </template>
+      </UserAccountContainerLayout>
+    </div>
+    <FooterCustom />
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .user-account-login {

@@ -1,16 +1,3 @@
-<template>
-  <ul class="project-table-header-container">
-    <li
-      v-for="(headItem, index) in list"
-      :key="index"
-      :style="getHeadItem(headItem)"
-      class="project-table-header-container__head-item"
-    >
-      {{ headItem.name }}
-    </li>
-  </ul>
-</template>
-
 <script lang="ts">
 import { useLocale } from 'element-plus'
 
@@ -50,6 +37,19 @@ export default defineComponent({
   }
 })
 </script>
+
+<template>
+  <ul class="project-table-header-container">
+    <li
+      v-for="(headItem, index) in list"
+      :key="index"
+      :style="getHeadItem(headItem)"
+      class="project-table-header-container__head-item"
+    >
+      {{ headItem.name }}
+    </li>
+  </ul>
+</template>
 
 <style lang="scss" scoped>
 .project-table-header-container {

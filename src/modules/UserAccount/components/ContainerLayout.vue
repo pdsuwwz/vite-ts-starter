@@ -1,93 +1,3 @@
-<template>
-  <div class="user-account-container-layout">
-    <div class="form-title">
-      <div class="form-title-icon">
-        <IconFont
-          v-if="titleIcon"
-          :icon="titleIcon"
-        />
-        <slot name="titleIcon"></slot>
-      </div>
-      <p class="form-title-text">
-        {{ title }}
-      </p>
-      <p class="form-desc-text">
-        {{ desc }}
-      </p>
-    </div>
-    <el-form
-      ref="boxForm"
-      :model="formData"
-      label-position="top"
-      hide-required-asterisk
-      @keyup.enter="onSubmit()"
-    >
-      <template
-        v-for="(formItem, index) in formConfig"
-        :key="index"
-      >
-        <el-form-item
-          v-bind="getFormItemAttrs(formItem.attrs)"
-        >
-          <div class="form-custom-label">
-            <p>{{ formItem.label }}</p>
-            <el-link
-              v-if="formItem.link"
-              type="primary"
-              :underline="false"
-              @click="handleClickLink(formItem.link)"
-            >
-              {{ formItem.link.text }}
-            </el-link>
-          </div>
-          <el-input
-            v-model="formData[formItem.attrs.prop]"
-            v-bind="getInputItemAttrs(formItem)"
-          >
-            <template
-              v-if="formItem.prefixIcon"
-              #prefix
-            >
-              <component
-                :is="formItem.prefixIcon"
-                class="input-icon-prefix"
-              />
-            </template>
-            <template
-              v-if="formItem.type === 'password'"
-              #suffix
-            >
-              <div class="flex items-center cursor-pointer">
-                <AutoIconPheyeBold
-                  v-if="showPassword"
-                  @click="tooglePassword()"
-                />
-                <AutoIconPheyeSlashBold
-                  v-else
-                  @click="tooglePassword()"
-                />
-              </div>
-            </template>
-          </el-input>
-        </el-form-item>
-      </template>
-      <div
-        v-for="(actionItem, index) in actionList"
-        :key="`${index}-`"
-        class="submit-form-action-list"
-      >
-        <el-button
-          v-bind="actionItem.attrs"
-          class="submit-form-action-button"
-          v-on="getActionItemEvent(actionItem.on) || {}"
-        >
-          {{ actionItem.text }}
-        </el-button>
-      </div>
-    </el-form>
-  </div>
-</template>
-
 <script lang="ts">
 
 import { isFunction } from '@/utils/type'
@@ -200,6 +110,96 @@ export default defineComponent({
 })
 
 </script>
+
+<template>
+  <div class="user-account-container-layout">
+    <div class="form-title">
+      <div class="form-title-icon">
+        <IconFont
+          v-if="titleIcon"
+          :icon="titleIcon"
+        />
+        <slot name="titleIcon"></slot>
+      </div>
+      <p class="form-title-text">
+        {{ title }}
+      </p>
+      <p class="form-desc-text">
+        {{ desc }}
+      </p>
+    </div>
+    <el-form
+      ref="boxForm"
+      :model="formData"
+      label-position="top"
+      hide-required-asterisk
+      @keyup.enter="onSubmit()"
+    >
+      <template
+        v-for="(formItem, index) in formConfig"
+        :key="index"
+      >
+        <el-form-item
+          v-bind="getFormItemAttrs(formItem.attrs)"
+        >
+          <div class="form-custom-label">
+            <p>{{ formItem.label }}</p>
+            <el-link
+              v-if="formItem.link"
+              type="primary"
+              :underline="false"
+              @click="handleClickLink(formItem.link)"
+            >
+              {{ formItem.link.text }}
+            </el-link>
+          </div>
+          <el-input
+            v-model="formData[formItem.attrs.prop]"
+            v-bind="getInputItemAttrs(formItem)"
+          >
+            <template
+              v-if="formItem.prefixIcon"
+              #prefix
+            >
+              <component
+                :is="formItem.prefixIcon"
+                class="input-icon-prefix"
+              />
+            </template>
+            <template
+              v-if="formItem.type === 'password'"
+              #suffix
+            >
+              <div class="flex items-center cursor-pointer">
+                <AutoIconPheyeBold
+                  v-if="showPassword"
+                  @click="tooglePassword()"
+                />
+                <AutoIconPheyeSlashBold
+                  v-else
+                  @click="tooglePassword()"
+                />
+              </div>
+            </template>
+          </el-input>
+        </el-form-item>
+      </template>
+      <div
+        v-for="(actionItem, index) in actionList"
+        :key="`${index}-`"
+        class="submit-form-action-list"
+      >
+        <el-button
+          v-bind="actionItem.attrs"
+          class="submit-form-action-button"
+          v-on="getActionItemEvent(actionItem.on) || {}"
+        >
+          {{ actionItem.text }}
+        </el-button>
+      </div>
+    </el-form>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .user-account-container-layout {

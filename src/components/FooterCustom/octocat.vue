@@ -1,3 +1,15 @@
+<script lang="ts">
+export default defineComponent({
+  name: 'Octocat',
+  setup() {
+    const link = ref('https://github.com/pdsuwwz/vite-ts-starter')
+    return {
+      link
+    }
+  }
+})
+</script>
+
 <template>
   <a
     class="octocat-link"
@@ -19,17 +31,6 @@
   </a>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  name: 'Octocat',
-  setup() {
-    const link = ref('https://github.com/pdsuwwz/vite-ts-starter')
-    return {
-      link
-    }
-  }
-})
-</script>
 <style lang="scss" scoped>
 .octocat-link {
   width: 22px;
