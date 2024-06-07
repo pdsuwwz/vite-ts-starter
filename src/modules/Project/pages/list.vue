@@ -75,9 +75,13 @@ export default defineComponent({
     }
     handleSelectSearch()
 
+    const testI18nDate = ref()
+
     return {
       localeInject,
       loadingContent,
+      testI18nDate,
+
       handleCreateProject,
       handleSelectSearch
     }
@@ -119,6 +123,7 @@ export default defineComponent({
       >
         <template #head>
           <el-date-picker
+            v-model="testI18nDate"
             :start-placeholder="_t('base.i18nTest')"
             :end-placeholder="_t('base.i18nTest')"
             type="datetimerange"
