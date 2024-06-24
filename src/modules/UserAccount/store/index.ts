@@ -59,7 +59,7 @@ const UserAccountModule: Module<IUserAccountState, IGlobalState> = {
       commit(MUTATION.SET_LANGUAGE, data.locale)
     },
     async login ({ state, commit }, data) {
-      await sleep(300)
+      await sleep(100)
       const res = await login(data)
       return this.filterResponse(res, null, () => {})
     },
