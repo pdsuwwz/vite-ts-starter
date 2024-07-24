@@ -161,7 +161,7 @@ importers:
         version: 0.61.5(postcss@8.4.39)(rollup@4.19.0)(vite@5.3.4(@types/node@20.14.12)(sass@1.77.6))
       unplugin-auto-import:
         specifier: ^0.18.1
-        version: 0.18.1(@vueuse/core@9.13.0(vue@3.4.33(typescript@5.5.4)))(rollup@4.19.0)
+        version: 0.18.2(@vueuse/core@9.13.0(vue@3.4.33(typescript@5.5.4)))(rollup@4.19.0)
       unplugin-icons:
         specifier: ^0.19.0
         version: 0.19.0(@vue/compiler-sfc@3.4.33)
@@ -2628,10 +2628,6 @@ packages:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
     engines: {node: '>=12'}
 
-  minimatch@10.0.1:
-    resolution: {integrity: sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==}
-    engines: {node: 20 || >=22}
-
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -3324,8 +3320,8 @@ packages:
       vite:
         optional: true
 
-  unplugin-auto-import@0.18.1:
-    resolution: {integrity: sha512-BDBShopGfQPXEu0zdiEe1gSqUUMywFfqaOwt7x+ki3kaF+IfL6a5SRrilexw/sMiaLrNCIby7l8Ko3+wzd6EFg==}
+  unplugin-auto-import@0.18.2:
+    resolution: {integrity: sha512-Dwb3rAic75harVBrVjwiq6H24PT+nBq2dpxV5BH8NNI6sDFaTytvP+iyo4xy7prQbR3r5K6nMs4f5Wp9PE4g8A==}
     engines: {node: '>=14'}
     peerDependencies:
       '@nuxt/kit': ^3.2.2
@@ -6468,10 +6464,6 @@ snapshots:
 
   mimic-fn@4.0.0: {}
 
-  minimatch@10.0.1:
-    dependencies:
-      brace-expansion: 2.0.1
-
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
@@ -7231,14 +7223,14 @@ snapshots:
       - rollup
       - supports-color
 
-  unplugin-auto-import@0.18.1(@vueuse/core@9.13.0(vue@3.4.33(typescript@5.5.4)))(rollup@4.19.0):
+  unplugin-auto-import@0.18.2(@vueuse/core@9.13.0(vue@3.4.33(typescript@5.5.4)))(rollup@4.19.0):
     dependencies:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.1.0(rollup@4.19.0)
       fast-glob: 3.3.2
       local-pkg: 0.5.0
       magic-string: 0.30.10
-      minimatch: 10.0.1
+      minimatch: 9.0.5
       unimport: 3.9.0(rollup@4.19.0)
       unplugin: 1.12.0
     optionalDependencies:
