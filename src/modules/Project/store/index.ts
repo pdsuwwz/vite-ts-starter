@@ -49,12 +49,12 @@ const ProjectModule: Module<IProjectModule, IGlobalState> = {
   },
   actions: {
     async getSearchProjectByQuery ({ commit }, query) {
-      await sleep(1000)
+      await sleep(300)
       const res = await getProjectList(query)
       return this.filterResponse(res, null, () => {})
     },
     async getProjectList ({ commit }, params) {
-      await sleep(1000)
+      await sleep(300)
       // const res = await getProjectList(params)
       const res = {
         msg: 'ok',

@@ -1,4 +1,3 @@
-
 import {
   isArray,
   isBoolean,
@@ -28,7 +27,8 @@ export function pascalize (string: any) {
   return camelized.substr(0, 1).toUpperCase() + camelized.substr(1)
 }
 
-function seperateWords (string: string, options?: { separator?: any; split?: any; }) {
+function seperateWords (string: string, options?: { separator?: any
+  split?: any }) {
   options = options || {}
   const separator = options.separator || '_'
   const split = options.split || /(?=[A-Z])/
@@ -46,7 +46,9 @@ export function decamelize (string: any, options?: any) {
 }
 
 function processor(
-  convert: { (string: any): any; (string: any, options: any): any; (string: any): any; },
+  convert: { (string: any): any
+    (string: any, options: any): any
+    (string: any): any },
   options: { process: any; }
 ) {
   const callback = options && 'process' in options ? options.process : options

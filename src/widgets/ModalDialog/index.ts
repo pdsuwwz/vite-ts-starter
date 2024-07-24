@@ -1,7 +1,8 @@
 import Modal from '@/widgets/ModalDialog/modal.vue'
 
 const extractData = (options: { renderComponent: any; }) => {
-  const extractSlotComponents = (renderComponent: { component?: any; data?: any; }) => {
+  const extractSlotComponents = (renderComponent: { component?: any
+    data?: any }) => {
     const component: any = {}
     let componantData = {}
 

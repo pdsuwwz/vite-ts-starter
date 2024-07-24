@@ -41,7 +41,7 @@ const ResultModule: Module<IResultModule, IGlobalState> = {
     async getResultOverview ({ commit }, query) {
       // const res = await getDemoTestList(query)
       // return this.filterResponse(res, null, () => {})
-      await sleep(800)
+      await sleep(600)
       const res = {
         msg: 'ok',
         error: 0,
