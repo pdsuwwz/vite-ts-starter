@@ -20,8 +20,19 @@ PROTECTED_BRANCHES=(
   "release"
 )
 
-# 获取当前分支名
-CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+# 初始化 CURRENT_BRANCH 变量为空字符串
+CURRENT_BRANCH=""
+
+# 检查仓库是否有提交历史
+if git show-ref --heads --quiet; then
+    # 获取当前分支名
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    echo "当前分支: $CURRENT_BRANCH"
+else
+    echo "当前为首次提交，仓库没有提交历史"
+    exit 0
+fi
+
 
 # 如果当前分支是受保护分支
 for branch in "${PROTECTED_BRANCHES[@]}"; do
