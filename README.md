@@ -1,5 +1,7 @@
 # vite-ts-starter
 
+中文 | [English](README-en.md)
+
 [![Deploy](https://github.com/pdsuwwz/vite-ts-starter/workflows/gh-pages/badge.svg)](https://github.com/pdsuwwz/vite-ts-starter/actions/workflows/deploy.yml)
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/pdsuwwz/vite-ts-starter/deploy.yml?branch=main)](https://github.com/pdsuwwz/vite-ts-starter/deployments/activity_log?environment=github-pages)
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
