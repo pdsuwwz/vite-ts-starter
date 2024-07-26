@@ -11,7 +11,7 @@ English | [中文](README.md)
 
 A ready-to-use prototype template framework for quickly developing management systems using Vue3 + Vite5 + TS, with continuous updates on the latest tech stack 💪
 
-[🚀 Online Playground](https://pdsuwwz.github.io/vite-ts-starter)
+[🚀 Online Playground](https://pdsuwwz.github.io/vite-ts-starter/#en)
 
 
 ## 🌱 Different Versions
