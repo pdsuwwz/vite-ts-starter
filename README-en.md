@@ -95,6 +95,51 @@ Test code coverage.
 pnpm test:coverage
 ```
 
+## 🌍 Internationalization (i18n) Setup
+
+This project supports multi-language settings, with `English` as the default language.
+
+### Default Language Configuration
+
+
+The default language is set through the [`defaultLanguageLocale`](src/locales/index.ts#L43) constant. To change the default language, simply modify the value of this constant:
+
+```ts
+export const defaultLanguageLocale = 'en'
+```
+
+### Extending Supported Languages
+
+The project currently supports the following languages, as detailed in [src/locales/index.ts](src/locales/index.ts#L13):
+
+```ts
+export const localesMapping = [
+  {
+    localeCode: 'zh-hans',
+    localeName: '简体中文',
+    localeLang: {...}
+  },
+  {
+    localeCode: 'en',
+    localeName: 'English',
+    localeLang: {...}
+  }
+]
+```
+
+To add support for a new language:
+
+  * Add a new language object to the [`localesMapping`](src/locales/index.ts#L13) array
+  * Create a corresponding language file in the [`src/locales/lang/`](src/locales/lang/) directory (e.g., de.ts for German)
+
+    ```
+    ./lang
+    ├── en.ts
+    └── zh-hans.ts
+    ```
+  * Import and merge the `Element Plus` language pack and custom language file, ensuring both UI components and custom content are localized.
+
+
 ## 💡 Tip
 
 * If Husky is not working, it may be due to incomplete initialization. Try running the following command to initialize:

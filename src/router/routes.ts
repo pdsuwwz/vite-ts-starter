@@ -1,5 +1,5 @@
-import childrenRoutes from '@/router/child-routes'
-import { isHasLocale, localesMapping } from '@/locales'
+import childRoutes from '@/router/child-routes'
+import { currentLocaleMap, localesMapping } from '@/locales'
 import { isUndefined } from '@/utils/type'
 
 const Layout = () => import('@/components/Layout/index.vue')
@@ -25,7 +25,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Layout,
     beforeEnter (to, from, next) {
       console.log('beforeEnter: to ', to)
-      if (isHasLocale(to.params.locale) && !isUndefined(to.params.pathMatch)) {
+      if (currentLocaleMap(to.params.locale) && !isUndefined(to.params.pathMatch)) {
         next(`/${ to.params.locale }/project`)
         return
       }
@@ -39,7 +39,7 @@ const routes: Array<RouteRecordRaw> = [
           name: 'Project'
         }
       },
-      ...childrenRoutes
+      ...childRoutes
     ]
   },
   {
