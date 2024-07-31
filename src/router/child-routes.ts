@@ -3,7 +3,7 @@ const Layout = () => import('@/components/Layout/index.vue')
 const LayoutView = () => import('@/components/Layout/LayoutView.vue')
 const LayoutArea = () => import('@/components/Layout/LayoutArea.vue')
 
-const childrenRoutes: Array<RouteRecordRaw> = [
+const childRoutes: Array<RouteRecordRaw> = [
   {
     path: 'test-layout',
     name: '布局测试',
@@ -85,4 +85,4 @@ const childrenRoutes: Array<RouteRecordRaw> = [
   }
 ]
 
-export default childrenRoutes
+export default childRoutes

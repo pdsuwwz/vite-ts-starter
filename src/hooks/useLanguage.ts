@@ -1,8 +1,4 @@
-import zhCn from 'element-plus/es/locale/lang/zh-cn'
-import en from 'element-plus/es/locale/lang/en'
-
-import selfEn from '@/locales/lang/en'
-import selfZhHans from '@/locales/lang/zh-hans'
+import { currentLocaleMap } from '@/locales'
 
 export const useLanguage = () => {
   const store = useBaseStore()
@@ -10,20 +6,12 @@ export const useLanguage = () => {
   const currentLocaleLang = computed(() => {
     let locale: any = null
 
-    switch (store.state.UserAccount.locale) {
-      case 'zh-hans':
-        locale = {
-          ...zhCn,
-          ...selfZhHans
-        }
-        break
-      case 'en':
-        locale = {
-          ...en,
-          ...selfEn
-        }
-        break
+    const targetLocaleItem = currentLocaleMap(store.state.UserAccount.locale)
+
+    if (targetLocaleItem) {
+      locale = targetLocaleItem.localeLang
     }
+
     return locale
   })
 

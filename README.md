@@ -93,6 +93,52 @@ pnpm test
 pnpm test:coverage
 ```
 
+## 🌍 国际化 i18n 设置
+
+本项目支持多语言设置，默认语言为 `English`.
+
+### 默认语言配置
+
+
+默认语言通过 [`defaultLanguageLocale`](src/locales/index.ts#L43) 常量设置。要更改默认语言，只需修改此常量的值：
+
+```ts
+export const defaultLanguageLocale = 'en'
+```
+
+### 扩展支持的语言
+
+
+项目当前支持以下语言，详见代码[src/locales/index.ts](src/locales/index.ts#L13):
+
+```ts
+export const localesMapping = [
+  {
+    localeCode: 'zh-hans',
+    localeName: '简体中文',
+    localeLang: {...}
+  },
+  {
+    localeCode: 'en',
+    localeName: 'English',
+    localeLang: {...}
+  }
+]
+```
+
+要添加新的语言支持:
+
+  * 在 [`localesMapping`](src/locales/index.ts#L13) 数组中添加新的语言对象
+  * 在 [`src/locales/lang/`](src/locales/lang/) 目录下创建对应的语言文件（如 de.ts 为德语）
+
+    ```
+    ./lang
+    ├── en.ts
+    └── zh-hans.ts
+    ```
+  * 导入并合并 `Element Plus` 语言包和自定义语言文件，确保 UI 组件和自定义内容均被本地化
+
+
 ## 💡 提示
 
 * 若 Husky 未生效，可能是由于未完成初始化，尝试执行以下命令进行初始化:

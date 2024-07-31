@@ -1,4 +1,6 @@
 <script lang="ts">
+import { defaultLanguageLocale } from '@/locales'
+
 
 export default defineComponent({
   name: 'App',
@@ -13,7 +15,7 @@ export default defineComponent({
         if (route.name === '404') return
 
         store.dispatch('UserAccount/setLanguage', {
-          locale: route.params.locale || 'en'
+          locale: route.params.locale || defaultLanguageLocale
         })
       }
     )
@@ -34,5 +36,5 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-@use "@/styles/index.scss";
+@use "@/styles/index";
 </style>

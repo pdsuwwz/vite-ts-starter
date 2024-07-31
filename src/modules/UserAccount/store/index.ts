@@ -10,6 +10,7 @@ import MUTATION from '@/modules/UserAccount/store/mutations-type'
 import mixin from '@/store/utils/mixin'
 
 import type { IGlobalState } from '@/store'
+import { defaultLanguageLocale } from '@/locales'
 
 export interface IUserAccountState {
   locale: string
@@ -21,7 +22,7 @@ const UserAccountModule: Module<IUserAccountState, IGlobalState> = {
   namespaced: true,
   _name: 'UserAccount',
   state: {
-    locale: 'en',
+    locale: defaultLanguageLocale,
     demoList: {},
     userInfo: {}
   },
