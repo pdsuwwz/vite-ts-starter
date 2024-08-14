@@ -66,7 +66,17 @@ export default defineFlatConfig([
           }
         }
       }],
-      '@stylistic/no-trailing-spaces': ['error']
+      '@stylistic/no-trailing-spaces': ['error'],
+      '@stylistic/member-delimiter-style': ['error', {
+        multiline: {
+          delimiter: 'none',
+          requireLast: false
+        },
+        singleline: {
+          delimiter: 'semi',
+          requireLast: true
+        }
+      }]
     }
   },
   {
@@ -355,25 +365,9 @@ export default defineFlatConfig([
         }
       ),
       ...pluginTypeScript.configs.recommended.rules,
-      '@typescript-eslint/indent': ['error', 2, {
-        SwitchCase: 1
-      }],
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unused-vars': 1,
-      '@typescript-eslint/member-delimiter-style': [
-        'error',
-        {
-          multiline: {
-            delimiter: 'none',
-            requireLast: false
-          },
-          singleline: {
-            delimiter: 'semi',
-            requireLast: true
-          }
-        }
-      ],
       '@typescript-eslint/no-empty-function': 0,
       '@typescript-eslint/no-non-null-assertion': 0,
       '@typescript-eslint/consistent-type-imports': ['error', {
