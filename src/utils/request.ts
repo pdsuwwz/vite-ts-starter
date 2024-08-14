@@ -230,7 +230,9 @@ export function useResHeadersAPI (headers: any, resData: any) {
      */
 
     filename = extractFileNameFromContentDispositionHeader(disposition)
-    filename && downloadFile(resData, filename, headers['content-type'])
+    if (filename) {
+      downloadFile(resData, filename, headers['content-type'])
+    }
   }
 }
 

@@ -10,15 +10,18 @@ export function getFilterResponse<T>(
 ) {
   return new Promise((resolve) => {
     if (res && res.error === 0) {
-      successCallback && successCallback(res)
+      if (successCallback) {
+        successCallback(res)
+      }
+    } else if (errorCallback) {
+      errorCallback(res)
     } else {
-      errorCallback
-        ? errorCallback(res)
-        : ElMessage({
-          type: 'error',
-          message: res.msg,
-          showClose: true
-        })
+      ElMessage({
+        type: 'error',
+        message: res.msg,
+        showClose: true
+      })
+
     }
     resolve(res)
   })

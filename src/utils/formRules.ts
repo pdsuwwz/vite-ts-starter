@@ -18,7 +18,11 @@ function validatorRules(
     validator: '',
     ...params
   }
-  validator ? rule.validator = validator : delete rule.validator
+  if (validator) {
+    rule.validator = validator
+  } else {
+    delete rule.validator
+  }
   return rule
 }
 function requiredRules (params = {}) {
@@ -32,7 +36,11 @@ function requiredRules (params = {}) {
     if (!value) {
       callback(new Error(message))
     } else if (Array.isArray(value)) {
-      value.length === 0 ? callback(new Error(message)) : callback()
+      if (value.length === 0) {
+        callback(new Error(message))
+      } else {
+        callback()
+      }
     } else if (!String(value).replace(new RegExp(regexExtraSpace), '')) {
       callback(new Error(message))
     } else {
@@ -60,7 +68,11 @@ function imageListRules (errMsg = '请上传全部图片') {
     if (!value) {
       callback(new Error(errSingle))
     } else if (Array.isArray(value) && value.some((img) => !img.url)) {
-      value.length > 1 ? callback(new Error(errMsg)) : callback(new Error(errSingle))
+      if (value.length > 1) {
+        callback(new Error(errMsg))
+      } else {
+        callback(new Error(errSingle))
+      }
     } else {
       callback()
     }
