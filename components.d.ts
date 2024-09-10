@@ -36,7 +36,6 @@ declare module 'vue' {
     NavigationSideAction: typeof import('./src/components/Navigation/Side/SideAction.vue')['default']
     NavigationSideGoBack: typeof import('./src/components/Navigation/Side/SideGoBack.vue')['default']
     NavigationSideLogo: typeof import('./src/components/Navigation/Side/SideLogo.vue')['default']
-    OptionsMenu: typeof import('./src/components/OptionsMenu/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TooltipCustom: typeof import('./src/components/TooltipCustom/index.vue')['default']
