@@ -18,8 +18,11 @@ export default defineConfig({
     transformerAttributifyJsx()
   ],
   theme: {
+    breakpoints: {
+      sm: '600px'
+    },
     colors: {
-      primary: 'rgba(32, 48, 98, %alpha)',
+      primary: '#3c40c6',
       success: 'rgba(82, 196, 26, %alpha)',
       warning: 'rgba(250, 173, 20, %alpha)',
       danger: 'rgba(250, 85, 85, %alpha)',

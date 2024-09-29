@@ -7,7 +7,12 @@ export default {
     goback: 'Back to the previous page',
     empty: 'No data available',
     i18nTest: 'Test internationalization',
-    pleaseInput: 'Please Input'
+    pleaseInput: 'Please Input',
+    btnCancel: 'Cancel',
+    btnConfirm: 'Confirm'
+  },
+  nav: {
+    action: 'Action'
   },
   login: {
     hydl: 'Hi, Welcome',

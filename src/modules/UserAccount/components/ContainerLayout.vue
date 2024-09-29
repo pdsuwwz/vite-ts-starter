@@ -290,7 +290,7 @@ export default defineComponent({
   }
 }
 
-@media screen and (width <= 600px) {
+@screen lt-sm {
 
   .user-account-container-layout {
     width: 95%;

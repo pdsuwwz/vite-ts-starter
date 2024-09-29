@@ -1,4 +1,4 @@
 export const overviewMock = {
-  title: '测试标题总览',
-  content: '测试内容 overview'
+  title: 'Async Test title overview 测试异步标题',
+  content: 'Async Test content overview 测试异步内容'
 }

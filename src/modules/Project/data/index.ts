@@ -1,56 +1,39 @@
+const date = new Date()
+const [, id] = String(Math.random()).split('.')
+const today = `${ date.getFullYear() }-${ date.getMonth() + 1 }-${ date.getDate() }`
+
 export const projectDetail = {
-  id: Math.random(),
-  name: '测试项目',
-  corpName: '测试公司',
-  notes: '备注',
+  id,
+  name: 'This is Test Name 测试项目',
+  corpName: 'This is Test Company 测试公司',
+  notes: 'This is Test Remarks 备注',
   isPublished: false,
-  createTime: '2023.01.29'
+  createTime: today
 }
 
 export const projectList = [
   {
     id: '111',
-    name: '测试项目',
-    corpName: '测试公司',
-    notes: '备注备注',
+    name: 'Test Name 测试项目',
+    corpName: 'Test Company 测试公司',
+    notes: 'Test Remarks 备注',
     isPublished: false,
-    createTime: '2023.01.29'
+    createTime: today
   },
   {
     id: '222',
-    name: '测试项目测试项目测试项目测试项目测试项目测试项目测试项目测试项目测试项目测试项目测试项目测试项目测试项目',
-    corpName: '测试公司测试公司测试公司测试公司测试公司测试公司测试公司测试公司测试公司测试公司测试公司测试公司测试公司',
-    notes: '备注备注',
+    name: 'This is Test Test Test Test Name',
+    corpName: 'This is Test Test Test Company',
+    notes: 'Remarks.... 这是备注😄',
     isPublished: true,
-    createTime: '2023.03.29'
+    createTime: today
   },
   {
     id: '333',
-    name: '测试项目',
-    corpName: '测试公司',
-    notes: '',
+    name: 'This is Test Test Test Test Name',
+    corpName: 'This is Test Test Test 中文名称',
+    notes: '中文备注',
     isPublished: false,
-    createTime: '2023.02.29'
+    createTime: today
   }
-]
-
-export const corporationList = [
-  'Alabama', 'Alaska', 'Arizona',
-  '测试', '测试1', '测试2', '测试3',
-  'Arkansas', 'California', 'Colorado',
-  'Connecticut', 'Delaware', 'Florida',
-  'Georgia', 'Hawaii', 'Idaho', 'Illinois',
-  'Indiana', 'Iowa', 'Kansas', 'Kentucky',
-  'Louisiana', 'Maine', 'Maryland',
-  'Massachusetts', 'Michigan', 'Minnesota',
-  'Mississippi', 'Missouri', 'Montana',
-  'Nebraska', 'Nevada', 'New Hampshire',
-  'New Jersey', 'New Mexico', 'New York',
-  'North Carolina', 'North Dakota', 'Ohio',
-  'Oklahoma', 'Oregon', 'Pennsylvania',
-  'Rhode Island', 'South Carolina',
-  'South Dakota', 'Tennessee', 'Texas',
-  'Utah', 'Vermont', 'Virginia',
-  'Washington', 'West Virginia', 'Wisconsin',
-  'Wyoming'
 ]

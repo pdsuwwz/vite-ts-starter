@@ -1,17 +1,9 @@
 
 import { sleep } from '@/utils/request'
-import {
-  createProject,
-  getProjectDetail,
-  getProjectList,
-  updateTogglePublishStatus
-} from '@/modules/Project/api'
+import * as ProjectApi from '@/modules/Project/api'
 import MUTATION from '@/modules/Project/store/mutations-type'
 import mixin from '@/store/utils/mixin'
-import {
-  projectDetail,
-  projectList
-} from '@/modules/Project/data'
+import * as ProjectData from '@/modules/Project/data'
 import type { Module } from 'vuex'
 import type { IGlobalState } from '@/store'
 
@@ -50,7 +42,7 @@ const ProjectModule: Module<IProjectModule, IGlobalState> = {
   actions: {
     async getSearchProjectByQuery ({ commit }, query) {
       await sleep(300)
-      const res = await getProjectList(query)
+      const res = await ProjectApi.getProjectList(query)
       return this.filterResponse(res, null, () => {})
     },
     async getProjectList ({ commit }, params) {
@@ -60,7 +52,7 @@ const ProjectModule: Module<IProjectModule, IGlobalState> = {
         msg: 'ok',
         error: 0,
         data: {
-          projectList
+          projectList: ProjectData.projectList
         }
       }
       return this.filterResponse(res, () => {
@@ -89,7 +81,7 @@ const ProjectModule: Module<IProjectModule, IGlobalState> = {
       })
     },
     async updateTogglePublishStatus ({ commit }, params) {
-      const res = await updateTogglePublishStatus(params)
+      const res = await ProjectApi.updateTogglePublishStatus(params)
       return this.filterResponse(res, null)
     }
   },

@@ -36,9 +36,9 @@ export default defineComponent({
         :title="_t('result.title')"
       >
         <ul>
-          <li>111</li>
-          <li>222</li>
-          <li>333</li>
+          <li>Test Menu 这里放菜单1</li>
+          <li>Test Menu 这里放菜单2</li>
+          <li>Test Menu 这里放菜单3</li>
         </ul>
       </LayoutSection>
     </template>

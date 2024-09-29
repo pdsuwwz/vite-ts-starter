@@ -172,14 +172,14 @@ export default defineComponent({
           round
           @click="handleCancel()"
         >
-          取消
+          {{ _t('base.btnCancel') }}
         </el-button>
         <el-button
           type="primary"
           round
           @click="handleConfirm()"
         >
-          {{ confirmText || '确定' }}
+          {{ confirmText || _t('base.btnConfirm') }}
         </el-button>
       </div>
     </div>

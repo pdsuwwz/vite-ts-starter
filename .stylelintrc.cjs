@@ -40,6 +40,7 @@ module.exports = {
       }
     ],
     'property-no-unknown': null,
+    'scss/at-rule-no-unknown': null,
     'at-rule-empty-line-before': [
       'always',
       {
