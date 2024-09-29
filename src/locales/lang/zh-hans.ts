@@ -5,7 +5,12 @@ export default {
     goback: '返回',
     empty: '无可用数据',
     i18nTest: '测试国际化',
-    pleaseInput: '请输入'
+    pleaseInput: '请输入',
+    btnCancel: '取消',
+    btnConfirm: '确定'
+  },
+  nav: {
+    action: '操作'
   },
   login: {
     hydl: '欢迎登录',

@@ -33,7 +33,7 @@ export default defineComponent({
         :key="item"
         class="action-item"
       >
-        Action {{ item }}
+        {{ _t('nav.action') }}{{ item }}
       </li>
     </ul>
   </div>

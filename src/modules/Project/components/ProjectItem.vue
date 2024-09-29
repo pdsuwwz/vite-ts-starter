@@ -188,8 +188,7 @@ async function handlePublish (projectId) {
     }
 
     .project-item__name-desc {
-      flex: 1;
-      overflow: hidden;
+      --at-apply: flex-1 overflow-hidden;
 
       .project-item__name-desc__corpname {
         display: flex;

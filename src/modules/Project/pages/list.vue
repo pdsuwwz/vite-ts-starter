@@ -109,6 +109,7 @@ export default defineComponent({
         >
           <IconFont
             icon="iconestablish"
+            class="mr-2"
           />
           {{ _t('project.create') }}
         </el-button>

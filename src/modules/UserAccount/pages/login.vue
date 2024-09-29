@@ -90,6 +90,9 @@ export default defineComponent({
               text: localeInject.t('login.fgtpwd'),
               click () {
                 console.log(proxy, localeInject.t('login.fgtpwd'))
+                ElMessage.info({
+                  message: `😄 ${ localeInject.t('login.fgtpwd') }`
+                })
               }
             },
             type: 'password',
@@ -253,24 +256,10 @@ export default defineComponent({
   }
 
   .user-account-body {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    --at-apply: flex-1 flex items-center justify-end;
   }
 }
 
-@media screen and (width <= 600px) {
 
-  .user-account-container-layout {
-    justify-content: center;
-
-    .user-account-nav {
-      left: 0;
-      right: 0;
-      margin: auto;
-      justify-content: center;
-    }
-  }
-}
 </style>
+
