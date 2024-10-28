@@ -109,8 +109,8 @@ importers:
         specifier: ^2.31.0
         version: 2.31.0(@typescript-eslint/parser@8.11.0(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.13.0(jiti@1.21.6))
       eslint-plugin-vue:
-        specifier: 9.29.1
-        version: 9.29.1(eslint@9.13.0(jiti@1.21.6))
+        specifier: 9.30.0
+        version: 9.30.0(eslint@9.13.0(jiti@1.21.6))
       globals:
         specifier: ^15.11.0
         version: 15.11.0
@@ -2014,8 +2014,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-vue@9.29.1:
-    resolution: {integrity: sha512-MH/MbVae4HV/tM8gKAVWMPJbYgW04CK7SuzYRrlNERpxbO0P3+Zdsa2oAcFBW6xNu7W6lIkGOsFAMCRTYmrlWQ==}
+  eslint-plugin-vue@9.30.0:
+    resolution: {integrity: sha512-CyqlRgShvljFkOeYK8wN5frh/OGTvkj1S7wlr2Q2pUvwq+X5VYiLd6ZjujpgSgLnys2W8qrBLkXQ41SUYaoPIQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -5744,7 +5744,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-vue@9.29.1(eslint@9.13.0(jiti@1.21.6)):
+  eslint-plugin-vue@9.30.0(eslint@9.13.0(jiti@1.21.6)):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@9.13.0(jiti@1.21.6))
       eslint: 9.13.0(jiti@1.21.6)
