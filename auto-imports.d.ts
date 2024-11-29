@@ -96,6 +96,7 @@ declare global {
   export type { RouteRecordRaw, RouteLocationRaw, LocationQuery, RouteParams, RouteLocationNormalizedLoaded, RouteRecordName, NavigationGuard } from 'vue-router'
   import('vue-router')
 }
+
 // for vue template auto import
 import { UnwrapRef } from 'vue'
 declare module 'vue' {
