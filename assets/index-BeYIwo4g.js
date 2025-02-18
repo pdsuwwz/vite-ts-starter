@@ -1,1 +1,0 @@
-import{d as e,_ as o,b as n,o as t}from"./index-DXPsBYUU.js";const s=e({name:"XxBox"}),c={class:"xxx-container"};function a(r,_,d,p,i,x){return t(),n("div",c)}const m=o(s,[["render",a],["__scopeId","data-v-7c5448f8"]]);export{m as default};
