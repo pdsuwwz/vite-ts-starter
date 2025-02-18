@@ -174,7 +174,7 @@ export default defineComponent({
         <div
           class="nav-logo"
           :class="[
-            'bgimage-images-vue-svg',
+            'bgimage-images-logo-svg',
             'bg-contain bg-no-repeat bg-center'
           ]"
         ></div>
@@ -197,7 +197,7 @@ export default defineComponent({
           #titleIcon
         >
           <!-- <img
-          src="@/assets/images/vue.svg"
+          src="@/assets/images/logo.svg"
           alt=""
         > -->
           <el-icon>
@@ -236,14 +236,14 @@ export default defineComponent({
     }
 
     .nav-logo {
-      width: 56px;
-      height: 32px;
+      width: 40px;
+      height: 30px;
     }
 
     .nav-circle {
       width: 6px;
       height: 6px;
-      margin: 0 10px;
+      margin: 0 7px;
       border-radius: 50%;
       background: #484848;
     }
