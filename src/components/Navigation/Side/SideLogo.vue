@@ -24,7 +24,7 @@ export default defineComponent({
     >
       <img
         class="side-logo-img"
-        src="@/assets/images/vue.svg"
+        src="@/assets/images/logo.svg"
         alt="商标"
       >
       <h1 class="side-logo-title">
@@ -48,6 +48,7 @@ export default defineComponent({
 
     .side-logo-img {
       width: 40px;
+      height: 30px;
     }
 
     .side-logo-title {
@@ -55,7 +56,7 @@ export default defineComponent({
       line-height: 32px;
       font-size: 16px;
       font-weight: 600;
-      margin-left: 12px;
+      margin-left: 7px;
     }
   }
 }
