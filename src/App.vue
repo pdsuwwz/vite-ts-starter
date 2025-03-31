@@ -1,30 +1,21 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defaultLanguageLocale } from '@/locales'
+const store = useBaseStore()
+const route = useRoute()
+const router = useRouter()
 
+const { currentLocaleLang } = useLanguage()
 
-export default defineComponent({
-  name: 'App',
-  setup () {
-    const store = useBaseStore()
-    const route = useRoute()
-    const router = useRouter()
+watch(
+  () => route.params,
+  () => {
+    if (route.name === '404') return
 
-    watch(
-      () => route.params,
-      () => {
-        if (route.name === '404') return
-
-        store.dispatch('UserAccount/setLanguage', {
-          locale: route.params.locale || defaultLanguageLocale
-        })
-      }
-    )
-
-    return {
-      ...useLanguage()
-    }
+    store.dispatch('UserAccount/setLanguage', {
+      locale: route.params.locale || defaultLanguageLocale
+    })
   }
-})
+)
 </script>
 
 <template>
