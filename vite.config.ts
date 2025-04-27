@@ -11,6 +11,7 @@ import UnpluginIcons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { loadEnv } from 'vite'
 
 const htmlPlugin = () => {
   return {
@@ -25,8 +26,10 @@ const htmlPlugin = () => {
 }
 
 export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd())
+
   return {
-    base: process.env.VITE_ROUTER_MODE === 'hash'
+    base: env.VITE_ROUTER_MODE === 'hash'
       ? ''
       : '/',
     plugins: [
@@ -159,7 +162,7 @@ export default defineConfig(({ mode }) => {
       ]
     },
     define: {
-      'process.env': process.env
+      'process.env.VITE_ROUTER_MODE': JSON.stringify(env.VITE_ROUTER_MODE)
     },
     css: {
       preprocessorOptions: {
