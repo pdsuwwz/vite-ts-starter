@@ -23,6 +23,8 @@
     "RouteParams": true,
     "RouteRecordName": true,
     "RouteRecordRaw": true,
+    "Slot": true,
+    "Slots": true,
     "VNode": true,
     "WritableComputedRef": true,
     "_": true,
@@ -103,8 +105,6 @@
     "watch": true,
     "watchEffect": true,
     "watchPostEffect": true,
-    "watchSyncEffect": true,
-    "Slot": true,
-    "Slots": true
+    "watchSyncEffect": true
   }
 }
