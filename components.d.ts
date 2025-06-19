@@ -41,7 +41,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     TooltipCustom: typeof import('./src/components/TooltipCustom/index.vue')['default']
   }
-  export interface ComponentCustomProperties {
+  export interface GlobalDirectives {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']
   }
 }
