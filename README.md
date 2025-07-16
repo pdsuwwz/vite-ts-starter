@@ -7,9 +7,9 @@ English | [中文](README-zh.md)
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/vite-ts-starter?color=blue)](https://github.com/pdsuwwz/vite-ts-starter/blob/main/LICENSE)
 
-🐬 A Starter template built on Vite 6.x + Vue 3.x + Element Plus 2.x + TypeScript + Husky + lint-staged.
+🐬 A Starter template built on Vite 7.x + Vue 3.x + Element Plus 2.x + TypeScript + Husky + lint-staged.
 
-A ready-to-use prototype template framework for quickly developing management systems using Vue3 + Vite6 + TS, with continuous updates on the latest tech stack 💪
+A ready-to-use prototype template framework for quickly developing management systems using Vue3 + Vite7 + TS, with continuous updates on the latest tech stack 💪
 
 [🚀 Online Playground](https://pdsuwwz.github.io/vite-ts-starter/#en)
 
@@ -17,12 +17,12 @@ A ready-to-use prototype template framework for quickly developing management sy
 ## 🌱 Different Versions
 Five different tech stack repo templates are maintained. Try them and pick the one that fits you.
 
-- 💥 (Recommended) [TS + Pinia + 🌐 Low-coupling (i18n) multilingual Vite6 + Vue3 + TS + Element-Plus2 + vue-i18n@next](https://github.com/pdsuwwz/vue-boilerplate-i18n)
+- 💥 (Recommended) [TS + Pinia + 🌐 Low-coupling (i18n) multilingual Vite7 + Vue3 + TS + Element-Plus2 + vue-i18n@next](https://github.com/pdsuwwz/vue-boilerplate-i18n)
 
 - ⚡️ TS + Pinia [Vite5 + Vue3 + TS + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/pinia-starter-ts)
 - ⚡️ JS + Pinia [Vite5 + Vue3 + Pinia + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-pinia-starter)
 
-- ⚡️ TS + Vuex4 (Current Repo)[Vite6 + Vue3 + TS + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-ts-starter)
+- ⚡️ TS + Vuex4 (Current Repo)[Vite7 + Vue3 + TS + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-ts-starter)
 - ⚡️ JS + Vuex4 [Vite5 + Vue3 + Vuex4 + Element-Plus2 + useLocale + i18n](https://github.com/pdsuwwz/vite-starter)
 
 ## 🪄 Using Different UI Libraries
@@ -35,7 +35,7 @@ If you prefer using [Naive UI](https://www.naiveui.com/) as your UI library, we'
 
 ## 🎉 Features
 
-* Supports __Vite 6 + Vue 3 + TypeScript__
+* Supports __Vite 7 + Vue 3 + TypeScript__
 * UI framework: __Element Plus 2.x__
 * State management: __Vuex 4__
 * Code standardization: __Husky + lint-staged__
