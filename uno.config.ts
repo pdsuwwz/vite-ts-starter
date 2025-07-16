@@ -2,14 +2,14 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
-  presetUno,
+  presetWind3,
   transformerAttributifyJsx,
   transformerDirectives
 } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    presetWind3(),
     presetAttributify(),
     presetIcons()
   ],
