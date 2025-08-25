@@ -1,1 +1,0 @@
-import{d as e,_ as o,b as t,o as n}from"./index-iKXMIMyC.js";const s=e({name:"XxTest"}),a={class:"xxx-container"};function c(r,_,d,p,i,f){return n(),t("div",a)}const m=o(s,[["render",c],["__scopeId","data-v-a92fd033"]]);export{m as default};
