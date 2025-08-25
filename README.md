@@ -54,7 +54,7 @@ If you prefer using [Naive UI](https://www.naiveui.com/) as your UI library, we'
 ## Environment Support
 
 * Vue 3.x
-* Node >= 18.12.x
+* Node >= 22.12.x
 * Pnpm 9.x
 * **VSCode Extension `dbaeumer.vscode-eslint` >= v3.0.5 (pre-release)**
 
