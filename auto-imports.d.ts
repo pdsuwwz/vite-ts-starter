@@ -100,91 +100,19 @@ declare global {
 }
 
 // for vue template auto import
-import { UnwrapRef } from 'vue'
+type UnwrapRefs<T> = {
+  [K in keyof T]: import('vue').UnwrapRef<T[K]>
+}
+namespace _ComponentCustomProperties {
+  const _: typeof import('lodash-es')
+  const { EffectScope, computed, createApp, createVNode, customRef, defineAsyncComponent, defineComponent, effectScope, getCurrentInstance, getCurrentScope, getCurrentWatcher, h, inject, isProxy, isReactive, isReadonly, isRef, isShallow, markRaw, nextTick, onActivated, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onDeactivated, onErrorCaptured, onMounted, onRenderTracked, onRenderTriggered, onScopeDispose, onServerPrefetch, onUnmounted, onUpdated, onWatcherCleanup, provide, reactive, readonly, ref, render, resolveComponent, shallowReactive, shallowReadonly, shallowRef, toRaw, toRef, toRefs, toValue, triggerRef, unref, useAttrs, useCssModule, useCssVars, useId, useModel, useSlots, useTemplateRef, watch, watchEffect, watchPostEffect, watchSyncEffect }: typeof import('vue')
+  const { createLogger, createNamespacedHelpers, createStore, mapActions, mapGetters, mapMutations, mapState, useStore }: typeof import('vuex')
+  const { createRouter, createWebHashHistory, createWebHistory, onBeforeRouteLeave, onBeforeRouteUpdate, useLink, useRoute, useRouter }: typeof import('vue-router')
+  const { default: useBaseStore, key }: typeof import('./src/hooks/useBaseStore')
+  const { default: useCurrentInstance }: typeof import('./src/hooks/useCurrentInstance')
+  const { useLanguage }: typeof import('./src/hooks/useLanguage')
+  const { v4: uuidv4 }: typeof import('uuid')
+}
 declare module 'vue' {
-  interface GlobalComponents {}
-  interface ComponentCustomProperties {
-    readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly _: UnwrapRef<typeof import('lodash-es')>
-    readonly computed: UnwrapRef<typeof import('vue')['computed']>
-    readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
-    readonly createLogger: UnwrapRef<typeof import('vuex')['createLogger']>
-    readonly createNamespacedHelpers: UnwrapRef<typeof import('vuex')['createNamespacedHelpers']>
-    readonly createRouter: UnwrapRef<typeof import('vue-router')['createRouter']>
-    readonly createStore: UnwrapRef<typeof import('vuex')['createStore']>
-    readonly createVNode: UnwrapRef<typeof import('vue')['createVNode']>
-    readonly createWebHashHistory: UnwrapRef<typeof import('vue-router')['createWebHashHistory']>
-    readonly createWebHistory: UnwrapRef<typeof import('vue-router')['createWebHistory']>
-    readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
-    readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
-    readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
-    readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
-    readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
-    readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
-    readonly getCurrentWatcher: UnwrapRef<typeof import('vue')['getCurrentWatcher']>
-    readonly h: UnwrapRef<typeof import('vue')['h']>
-    readonly inject: UnwrapRef<typeof import('vue')['inject']>
-    readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
-    readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
-    readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
-    readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
-    readonly isShallow: UnwrapRef<typeof import('vue')['isShallow']>
-    readonly key: UnwrapRef<typeof import('./src/hooks/useBaseStore')['key']>
-    readonly mapActions: UnwrapRef<typeof import('vuex')['mapActions']>
-    readonly mapGetters: UnwrapRef<typeof import('vuex')['mapGetters']>
-    readonly mapMutations: UnwrapRef<typeof import('vuex')['mapMutations']>
-    readonly mapState: UnwrapRef<typeof import('vuex')['mapState']>
-    readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
-    readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
-    readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
-    readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
-    readonly onBeforeRouteLeave: UnwrapRef<typeof import('vue-router')['onBeforeRouteLeave']>
-    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('vue-router')['onBeforeRouteUpdate']>
-    readonly onBeforeUnmount: UnwrapRef<typeof import('vue')['onBeforeUnmount']>
-    readonly onBeforeUpdate: UnwrapRef<typeof import('vue')['onBeforeUpdate']>
-    readonly onDeactivated: UnwrapRef<typeof import('vue')['onDeactivated']>
-    readonly onErrorCaptured: UnwrapRef<typeof import('vue')['onErrorCaptured']>
-    readonly onMounted: UnwrapRef<typeof import('vue')['onMounted']>
-    readonly onRenderTracked: UnwrapRef<typeof import('vue')['onRenderTracked']>
-    readonly onRenderTriggered: UnwrapRef<typeof import('vue')['onRenderTriggered']>
-    readonly onScopeDispose: UnwrapRef<typeof import('vue')['onScopeDispose']>
-    readonly onServerPrefetch: UnwrapRef<typeof import('vue')['onServerPrefetch']>
-    readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
-    readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
-    readonly onWatcherCleanup: UnwrapRef<typeof import('vue')['onWatcherCleanup']>
-    readonly provide: UnwrapRef<typeof import('vue')['provide']>
-    readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
-    readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
-    readonly ref: UnwrapRef<typeof import('vue')['ref']>
-    readonly render: UnwrapRef<typeof import('vue')['render']>
-    readonly resolveComponent: UnwrapRef<typeof import('vue')['resolveComponent']>
-    readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>
-    readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
-    readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
-    readonly toRaw: UnwrapRef<typeof import('vue')['toRaw']>
-    readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
-    readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>
-    readonly toValue: UnwrapRef<typeof import('vue')['toValue']>
-    readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
-    readonly unref: UnwrapRef<typeof import('vue')['unref']>
-    readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
-    readonly useBaseStore: UnwrapRef<typeof import('./src/hooks/useBaseStore')['default']>
-    readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
-    readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
-    readonly useCurrentInstance: UnwrapRef<typeof import('./src/hooks/useCurrentInstance')['default']>
-    readonly useId: UnwrapRef<typeof import('vue')['useId']>
-    readonly useLanguage: UnwrapRef<typeof import('./src/hooks/useLanguage')['useLanguage']>
-    readonly useLink: UnwrapRef<typeof import('vue-router')['useLink']>
-    readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
-    readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
-    readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
-    readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
-    readonly useStore: UnwrapRef<typeof import('vuex')['useStore']>
-    readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
-    readonly uuidv4: UnwrapRef<typeof import('uuid')['v4']>
-    readonly watch: UnwrapRef<typeof import('vue')['watch']>
-    readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
-    readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>
-    readonly watchSyncEffect: UnwrapRef<typeof import('vue')['watchSyncEffect']>
-  }
+  interface ComponentCustomProperties extends UnwrapRefs<typeof _ComponentCustomProperties> {}
 }
